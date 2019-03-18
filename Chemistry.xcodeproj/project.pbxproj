@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9238AE7D223E7A860022BA1E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */; };
+		9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */; };
+		9238AE81223E96010022BA1E /* MasterAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */; };
 		9274DBDA217C8687007AF82A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBD9217C8687007AF82A /* AppDelegate.swift */; };
-		9274DBDC217C8687007AF82A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBDB217C8687007AF82A /* MasterViewController.swift */; };
 		9274DBDE217C8687007AF82A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBDD217C8687007AF82A /* DetailViewController.swift */; };
 		9274DBE1217C8688007AF82A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9274DBDF217C8688007AF82A /* Main.storyboard */; };
 		9274DBE3217C86D5007AF82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9274DBE2217C86D5007AF82A /* Assets.xcassets */; };
 		9274DBE6217C86D5007AF82A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9274DBE4217C86D5007AF82A /* LaunchScreen.storyboard */; };
 		9274DBF1217C86D6007AF82A /* ChemistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBF0217C86D6007AF82A /* ChemistryTests.swift */; };
 		9274DBFC217C86D6007AF82A /* ChemistryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBFB217C86D6007AF82A /* ChemistryUITests.swift */; };
+		9274DC0F217C880B007AF82A /* H2O.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DC0E217C880B007AF82A /* H2O.swift */; };
+		9274DC11217C8965007AF82A /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DC10217C8965007AF82A /* Atoms.swift */; };
+		9274DC13217C8DA9007AF82A /* ToNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DC12217C8DA9007AF82A /* ToNode.swift */; };
+		92809E29217CADF3008FA2AB /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92809E28217CADF3008FA2AB /* Molecules.swift */; };
+		92809E2C217CAF29008FA2AB /* H2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92809E2B217CAF29008FA2AB /* H2.swift */; };
+		92809E2E217CAF62008FA2AB /* O2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92809E2D217CAF62008FA2AB /* O2.swift */; };
+		92CE1E23223D70360078380F /* F2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE1E22223D70360078380F /* F2.swift */; };
+		92D6F183223FD8F000C0F3A3 /* MasterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F182223FD8F000C0F3A3 /* MasterNavigationController.swift */; };
+		92D6F185223FF76400C0F3A3 /* Fe2O3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F184223FF76400C0F3A3 /* Fe2O3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMoleculesViewController.swift; sourceTree = "<group>"; };
+		9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterAtomsViewController.swift; sourceTree = "<group>"; };
 		9274DBD6217C8686007AF82A /* Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBD9217C8687007AF82A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9274DBDB217C8687007AF82A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		9274DBDD217C8687007AF82A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9274DBE0217C8688007AF82A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9274DBE2217C86D5007AF82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +62,15 @@
 		9274DBF7217C86D6007AF82A /* ChemistryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemistryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBFB217C86D6007AF82A /* ChemistryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryUITests.swift; sourceTree = "<group>"; };
 		9274DBFD217C86D6007AF82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9274DC0E217C880B007AF82A /* H2O.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2O.swift; sourceTree = "<group>"; };
+		9274DC10217C8965007AF82A /* Atoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
+		9274DC12217C8DA9007AF82A /* ToNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNode.swift; sourceTree = "<group>"; };
+		92809E28217CADF3008FA2AB /* Molecules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
+		92809E2B217CAF29008FA2AB /* H2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2.swift; sourceTree = "<group>"; };
+		92809E2D217CAF62008FA2AB /* O2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = O2.swift; sourceTree = "<group>"; };
+		92CE1E22223D70360078380F /* F2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F2.swift; sourceTree = "<group>"; };
+		92D6F182223FD8F000C0F3A3 /* MasterNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterNavigationController.swift; sourceTree = "<group>"; };
+		92D6F184223FF76400C0F3A3 /* Fe2O3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fe2O3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +98,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9238AE57223E6E720022BA1E /* Chemistry Shared */ = {
+			isa = PBXGroup;
+			children = (
+				92809E2A217CAEE1008FA2AB /* Chemistry */,
+				9274DC0B217C8753007AF82A /* Molecules */,
+				9274DC12217C8DA9007AF82A /* ToNode.swift */,
+			);
+			path = "Chemistry Shared";
+			sourceTree = "<group>";
+		};
 		9274DBCD217C8682007AF82A = {
 			isa = PBXGroup;
 			children = (
+				9238AE57223E6E720022BA1E /* Chemistry Shared */,
 				9274DBD8217C8686007AF82A /* Chemistry */,
 				9274DBEF217C86D6007AF82A /* ChemistryTests */,
 				9274DBFA217C86D6007AF82A /* ChemistryUITests */,
@@ -100,12 +133,15 @@
 			isa = PBXGroup;
 			children = (
 				9274DBD9217C8687007AF82A /* AppDelegate.swift */,
-				9274DBDB217C8687007AF82A /* MasterViewController.swift */,
-				9274DBDD217C8687007AF82A /* DetailViewController.swift */,
 				9274DBDF217C8688007AF82A /* Main.storyboard */,
+				9274DBDD217C8687007AF82A /* DetailViewController.swift */,
 				9274DBE2217C86D5007AF82A /* Assets.xcassets */,
 				9274DBE4217C86D5007AF82A /* LaunchScreen.storyboard */,
 				9274DBE7217C86D5007AF82A /* Info.plist */,
+				9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */,
+				9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */,
+				9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */,
+				92D6F182223FD8F000C0F3A3 /* MasterNavigationController.swift */,
 			);
 			path = Chemistry;
 			sourceTree = "<group>";
@@ -126,6 +162,27 @@
 				9274DBFD217C86D6007AF82A /* Info.plist */,
 			);
 			path = ChemistryUITests;
+			sourceTree = "<group>";
+		};
+		9274DC0B217C8753007AF82A /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				9274DC0E217C880B007AF82A /* H2O.swift */,
+				92809E2B217CAF29008FA2AB /* H2.swift */,
+				92809E2D217CAF62008FA2AB /* O2.swift */,
+				92CE1E22223D70360078380F /* F2.swift */,
+				92D6F184223FF76400C0F3A3 /* Fe2O3.swift */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		92809E2A217CAEE1008FA2AB /* Chemistry */ = {
+			isa = PBXGroup;
+			children = (
+				9274DC10217C8965007AF82A /* Atoms.swift */,
+				92809E28217CADF3008FA2AB /* Molecules.swift */,
+			);
+			path = Chemistry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +247,7 @@
 		9274DBCE217C8683007AF82A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Pavel Kosilo";
 				TargetAttributes = {
@@ -259,9 +316,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9274DC11217C8965007AF82A /* Atoms.swift in Sources */,
 				9274DBDE217C8687007AF82A /* DetailViewController.swift in Sources */,
-				9274DBDC217C8687007AF82A /* MasterViewController.swift in Sources */,
+				9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */,
+				92809E2E217CAF62008FA2AB /* O2.swift in Sources */,
+				92CE1E23223D70360078380F /* F2.swift in Sources */,
+				92D6F183223FD8F000C0F3A3 /* MasterNavigationController.swift in Sources */,
+				9238AE7D223E7A860022BA1E /* CustomTabBarController.swift in Sources */,
+				92809E29217CADF3008FA2AB /* Molecules.swift in Sources */,
+				9274DC0F217C880B007AF82A /* H2O.swift in Sources */,
+				92809E2C217CAF29008FA2AB /* H2.swift in Sources */,
+				9238AE81223E96010022BA1E /* MasterAtomsViewController.swift in Sources */,
+				92D6F185223FF76400C0F3A3 /* Fe2O3.swift in Sources */,
 				9274DBDA217C8687007AF82A /* AppDelegate.swift in Sources */,
+				9274DC13217C8DA9007AF82A /* ToNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
