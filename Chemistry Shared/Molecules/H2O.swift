@@ -19,8 +19,13 @@ class H2O : Molecule {
         let atom2Node = atom2.ToNode()
         let atom3Node = atom3.ToNode()
         
+        #if os(iOS) || os(watchOS) || os(tvOS)
         atom1Node.position.x = Float(atom3.radius)
         atom2Node.position.x = -(Float(atom3.radius))
+        #elseif os(OSX)
+        atom1Node.position.x = atom3.radius
+        atom2Node.position.x = -(atom3.radius)
+        #endif
         
         let moleculeNode = SCNNode()
         moleculeNode.addChildNode(atom1Node)

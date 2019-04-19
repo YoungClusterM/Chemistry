@@ -98,6 +98,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043B10B5224FCAD3009E33D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9238AE57223E6E720022BA1E /* Chemistry Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +123,7 @@
 				9274DBEF217C86D6007AF82A /* ChemistryTests */,
 				9274DBFA217C86D6007AF82A /* ChemistryUITests */,
 				9274DBD7217C8686007AF82A /* Products */,
+				043B10B5224FCAD3009E33D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,10 +264,12 @@
 					};
 					9274DBEB217C86D6007AF82A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = 9274DBD5217C8685007AF82A;
 					};
 					9274DBF6217C86D6007AF82A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = 9274DBD5217C8685007AF82A;
 					};
 				};
@@ -509,9 +519,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oopscommand.Chemistry;
+				PRODUCT_BUNDLE_IDENTIFIER = me.pkosilo.Chemistry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -527,9 +537,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oopscommand.Chemistry;
+				PRODUCT_BUNDLE_IDENTIFIER = me.pkosilo.Chemistry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -549,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oopscommand.ChemistryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chemistry.app/Chemistry";
 			};
@@ -570,7 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oopscommand.ChemistryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chemistry.app/Chemistry";
 			};
@@ -590,7 +600,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oopscommand.ChemistryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Chemistry;
 			};
@@ -610,7 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oopscommand.ChemistryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Chemistry;
 			};

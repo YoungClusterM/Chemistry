@@ -18,6 +18,7 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         insertMolecules(self)
         if let split = splitViewController {
             let controllers = split.viewControllers

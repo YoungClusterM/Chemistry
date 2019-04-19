@@ -14,6 +14,7 @@ class CustomTabBarController: UITabBarController {
         if let newTitle = self.selectedViewController?.title {
             self.navigationItem.title = newTitle
             if let newSearch = self.selectedViewController?.navigationItem.searchController {
+                self.navigationItem.hidesSearchBarWhenScrolling = true
                 self.navigationItem.searchController = newSearch
             }
         }
@@ -21,6 +22,7 @@ class CustomTabBarController: UITabBarController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         setTitle()
     }
     

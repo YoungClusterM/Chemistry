@@ -8,21 +8,38 @@
 
 import Foundation
 import CoreGraphics
+#if os(iOS) || os(watchOS) || os(tvOS)
 import UIKit
+#elseif os(OSX)
+import AppKit
+#endif
 import SceneKit
 
 class Atom {
     var pm : Float
+    #if os(iOS) || os(watchOS) || os(tvOS)
     var color : UIColor
+    #elseif os(OSX)
+    var color : NSColor
+    #endif
     var wikipedia : String
     var num : Int8
     
+    #if os(iOS) || os(watchOS) || os(tvOS)
     init(pm: Float, color: UIColor, num: Int8, wikipedia: String) {
         self.pm = pm
         self.color = color
         self.num = num
         self.wikipedia = wikipedia
     }
+    #elseif os(OSX)
+    init(pm: Float, color: NSColor, num: Int8, wikipedia: String) {
+        self.pm = pm
+        self.color = color
+        self.num = num
+        self.wikipedia = wikipedia
+    }
+    #endif
     
     func draw() -> SCNSphere {
         let atom = SCNSphere(radius: CGFloat(self.pm / 100))

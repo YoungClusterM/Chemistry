@@ -8,8 +8,9 @@
 
 import UIKit
 import SceneKit
+import WebKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, WKUIDelegate {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     var sceneView = SCNView(frame: CGRect(x: 0, y: 0, width: 512, height: 512))
@@ -31,14 +32,22 @@ class DetailViewController: UIViewController {
     }
     
     func configureView() {
-        self.view = sceneView
+        self.navigationItem.largeTitleDisplayMode = .never
         // Update the user interface for the detail item.
         if let detail = detailItem { // Check detailization item active
             if let molecule = Molecules[detail] { // Is it in Molecules
+                self.view = sceneView
                 configureSceneView(node: molecule)
             } else {
-                if let atom = Atoms[detail]?.draw().ToNode() { // Is it in Atoms
-                    configureSceneView(node: atom)
+                if let atom = Atoms[detail]?.wikipedia { // Is it in Atoms
+                    self.title = atom
+                    let webConfiguration = WKWebViewConfiguration()
+                    let webView = WKWebView(frame: .zero, configuration: webConfiguration)
+                    self.view = webView
+                    
+                    let myURL = URL(string:"https://en.m.wikipedia.org/wiki/"+atom)
+                    let myRequest = URLRequest(url: myURL!)
+                    webView.load(myRequest)
                 }
             }
         }

@@ -25,6 +25,7 @@ class Fe2O3 : Molecule {
         let atomO2Node = atomO2.ToNode()
         let atomO3Node = atomO3.ToNode()
         
+        #if os(iOS) || os(watchOS) || os(tvOS)
         // Fe
         atom1Node.position.x = Float(atom2.radius)/2
         atom2Node.position.x = -(Float(atom1.radius))/2
@@ -35,6 +36,18 @@ class Fe2O3 : Molecule {
         atomO1Node.position.y = -Float(atom1.radius)
         atomO2Node.position.y = -Float(atom2.radius)
         atomO3Node.position.y = Float(atom1.radius)
+        #elseif os(OSX)
+        // Fe
+        atom1Node.position.x = atom2.radius/2
+        atom2Node.position.x = -(atom1.radius)/2
+        
+        // O
+        atomO1Node.position.x = atom1Node.position.x*2
+        atomO2Node.position.x = atom2Node.position.x*2
+        atomO1Node.position.y = -(atom1.radius)
+        atomO2Node.position.y = -(atom2.radius)
+        atomO3Node.position.y = atom1.radius
+        #endif
         
         let moleculeNode = SCNNode()
         moleculeNode.addChildNode(atom1Node)

@@ -17,8 +17,13 @@ class O2 : Molecule {
         let atom1Node = atom1.ToNode()
         let atom2Node = atom2.ToNode()
         
+        #if os(iOS) || os(watchOS) || os(tvOS)
         atom1Node.position.x = Float(atom2.radius)/2
         atom2Node.position.x = -(Float(atom1.radius))/2
+        #elseif os(OSX)
+        atom1Node.position.x = atom2.radius/2
+        atom2Node.position.x = -(atom1.radius)/2
+        #endif
         
         let moleculeNode = SCNNode()
         moleculeNode.addChildNode(atom1Node)

@@ -18,7 +18,8 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        insertMolecules(self)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        insertAtoms(self)
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -44,9 +45,9 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     }
     
     @objc
-    func insertMolecules(_ sender: Any) {
-        for molecule in Atoms {
-            objects.insert(molecule.key, at: 0)
+    func insertAtoms(_ sender: Any) {
+        for atom in Atoms {
+            objects.insert(atom.key, at: 0)
         }
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
@@ -94,6 +95,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
             object = objects[indexPath.row]
         }
         cell.textLabel!.text = object.description
+        cell.detailTextLabel!.text = Atoms[object.description]!.wikipedia
         return cell
     }
     
@@ -116,8 +118,12 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
         
         let array = (objects as Array).filter({atom -> Bool in
             return atom.lowercased().contains(searchController.searchBar.text!.lowercased())
-        })
-        filteredAtoms = array
+        }) // Symbols
+        let array2 = (objects as Array).filter({atom -> Bool in
+            return Atoms[atom]!.wikipedia.lowercased().contains(searchController.searchBar.text!.lowercased())
+        }) // Names
+        
+        filteredAtoms = array + array2
         
         self.tableView.reloadData()
     }
