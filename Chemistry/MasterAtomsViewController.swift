@@ -117,7 +117,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
             object = objects[indexPath.row]
         }
         cell.textLabel!.text = object.description
-        cell.detailTextLabel!.text = Atoms[object.description]!.wikipedia
+        cell.detailTextLabel!.text = NSLocalizedString(Atoms[object.description]!.wikipedia, comment: "")
         return cell
     }
     
@@ -142,7 +142,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
             return atom.lowercased().contains(searchController.searchBar.text!.lowercased())
         }) // Symbols
         let array2 = (objects as Array).filter({atom -> Bool in
-            return Atoms[atom]!.wikipedia.lowercased().contains(searchController.searchBar.text!.lowercased())
+            return NSLocalizedString(Atoms[atom]!.wikipedia, comment: "").lowercased().contains(searchController.searchBar.text!.lowercased())
         }) // Names
         
         filteredAtoms = array + array2

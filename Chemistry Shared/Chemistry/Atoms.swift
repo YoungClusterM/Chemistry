@@ -176,4 +176,14 @@ let Atoms: [String:Atom] = [
     "Lv": Atom(pm: 200, color: .blue, num: 116, wikipedia: "Livermorium"),
     "Ts": Atom(pm: 200, color: .blue, num: 117, wikipedia: "Tennessine"),
     "Og": Atom(pm: 152, color: .blue, num: 118, wikipedia: "Oganesson"),
+    "Uue": Atom(pm: 240, color: .blue, num: 119, wikipedia: "Ununennium"),
+    "Ubn": Atom(pm: 320, color: .blue, num: 120, wikipedia: "Unbinilium"),
+    // Begin Super-actinides
+    "Ubu": Atom(pm: 320, color: .blue, num: 121, wikipedia: "Unbiunium"),
+    "Ubb": Atom(pm: 320, color: .blue, num: 122, wikipedia: "Unbibium"),
+    "Ubt": Atom(pm: 240, color: .blue, num: 123, wikipedia: "Unbitrium"),
+    "Ubq": Atom(pm: 240, color: .blue, num: 124, wikipedia: "Unbiquadium"),
+    "Ubp": Atom(pm: 240, color: .blue, num: 125, wikipedia: "Unbipentium"),
+    "Ubh": Atom(pm: 240, color: .blue, num: 126, wikipedia: "Unbihexium"),
+    // End Super-actinides
 ]
