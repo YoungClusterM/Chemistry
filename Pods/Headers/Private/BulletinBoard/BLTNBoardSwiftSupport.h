@@ -1,0 +1,1 @@
+../../../BulletinBoard/Sources/Support/BLTNBoardSwiftSupport.h

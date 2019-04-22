@@ -1,0 +1,6 @@
+module Pods_Chemistry {
+  umbrella header "Pods-Chemistry-umbrella.h"
+
+  export *
+  module * { export * }
+}

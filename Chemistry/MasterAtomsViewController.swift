@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BLTNBoard
 
 class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating {
     
@@ -15,6 +16,22 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     
     var searchController = UISearchController()
     var filteredAtoms: [String] = []
+    
+    lazy var descriptor: BLTNItemManager = {
+        let page = BLTNPageItem(title: "Atoms")
+        
+        page.descriptionText = "Here you can read information about all atoms from Wikipedia."
+        page.actionButtonTitle = "Close"
+        page.requiresCloseButton = false
+        
+        page.actionHandler = { (item: BLTNActionItem) in
+            item.manager!.dismissBulletin(animated: true)
+        }
+        
+        return BLTNItemManager(rootItem: page)
+    }()
+    
+    let userDefaults = UserDefaults(suiteName: "Chemistry")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +54,11 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
         })()
         
         tableView.reloadData()
+        
+        if (!(userDefaults?.bool(forKey: "atoms_descripted") ?? false)) {
+            descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
+            userDefaults?.set(true, forKey: "atoms_descripted")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BLTNBoard
 
 class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdating {
     
@@ -15,6 +16,22 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     
     var searchController = UISearchController()
     var filteredMolecules: [String] = []
+    
+    lazy var descriptor: BLTNItemManager = {
+        let page = BLTNPageItem(title: "Molecules")
+        
+        page.descriptionText = "Here you can view 3D model of molecules. It may be really helpful on Chemistry lessons."
+        page.actionButtonTitle = "Close"
+        page.requiresCloseButton = false
+        
+        page.actionHandler = { (item: BLTNActionItem) in
+            item.manager!.dismissBulletin(animated: true)
+            }
+        
+        return BLTNItemManager(rootItem: page)
+    }()
+    
+    let userDefaults = UserDefaults(suiteName: "Chemistry")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +54,11 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
         })()
         
         tableView.reloadData()
+        
+        if (!(userDefaults?.bool(forKey: "molecules_descripted") ?? false)) {
+            descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
+            userDefaults?.set(true, forKey: "molecules_descripted")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
