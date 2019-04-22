@@ -8,6 +8,14 @@
 
 "en.wikipedia.org" = "ru.wikipedia.org";
 
+"AtomsDescriptorTitle" = "Атомы";
+"AtomsDescriptorText" = "Здесь вы сможете прочитать всю информацию об атомов из Википедии";
+"AtomsDescriptorButton" = "Закрыть";
+
+"MoleculesDescriptorTitle" = "Молекулы";
+"MoleculesDescriptorText" = "Здесь вы сможете увидеть 3D-модели молекул. Это иногда бывает очень полезно на уроках химии.";
+"MoleculesDescriptorButton" = "Закрыть";
+
 "Hydrogen" = "Водород";
 "Helium" = "Гелий";
 "Lithium" = "Литий";

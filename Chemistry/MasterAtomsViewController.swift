@@ -18,10 +18,10 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     var filteredAtoms: [String] = []
     
     lazy var descriptor: BLTNItemManager = {
-        let page = BLTNPageItem(title: "Atoms")
+        let page = BLTNPageItem(title: NSLocalizedString("AtomsDescriptorTitle", comment: ""))
         
-        page.descriptionText = "Here you can read information about all atoms from Wikipedia."
-        page.actionButtonTitle = "Close"
+        page.descriptionText = NSLocalizedString("AtomsDescriptorText", comment: "")
+        page.actionButtonTitle = NSLocalizedString("AtomsDescriptorButton", comment: "")
         page.requiresCloseButton = false
         
         page.actionHandler = { (item: BLTNActionItem) in

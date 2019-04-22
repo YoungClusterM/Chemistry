@@ -18,10 +18,10 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     var filteredMolecules: [String] = []
     
     lazy var descriptor: BLTNItemManager = {
-        let page = BLTNPageItem(title: "Molecules")
+        let page = BLTNPageItem(title: NSLocalizedString("MoleculesDescriptorTitle", comment: ""))
         
-        page.descriptionText = "Here you can view 3D model of molecules. It may be really helpful on Chemistry lessons."
-        page.actionButtonTitle = "Close"
+        page.descriptionText = NSLocalizedString("MoleculesDescriptorText", comment: "")
+        page.actionButtonTitle = NSLocalizedString("MoleculesDescriptorButton", comment: "")
         page.requiresCloseButton = false
         
         page.actionHandler = { (item: BLTNActionItem) in

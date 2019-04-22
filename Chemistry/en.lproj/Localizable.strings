@@ -8,6 +8,14 @@
 
 "en.wikipedia.org" = "en.wikipedia.org";
 
+"AtomsDescriptorTitle" = "Atoms";
+"AtomsDescriptorText" = "Here you can read information about all atoms from Wikipedia.";
+"AtomsDescriptorButton" = "Close";
+
+"MoleculesDescriptorTitle" = "Molecules";
+"MoleculesDescriptorText" = "Here you can view 3D models of molecules. It may be really helpful on Chemistry lessons.";
+"MoleculesDescriptorButton" = "Close";
+
 // ATOMS
 "Hydrogen" = "Hydrogen";
 "Helium" = "Helium";
