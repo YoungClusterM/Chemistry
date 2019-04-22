@@ -6,7 +6,7 @@
   Copyright © 2019 Pavel Kosilo. All rights reserved.
 */
 
-"wikipedia_host" = "ru.wikipedia.org";
+"en.wikipedia.org" = "ru.wikipedia.org";
 
 "Hydrogen" = "Водород";
 "Helium" = "Гелий";

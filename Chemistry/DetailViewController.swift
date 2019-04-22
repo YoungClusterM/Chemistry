@@ -44,7 +44,7 @@ class DetailViewController: UIViewController, WKUIDelegate {
                     let webView = WKWebView(frame: .zero, configuration: webConfiguration)
                     self.view = webView
                     
-                    let link = "https://"+NSLocalizedString("wikipedia_host", comment: "")+"/wiki/"
+                    let link = "https://"+NSLocalizedString("en.wikipedia.org", comment: "")+"/wiki/"
                     let s_link = NSLocalizedString(atom, comment: "").addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed)!
                     let myURL = URL(string:link + s_link)
                     let myRequest = URLRequest(url: myURL!)

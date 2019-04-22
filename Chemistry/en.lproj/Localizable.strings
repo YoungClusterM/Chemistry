@@ -6,7 +6,7 @@
   Copyright © 2019 Pavel Kosilo. All rights reserved.
 */
 
-"wikipedia_host" = "en.wikipedia.org";
+"en.wikipedia.org" = "en.wikipedia.org";
 
 // ATOMS
 "Hydrogen" = "Hydrogen";
