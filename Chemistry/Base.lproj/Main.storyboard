@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="RMx-3f-FxP" customClass="MasterNavigationController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Molecules" id="2uB-00-WIj"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -54,6 +54,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3159" y="-330"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iCk-u8-4G6">
+            <objects>
+                <navigationController id="m2f-gS-DFd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BSW-fE-kKN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="hJZ-Cg-Lva"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgH-bP-fCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335" y="751"/>
         </scene>
         <!--Molecules-->
         <scene sceneID="Nki-YV-4Qg">
@@ -107,13 +123,13 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Molecules" image="Image-1" selectedImage="Image-1" id="Mlo-iK-xHC"/>
+                    <tabBarItem key="tabBarItem" title="Molecules" image="molecule" selectedImage="molecule" id="Mlo-iK-xHC"/>
                     <navigationItem key="navigationItem" title="Molecules" id="Zdf-7t-Un8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1493" y="-630"/>
+            <point key="canvasLocation" x="1513" y="-1029"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7TQ-0d-8b0">
@@ -126,10 +142,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.44705882352941173" green="0.0" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="viewControllers" id="8OV-6f-MiU"/>
                         <segue destination="duk-Uq-r4y" kind="relationship" relationship="viewControllers" id="7hE-hx-jLE"/>
+                        <segue destination="Gp0-xF-uQg" kind="relationship" relationship="viewControllers" id="Qgb-2d-tnT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbe-wo-dpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,13 +216,13 @@
                             <outlet property="delegate" destination="duk-Uq-r4y" id="foX-VD-5Ki"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Atoms" image="Image" selectedImage="Image" id="dHB-cv-gmH"/>
+                    <tabBarItem key="tabBarItem" title="Atoms" image="atom" selectedImage="atom" id="dHB-cv-gmH"/>
                     <navigationItem key="navigationItem" title="Atoms" id="Sje-RM-ZBE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcR-0c-1OO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492.753623188406" y="44.866071428571423"/>
+            <point key="canvasLocation" x="1514" y="-330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bha-Ff-n6r">
@@ -214,6 +232,7 @@
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="YE6-bH-INw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="TKD-TU-z51"/>
@@ -223,13 +242,56 @@
             </objects>
             <point key="canvasLocation" x="2335" y="45"/>
         </scene>
+        <!--Reactions-->
+        <scene sceneID="AW0-Px-xXQ">
+            <objects>
+                <tableViewController title="Reactions" id="Gp0-xF-uQg" customClass="MasterReactionViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JYS-Jj-CMY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="3bn-Pl-AX4" style="IBUITableViewCellStyleDefault" id="qii-SB-zsB">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qii-SB-zsB" id="f7E-Rh-Ix3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3bn-Pl-AX4">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="m2f-gS-DFd" kind="showDetail" id="g89-mM-TDp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gp0-xF-uQg" id="MCN-j1-sTk"/>
+                            <outlet property="delegate" destination="Gp0-xF-uQg" id="pFw-3K-aD0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Reactions" image="reactor" landscapeImage="reactor" id="fCc-9w-OJz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgQ-fE-eg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="751"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Image" width="25" height="25"/>
-        <image name="Image-1" width="25" height="25"/>
+        <image name="atom" width="25" height="25"/>
+        <image name="molecule" width="25" height="25"/>
+        <image name="reactor" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
-        <segue reference="TKD-TU-z51"/>
+        <segue reference="6S0-TO-JiA"/>
+        <segue reference="hJZ-Cg-Lva"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.44705882352941173" green="0.0" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

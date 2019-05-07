@@ -1,8 +1,8 @@
 /* 
-  Localization.strings
+  Localizable.strings
   Chemistry
 
-  Created by Pavel Kasila on 4/22/19.
+  Created by Pavel Kasila on 4/23/19.
   Copyright © 2019 Pavel Kosilo. All rights reserved.
 */
 
@@ -148,3 +148,6 @@
 "Unbipentium" = "Унбипентий";
 "Unbihexium" = "Унбигексий";
 // End Super-actinides
+
+"Continue" = "Продолжить";
+"Cancel" = "Отменить";

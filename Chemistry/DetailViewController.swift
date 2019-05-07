@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import WebKit
+import ChemistryShared
 
 class DetailViewController: UIViewController, WKUIDelegate {
     

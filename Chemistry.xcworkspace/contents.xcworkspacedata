@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Chemistry Shared/Chemistry Shared.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/pavelkasila/Documents/Chemistry/Chemistry macOS/Chemistry macOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Chemistry.xcodeproj">
    </FileRef>
    <FileRef

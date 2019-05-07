@@ -8,6 +8,7 @@
 
 import UIKit
 import BLTNBoard
+import ChemistryShared
 
 class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating {
     
@@ -18,14 +19,16 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     var filteredAtoms: [String] = []
     
     lazy var descriptor: BLTNItemManager = {
-        let page = BLTNPageItem(title: NSLocalizedString("AtomsDescriptorTitle", comment: ""))
+        let page = BLTNPageItem(title: LocalizedStringSpecific("AtomsDescriptorTitle"))
         
-        page.descriptionText = NSLocalizedString("AtomsDescriptorText", comment: "")
-        page.actionButtonTitle = NSLocalizedString("AtomsDescriptorButton", comment: "")
+        page.descriptionText = LocalizedStringSpecific("AtomsDescriptorText")
+        page.actionButtonTitle = LocalizedStringSpecific("AtomsDescriptorButton")
+        page.appearance.actionButtonColor = self.view.tintColor
         page.requiresCloseButton = false
         
         page.actionHandler = { (item: BLTNActionItem) in
             item.manager!.dismissBulletin(animated: true)
+            self.userDefaults?.set(true, forKey: "atoms_descripted")
         }
         
         return BLTNItemManager(rootItem: page)
@@ -57,7 +60,6 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
         
         if (!(userDefaults?.bool(forKey: "atoms_descripted") ?? false)) {
             descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
-            userDefaults?.set(true, forKey: "atoms_descripted")
         }
     }
     

@@ -8,6 +8,7 @@
 
 import UIKit
 import BLTNBoard
+import ChemistryShared
 
 class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdating {
     
@@ -18,14 +19,17 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     var filteredMolecules: [String] = []
     
     lazy var descriptor: BLTNItemManager = {
-        let page = BLTNPageItem(title: NSLocalizedString("MoleculesDescriptorTitle", comment: ""))
+        let page = BLTNPageItem(title: LocalizedStringSpecific("MoleculesDescriptorTitle"))
         
-        page.descriptionText = NSLocalizedString("MoleculesDescriptorText", comment: "")
-        page.actionButtonTitle = NSLocalizedString("MoleculesDescriptorButton", comment: "")
+        page.image = UIImage(named: "molecule_descriptor")
+        page.descriptionText = LocalizedStringSpecific("MoleculesDescriptorText")
+        page.actionButtonTitle = LocalizedStringSpecific("MoleculesDescriptorButton")
+        page.appearance.actionButtonColor = self.view.tintColor
         page.requiresCloseButton = false
         
         page.actionHandler = { (item: BLTNActionItem) in
             item.manager!.dismissBulletin(animated: true)
+            self.userDefaults?.set(true, forKey: "molecules_descripted")
             }
         
         return BLTNItemManager(rootItem: page)
@@ -57,7 +61,6 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
         
         if (!(userDefaults?.bool(forKey: "molecules_descripted") ?? false)) {
             descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
-            userDefaults?.set(true, forKey: "molecules_descripted")
         }
     }
     
