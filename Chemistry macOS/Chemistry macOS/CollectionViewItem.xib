@@ -23,7 +23,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAW-kN-MTg">
                     <rect key="frame" x="-2" y="20" width="484" height="17"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Atom Name" id="IhX-cT-a5z">
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Hydrogen" id="IhX-cT-a5z">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -32,7 +32,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGB-e1-1NQ">
                     <rect key="frame" x="-2" y="45" width="484" height="39"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="Atom Symbol" id="gUU-lH-kDd">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="H" id="gUU-lH-kDd">
                         <font key="font" metaFont="system" size="32"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -41,7 +41,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="is9-4k-lEJ">
                     <rect key="frame" x="-2" y="0.0" width="484" height="17"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Atom Mass" id="4ZZ-O3-7aO">
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="1.00794" id="4ZZ-O3-7aO">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -50,7 +50,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1l-77-g06">
                     <rect key="frame" x="-2" y="67" width="484" height="17"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Atom Number" id="axE-NM-kWl">
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="1" id="axE-NM-kWl">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

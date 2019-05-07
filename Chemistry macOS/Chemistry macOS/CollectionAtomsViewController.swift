@@ -38,4 +38,8 @@ class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSourc
         collectionView.reloadData()
     }
     
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        collectionView.frame = CGRect(x: 0, y: 0, width: collectionView.frame.width, height: (collectionView.collectionViewLayout?.collectionViewContentSize.height)!)
+    }
 }
