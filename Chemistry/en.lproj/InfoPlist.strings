@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Chemistry
+
+  Created by Pavel Kasila on 5/5/19.
+  Copyright © 2019 Pavel Kosilo. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Chemistry";

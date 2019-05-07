@@ -9,10 +9,10 @@
 import UIKit
 import SceneKit
 import WebKit
+import ChemistryShared
 
 class DetailViewController: UIViewController, WKUIDelegate {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    
     var sceneView = SCNView(frame: CGRect(x: 0, y: 0, width: 512, height: 512))
     
     func configureSceneView(node: SCNNode) {
@@ -40,12 +40,14 @@ class DetailViewController: UIViewController, WKUIDelegate {
                 configureSceneView(node: molecule)
             } else {
                 if let atom = Atoms[detail]?.wikipedia { // Is it in Atoms
-                    self.title = atom
+                    self.title = NSLocalizedString(atom, comment: "")
                     let webConfiguration = WKWebViewConfiguration()
                     let webView = WKWebView(frame: .zero, configuration: webConfiguration)
                     self.view = webView
                     
-                    let myURL = URL(string:"https://en.m.wikipedia.org/wiki/"+atom)
+                    let link = "https://"+NSLocalizedString("en.wikipedia.org", comment: "")+"/wiki/"
+                    let s_link = NSLocalizedString(atom, comment: "").addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed)!
+                    let myURL = URL(string:link + s_link)
                     let myRequest = URLRequest(url: myURL!)
                     webView.load(myRequest)
                 }

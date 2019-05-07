@@ -1,0 +1,16 @@
+PODS:
+  - BulletinBoard (3.0.0)
+
+DEPENDENCIES:
+  - BulletinBoard
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BulletinBoard
+
+SPEC CHECKSUMS:
+  BulletinBoard: 927f4f9fd22503ceecd71bfc830fd65d5996593a
+
+PODFILE CHECKSUM: f14ef65048bb60c6124fdb2c47361361ce591784
+
+COCOAPODS: 1.6.1

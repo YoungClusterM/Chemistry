@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045F307F227EFDF100816C02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 045F3081227EFDF100816C02 /* Localizable.strings */; };
+		04A486372280368B00490805 /* libChemistryShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A486362280368B00490805 /* libChemistryShared.a */; };
+		04F8DD0C227ED90500064781 /* ReactionCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */; };
+		04F8DD0E227EE34100064781 /* MasterReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8DD0D227EE34100064781 /* MasterReactionViewController.swift */; };
+		04F8DD12227EE42700064781 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04F8DD14227EE42700064781 /* InfoPlist.strings */; };
+		1709BF51B36168A05CCBA097 /* libPods-Chemistry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC19E2FC5C0368AB710DDFF /* libPods-Chemistry.a */; };
 		9238AE7D223E7A860022BA1E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */; };
 		9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */; };
 		9238AE81223E96010022BA1E /* MasterAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */; };
@@ -17,15 +23,7 @@
 		9274DBE6217C86D5007AF82A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9274DBE4217C86D5007AF82A /* LaunchScreen.storyboard */; };
 		9274DBF1217C86D6007AF82A /* ChemistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBF0217C86D6007AF82A /* ChemistryTests.swift */; };
 		9274DBFC217C86D6007AF82A /* ChemistryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBFB217C86D6007AF82A /* ChemistryUITests.swift */; };
-		9274DC0F217C880B007AF82A /* H2O.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DC0E217C880B007AF82A /* H2O.swift */; };
-		9274DC11217C8965007AF82A /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DC10217C8965007AF82A /* Atoms.swift */; };
-		9274DC13217C8DA9007AF82A /* ToNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DC12217C8DA9007AF82A /* ToNode.swift */; };
-		92809E29217CADF3008FA2AB /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92809E28217CADF3008FA2AB /* Molecules.swift */; };
-		92809E2C217CAF29008FA2AB /* H2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92809E2B217CAF29008FA2AB /* H2.swift */; };
-		92809E2E217CAF62008FA2AB /* O2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92809E2D217CAF62008FA2AB /* O2.swift */; };
-		92CE1E23223D70360078380F /* F2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE1E22223D70360078380F /* F2.swift */; };
 		92D6F183223FD8F000C0F3A3 /* MasterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F182223FD8F000C0F3A3 /* MasterNavigationController.swift */; };
-		92D6F185223FF76400C0F3A3 /* Fe2O3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F184223FF76400C0F3A3 /* Fe2O3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,15 +44,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0458BD9C227DEA1C00FF26AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCalculatorViewController.swift; sourceTree = "<group>"; };
+		045F3080227EFDF100816C02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		045F3082227EFDF600816C02 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		04A486252280354500490805 /* ChemistryShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChemistryShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A486362280368B00490805 /* libChemistryShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libChemistryShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A4865222805B4100490805 /* Chemistry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chemistry.entitlements; sourceTree = "<group>"; };
+		04ED9251226F5A4B00994A8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04ED925B226F5B3500994A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04ED925C226F5B3500994A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04F8DD0D227EE34100064781 /* MasterReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterReactionViewController.swift; sourceTree = "<group>"; };
+		04F8DD13227EE42700064781 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04F8DD15227EE43100064781 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMoleculesViewController.swift; sourceTree = "<group>"; };
 		9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterAtomsViewController.swift; sourceTree = "<group>"; };
 		9274DBD6217C8686007AF82A /* Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBD9217C8687007AF82A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9274DBDD217C8687007AF82A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		9274DBE0217C8688007AF82A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9274DBE2217C86D5007AF82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9274DBE5217C86D5007AF82A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9274DBE7217C86D5007AF82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9274DBEC217C86D6007AF82A /* ChemistryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemistryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBF0217C86D6007AF82A /* ChemistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryTests.swift; sourceTree = "<group>"; };
@@ -62,15 +71,10 @@
 		9274DBF7217C86D6007AF82A /* ChemistryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemistryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBFB217C86D6007AF82A /* ChemistryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryUITests.swift; sourceTree = "<group>"; };
 		9274DBFD217C86D6007AF82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9274DC0E217C880B007AF82A /* H2O.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2O.swift; sourceTree = "<group>"; };
-		9274DC10217C8965007AF82A /* Atoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
-		9274DC12217C8DA9007AF82A /* ToNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNode.swift; sourceTree = "<group>"; };
-		92809E28217CADF3008FA2AB /* Molecules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
-		92809E2B217CAF29008FA2AB /* H2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2.swift; sourceTree = "<group>"; };
-		92809E2D217CAF62008FA2AB /* O2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = O2.swift; sourceTree = "<group>"; };
-		92CE1E22223D70360078380F /* F2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F2.swift; sourceTree = "<group>"; };
 		92D6F182223FD8F000C0F3A3 /* MasterNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterNavigationController.swift; sourceTree = "<group>"; };
-		92D6F184223FF76400C0F3A3 /* Fe2O3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fe2O3.swift; sourceTree = "<group>"; };
+		AEC19E2FC5C0368AB710DDFF /* libPods-Chemistry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chemistry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98B191E5BAF0D169BF48E9E /* Pods-Chemistry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemistry.release.xcconfig"; path = "Target Support Files/Pods-Chemistry/Pods-Chemistry.release.xcconfig"; sourceTree = "<group>"; };
+		C40F26F0682F1E45644ADE6E /* Pods-Chemistry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemistry.debug.xcconfig"; path = "Target Support Files/Pods-Chemistry/Pods-Chemistry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1709BF51B36168A05CCBA097 /* libPods-Chemistry.a in Frameworks */,
+				04A486372280368B00490805 /* libChemistryShared.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,29 +107,39 @@
 		043B10B5224FCAD3009E33D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEC19E2FC5C0368AB710DDFF /* libPods-Chemistry.a */,
+				04A486362280368B00490805 /* libChemistryShared.a */,
+				04A486252280354500490805 /* ChemistryShared.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9238AE57223E6E720022BA1E /* Chemistry Shared */ = {
+		04F8DD0F227EE37E00064781 /* Reactions */ = {
 			isa = PBXGroup;
 			children = (
-				92809E2A217CAEE1008FA2AB /* Chemistry */,
-				9274DC0B217C8753007AF82A /* Molecules */,
-				9274DC12217C8DA9007AF82A /* ToNode.swift */,
+				0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */,
 			);
-			path = "Chemistry Shared";
+			path = Reactions;
+			sourceTree = "<group>";
+		};
+		6F48A7D34CC40BB71FD64B8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C40F26F0682F1E45644ADE6E /* Pods-Chemistry.debug.xcconfig */,
+				B98B191E5BAF0D169BF48E9E /* Pods-Chemistry.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		9274DBCD217C8682007AF82A = {
 			isa = PBXGroup;
 			children = (
-				9238AE57223E6E720022BA1E /* Chemistry Shared */,
 				9274DBD8217C8686007AF82A /* Chemistry */,
 				9274DBEF217C86D6007AF82A /* ChemistryTests */,
 				9274DBFA217C86D6007AF82A /* ChemistryUITests */,
 				9274DBD7217C8686007AF82A /* Products */,
 				043B10B5224FCAD3009E33D0 /* Frameworks */,
+				6F48A7D34CC40BB71FD64B8D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,16 +156,21 @@
 		9274DBD8217C8686007AF82A /* Chemistry */ = {
 			isa = PBXGroup;
 			children = (
+				04A4865222805B4100490805 /* Chemistry.entitlements */,
 				9274DBD9217C8687007AF82A /* AppDelegate.swift */,
 				9274DBDF217C8688007AF82A /* Main.storyboard */,
 				9274DBDD217C8687007AF82A /* DetailViewController.swift */,
 				9274DBE2217C86D5007AF82A /* Assets.xcassets */,
 				9274DBE4217C86D5007AF82A /* LaunchScreen.storyboard */,
 				9274DBE7217C86D5007AF82A /* Info.plist */,
+				04F8DD14227EE42700064781 /* InfoPlist.strings */,
 				9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */,
 				9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */,
 				9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */,
 				92D6F182223FD8F000C0F3A3 /* MasterNavigationController.swift */,
+				04F8DD0D227EE34100064781 /* MasterReactionViewController.swift */,
+				04F8DD0F227EE37E00064781 /* Reactions */,
+				045F3081227EFDF100816C02 /* Localizable.strings */,
 			);
 			path = Chemistry;
 			sourceTree = "<group>";
@@ -172,27 +193,6 @@
 			path = ChemistryUITests;
 			sourceTree = "<group>";
 		};
-		9274DC0B217C8753007AF82A /* Molecules */ = {
-			isa = PBXGroup;
-			children = (
-				9274DC0E217C880B007AF82A /* H2O.swift */,
-				92809E2B217CAF29008FA2AB /* H2.swift */,
-				92809E2D217CAF62008FA2AB /* O2.swift */,
-				92CE1E22223D70360078380F /* F2.swift */,
-				92D6F184223FF76400C0F3A3 /* Fe2O3.swift */,
-			);
-			path = Molecules;
-			sourceTree = "<group>";
-		};
-		92809E2A217CAEE1008FA2AB /* Chemistry */ = {
-			isa = PBXGroup;
-			children = (
-				9274DC10217C8965007AF82A /* Atoms.swift */,
-				92809E28217CADF3008FA2AB /* Molecules.swift */,
-			);
-			path = Chemistry;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9274DC00217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry" */;
 			buildPhases = (
+				BE1CC7D5068CDC20E38F59C3 /* [CP] Check Pods Manifest.lock */,
 				9274DBD2217C8685007AF82A /* Sources */,
 				9274DBD3217C8685007AF82A /* Frameworks */,
 				9274DBD4217C8685007AF82A /* Resources */,
+				7311E4141A5A979ED3EEA49A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +263,14 @@
 				TargetAttributes = {
 					9274DBD5217C8685007AF82A = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
 					};
 					9274DBEB217C86D6007AF82A = {
 						CreatedOnToolsVersion = 10.0;
@@ -280,6 +290,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 				Base,
 			);
 			mainGroup = 9274DBCD217C8682007AF82A;
@@ -299,9 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045F307F227EFDF100816C02 /* Localizable.strings in Resources */,
 				9274DBE6217C86D5007AF82A /* LaunchScreen.storyboard in Resources */,
 				9274DBE3217C86D5007AF82A /* Assets.xcassets in Resources */,
 				9274DBE1217C8688007AF82A /* Main.storyboard in Resources */,
+				04F8DD12227EE42700064781 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,25 +334,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7311E4141A5A979ED3EEA49A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chemistry/Pods-Chemistry-resources.sh",
+				"${PODS_ROOT}/BulletinBoard/Resources/CloseGlyph.png",
+				"${PODS_ROOT}/BulletinBoard/Resources/CloseGlyph@2x.png",
+				"${PODS_ROOT}/BulletinBoard/Resources/CloseGlyph@3x.png",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/ar.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/ca.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/cs.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/da.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/de.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/el.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/en.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/es.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/fi.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/fr.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/he.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/hi.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/hr.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/hu.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/id.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/it.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/ja.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/ko.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/ms.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/nb.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/nl.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/pl.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/pt-BR.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/pt-PT.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/ro.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/ru.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/sk.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/sv.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/th.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/tr.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/uk.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/vi.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/zh-Hans.lproj",
+				"${PODS_ROOT}/BulletinBoard/Resources/Strings/zh-Hant.lproj",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CloseGlyph.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CloseGlyph@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CloseGlyph@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ar.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ca.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cs.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/da.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/de.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/el.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/es.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/fi.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/fr.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/he.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/hi.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/hr.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/hu.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/id.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/it.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ja.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ko.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ms.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/nb.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/nl.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pl.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pt-BR.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pt-PT.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ro.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ru.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sk.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sv.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/th.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tr.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/uk.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/vi.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hant.lproj",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chemistry/Pods-Chemistry-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE1CC7D5068CDC20E38F59C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chemistry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9274DBD2217C8685007AF82A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9274DC11217C8965007AF82A /* Atoms.swift in Sources */,
 				9274DBDE217C8687007AF82A /* DetailViewController.swift in Sources */,
 				9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */,
-				92809E2E217CAF62008FA2AB /* O2.swift in Sources */,
-				92CE1E23223D70360078380F /* F2.swift in Sources */,
+				04F8DD0C227ED90500064781 /* ReactionCalculatorViewController.swift in Sources */,
 				92D6F183223FD8F000C0F3A3 /* MasterNavigationController.swift in Sources */,
 				9238AE7D223E7A860022BA1E /* CustomTabBarController.swift in Sources */,
-				92809E29217CADF3008FA2AB /* Molecules.swift in Sources */,
-				9274DC0F217C880B007AF82A /* H2O.swift in Sources */,
-				92809E2C217CAF29008FA2AB /* H2.swift in Sources */,
+				04F8DD0E227EE34100064781 /* MasterReactionViewController.swift in Sources */,
 				9238AE81223E96010022BA1E /* MasterAtomsViewController.swift in Sources */,
-				92D6F185223FF76400C0F3A3 /* Fe2O3.swift in Sources */,
 				9274DBDA217C8687007AF82A /* AppDelegate.swift in Sources */,
-				9274DC13217C8DA9007AF82A /* ToNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +501,29 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		045F3081227EFDF100816C02 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				045F3080227EFDF100816C02 /* en */,
+				045F3082227EFDF600816C02 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		04F8DD14227EE42700064781 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F8DD13227EE42700064781 /* en */,
+				04F8DD15227EE43100064781 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		9274DBDF217C8688007AF82A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9274DBE0217C8688007AF82A /* Base */,
+				04ED925B226F5B3500994A8E /* Base */,
+				0458BD9C227DEA1C00FF26AD /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -386,7 +531,8 @@
 		9274DBE4217C86D5007AF82A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9274DBE5217C86D5007AF82A /* Base */,
+				04ED9251226F5A4B00994A8E /* ru */,
+				04ED925C226F5B3500994A8E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -398,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -458,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -510,6 +658,7 @@
 		};
 		9274DC01217C86D6007AF82A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40F26F0682F1E45644ADE6E /* Pods-Chemistry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +677,7 @@
 		};
 		9274DC02217C86D6007AF82A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98B191E5BAF0D169BF48E9E /* Pods-Chemistry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

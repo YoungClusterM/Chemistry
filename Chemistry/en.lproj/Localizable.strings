@@ -1,0 +1,154 @@
+/* 
+  Localizable.strings
+  Chemistry
+
+  Created by Pavel Kasila on 4/23/19.
+  Copyright © 2019 Pavel Kosilo. All rights reserved.
+*/
+
+"en.wikipedia.org" = "en.wikipedia.org";
+
+"AtomsDescriptorTitle" = "Atoms";
+"AtomsDescriptorText" = "Here you can read information about all atoms from Wikipedia.";
+"AtomsDescriptorButton" = "Close";
+
+"MoleculesDescriptorTitle" = "Molecules";
+"MoleculesDescriptorText" = "Here you can view 3D models of molecules. It may be really helpful on Chemistry lessons.";
+"MoleculesDescriptorButton" = "Close";
+
+// ATOMS
+"Hydrogen" = "Hydrogen";
+"Helium" = "Helium";
+"Lithium" = "Lithium";
+"Beryllium" = "Beryllium";
+"Boron" = "Boron";
+"Carbon" = "Carbon";
+"Nitrogen" = "Nitrogen";
+"Oxygen" = "Oxygen";
+"Fluorine" = "Fluorine";
+"Neon" = "Neon";
+"Sodium" = "Sodium";
+"Magnesium" = "Magnesium";
+"Aluminium" = "Aluminium";
+"Silicon" = "Silicon";
+"Phosphorus" = "Phosphorus";
+"Sulfur" = "Sulfur";
+"Chlorine" = "Chlorine";
+"Argon" = "Argon";
+"Potassium" = "Potassium";
+"Calcium" = "Calcium";
+"Scandium" = "Scandium";
+"Titanium" = "Titanium";
+"Vanadium" = "Vanadium";
+"Chromium" = "Chromium";
+"Manganese" = "Manganese";
+"Iron" = "Iron";
+"Cobalt" = "Cobalt";
+"Nickel" = "Nickel";
+"Copper" = "Copper";
+"Zinc" = "Zinc";
+"Gallium" = "Gallium";
+"Germanium" = "Germanium";
+"Arsenic" = "Arsenic";
+"Selenium" = "Selenium";
+"Bromine" = "Bromine";
+"Krypton" = "Krypton";
+"Rubidium" = "Rubidium";
+"Strontium" = "Strontium";
+"Yttrium" = "Yttrium";
+"Zirconium" = "Zirconium";
+"Niobium" = "Niobium";
+"Molybdenum" = "Molybdenum";
+"Technetium" = "Technetium";
+"Ruthenium" = "Ruthenium";
+"Rhodium" = "Rhodium";
+"Palladium" = "Palladium";
+"Silver" = "Silver";
+"Cadmium" = "Cadmium";
+"Indium" = "Indium";
+"Tin" = "Tin";
+"Antimony" = "Antimony";
+"Tellurium" = "Tellurium";
+"Iodine" = "Iodine";
+"Xenon" = "Xenon";
+"Cesium" = "Cesium";
+"Barium" = "Barium";
+// Begin lanthanes
+"Lanthanum" = "Lanthanum";
+"Cerium" = "Cerium";
+"Praseodymium" = "Praseodymium";
+"Neodymium" = "Neodymium";
+"Promethium" = "Promethium";
+"Samarium" = "Samarium";
+"Europium" = "Europium";
+"Gadolinium" = "Gadolinium";
+"Terbium" = "Terbium";
+"Dysprosium" = "Dysprosium";
+"Holmium" = "Holmium";
+"Erbium" = "Erbium";
+"Thulium" = "Thulium";
+"Ytterbium" = "Ytterbium";
+"Lutetium" = "Lutetium";
+// End lanthanes
+"Hafnium" = "Hafnium";
+"Tantalum" = "Tantalum";
+"Tungsten" = "Tungsten";
+"Rhenium" = "Rhenium";
+"Osmium" = "Osmium";
+"Iridium" = "Iridium";
+"Platinum" = "Platinum";
+"Gold" = "Gold";
+"Mercury" = "Mercury";
+"Thallium" = "Thallium";
+"Lead" = "Lead";
+"Bismuth" = "Bismuth";
+"Polonium" = "Polonium";
+"Astatine" = "Astatine";
+"Radon" = "Radon";
+"Francium" = "Francium";
+"Radium" = "Radium";
+// Begin Actinides
+"Actinium" = "Actinium";
+"Thorium" = "Thorium";
+"Protactinium" = "Protactinium";
+"Uranium" = "Uranium";
+"Neptunium" = "Neptunium";
+"Plutonium" = "Plutonium";
+"Americium" = "Americium";
+"Curium" = "Curium";
+"Berkelium" = "Berkelium";
+"Californium" = "Californium";
+"Einsteinium" = "Einsteinium";
+"Fermium" = "Fermium";
+"Mendelevium" = "Mendelevium";
+"Nobelium" = "Nobelium";
+"Lawrencium" = "Lawrencium";
+// End Actinides
+"Rutherfordium" = "Rutherfordium";
+"Dubnium" = "Dubnium";
+"Seaborgium" = "Seaborgium";
+"Bohrium" = "Bohrium";
+"Hassium" = "Hassium";
+"Meitnerium" = "Meitnerium";
+"Darmstadtium" = "Darmstadtium";
+"Roentgenium" = "Roentgenium";
+"Copernicium" = "Copernicium";
+"Nihonium" = "Nihonium";
+"Flerovium" = "Flerovium";
+"Moscovium" = "Moscovium";
+"Livermorium" = "Livermorium";
+"Tennessine" = "Tennessine";
+"Oganesson" = "Oganesson";
+"Ununennium" = "Ununennium";
+"Unbinilium" = "Unbinilium";
+// Begin Super-actinides
+"Unbiunium" = "Unbiunium";
+"Unbibium" = "Unbibium";
+"Unbitrium" = "Unbitrium";
+"Unbiquadium" = "Unbiquadium";
+"Unbipentium" = "Unbipentium";
+"Unbihexium" = "Unbihexium";
+// End Super-actinides
+
+"Continue" = "Continue";
+"Cancel" = "Cancel";

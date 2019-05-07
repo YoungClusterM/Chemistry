@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BLTNBoard
+import ChemistryShared
 
 class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating {
     
@@ -15,6 +17,24 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     
     var searchController = UISearchController()
     var filteredAtoms: [String] = []
+    
+    lazy var descriptor: BLTNItemManager = {
+        let page = BLTNPageItem(title: LocalizedStringSpecific("AtomsDescriptorTitle"))
+        
+        page.descriptionText = LocalizedStringSpecific("AtomsDescriptorText")
+        page.actionButtonTitle = LocalizedStringSpecific("AtomsDescriptorButton")
+        page.appearance.actionButtonColor = self.view.tintColor
+        page.requiresCloseButton = false
+        
+        page.actionHandler = { (item: BLTNActionItem) in
+            item.manager!.dismissBulletin(animated: true)
+            self.userDefaults?.set(true, forKey: "atoms_descripted")
+        }
+        
+        return BLTNItemManager(rootItem: page)
+    }()
+    
+    let userDefaults = UserDefaults(suiteName: "Chemistry")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +57,10 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
         })()
         
         tableView.reloadData()
+        
+        if (!(userDefaults?.bool(forKey: "atoms_descripted") ?? false)) {
+            descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,7 +119,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
             object = objects[indexPath.row]
         }
         cell.textLabel!.text = object.description
-        cell.detailTextLabel!.text = Atoms[object.description]!.wikipedia
+        cell.detailTextLabel!.text = NSLocalizedString(Atoms[object.description]!.wikipedia, comment: "")
         return cell
     }
     
@@ -120,7 +144,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
             return atom.lowercased().contains(searchController.searchBar.text!.lowercased())
         }) // Symbols
         let array2 = (objects as Array).filter({atom -> Bool in
-            return Atoms[atom]!.wikipedia.lowercased().contains(searchController.searchBar.text!.lowercased())
+            return NSLocalizedString(Atoms[atom]!.wikipedia, comment: "").lowercased().contains(searchController.searchBar.text!.lowercased())
         }) // Names
         
         filteredAtoms = array + array2

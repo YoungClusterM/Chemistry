@@ -1,0 +1,41 @@
+/* Class = "UITabBarItem"; title = "Молекулы"; ObjectID = "2uB-00-WIj"; */
+"2uB-00-WIj.title" = "Молекулы";
+
+/* Class = "UITableViewController"; title = "Молекулы"; ObjectID = "7bK-jq-Zjz"; */
+"7bK-jq-Zjz.title" = "Молекулы";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "8SD-uo-oaD"; */
+"8SD-uo-oaD.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Arm-wq-HPj"; */
+"Arm-wq-HPj.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Tab Bar Controller"; ObjectID = "IQO-tf-aXO"; */
+"IQO-tf-aXO.title" = "Tab Bar Controller";
+
+/* Class = "UITabBarItem"; title = "Молекулы"; ObjectID = "Mlo-iK-xHC"; */
+"Mlo-iK-xHC.title" = "Молекулы";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Ond-i4-idd"; */
+"Ond-i4-idd.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Молекулы"; ObjectID = "Pxd-Sw-bd3"; */
+"Pxd-Sw-bd3.title" = "Молекулы";
+
+/* Class = "UINavigationItem"; title = "Атомы"; ObjectID = "Sje-RM-ZBE"; */
+"Sje-RM-ZBE.title" = "Атомы";
+
+/* Class = "UINavigationItem"; title = "Молекулы"; ObjectID = "Zdf-7t-Un8"; */
+"Zdf-7t-Un8.title" = "Молекулы";
+
+/* Class = "UITabBarItem"; title = "Атомы"; ObjectID = "dHB-cv-gmH"; */
+"dHB-cv-gmH.title" = "Атомы";
+
+/* Class = "UITableViewController"; title = "Атомы"; ObjectID = "duk-Uq-r4y"; */
+"duk-Uq-r4y.title" = "Атомы";
+
+/* Class = "UITabBarItem"; title = "Reactions"; ObjectID = "fCc-9w-OJz"; */
+"fCc-9w-OJz.title" = "Реакции";
+
+/* Class = "UITableViewController"; title = "Reactions"; ObjectID = "Gp0-xF-uQg"; */
+"Gp0-xF-uQg.title" = "Реакции";

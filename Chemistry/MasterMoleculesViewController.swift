@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BLTNBoard
+import ChemistryShared
 
 class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdating {
     
@@ -15,6 +17,25 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     
     var searchController = UISearchController()
     var filteredMolecules: [String] = []
+    
+    lazy var descriptor: BLTNItemManager = {
+        let page = BLTNPageItem(title: LocalizedStringSpecific("MoleculesDescriptorTitle"))
+        
+        page.image = UIImage(named: "molecule_descriptor")
+        page.descriptionText = LocalizedStringSpecific("MoleculesDescriptorText")
+        page.actionButtonTitle = LocalizedStringSpecific("MoleculesDescriptorButton")
+        page.appearance.actionButtonColor = self.view.tintColor
+        page.requiresCloseButton = false
+        
+        page.actionHandler = { (item: BLTNActionItem) in
+            item.manager!.dismissBulletin(animated: true)
+            self.userDefaults?.set(true, forKey: "molecules_descripted")
+            }
+        
+        return BLTNItemManager(rootItem: page)
+    }()
+    
+    let userDefaults = UserDefaults(suiteName: "Chemistry")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +58,10 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
         })()
         
         tableView.reloadData()
+        
+        if (!(userDefaults?.bool(forKey: "molecules_descripted") ?? false)) {
+            descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
