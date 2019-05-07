@@ -759,7 +759,7 @@
                 <splitViewController title="Atoms" id="NLo-fq-n6J" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="dw2-z4-Ykt"/>
-                        <splitViewItem id="NJg-g6-cnQ"/>
+                        <splitViewItem id="srj-oW-HNA"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="CHW-oD-0Hb">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -771,56 +771,106 @@
                     <connections>
                         <outlet property="splitView" destination="CHW-oD-0Hb" id="Z9e-IV-vhe"/>
                         <segue destination="VTS-rX-JMX" kind="relationship" relationship="splitItems" id="9Ti-1r-YnD"/>
-                        <segue destination="etp-hp-Uwm" kind="relationship" relationship="splitItems" id="cir-OX-3JG"/>
+                        <segue destination="Bz7-hR-Ktk" kind="relationship" relationship="splitItems" id="jXW-Re-rO0"/>
                     </connections>
                 </splitViewController>
                 <customObject id="0Lh-xL-UD8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417" y="1260"/>
         </scene>
-        <!--View Controller-->
+        <!--Atoms Collection-->
         <scene sceneID="Ddx-GX-qDU">
             <objects>
-                <viewController id="VTS-rX-JMX" sceneMemberID="viewController">
+                <customObject id="tSD-TE-UtS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Atoms Collection" id="VTS-rX-JMX" customClass="CollectionAtomsViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="np0-pJ-mjl">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjK-Fl-94c">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <clipView key="contentView" ambiguous="YES" id="M8q-rQ-OSL">
+                                    <rect key="frame" x="1" y="1" width="448" height="298"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView ambiguous="YES" id="msI-1w-ONq">
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="zLR-3g-sEX">
+                                                <size key="itemSize" width="100" height="100"/>
+                                                <edgeInsets key="sectionInset" left="10" right="10" top="10" bottom="10"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="VTS-rX-JMX" id="bib-FV-17X"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="npw-VI-cGE">
+                                    <rect key="frame" x="1" y="283" width="448" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="dWT-p5-bje">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="msI-1w-ONq" id="Oz8-RE-Q2S"/>
+                    </connections>
                 </viewController>
-                <customObject id="tSD-TE-UtS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="1373"/>
+            <point key="canvasLocation" x="417" y="1705"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="l2g-hf-rYi">
-            <objects>
-                <viewController id="etp-hp-Uwm" sceneMemberID="viewController">
-                    <view key="view" id="E1w-bV-dkI">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="8p8-ey-fMJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="969" y="1745"/>
-        </scene>
-        <!--View Controller-->
+        <!--Molecules Collection-->
         <scene sceneID="EVS-0W-f8Z">
             <objects>
-                <viewController id="fok-Zh-NTW" sceneMemberID="viewController">
+                <customObject id="izP-Ew-thb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Molecules Collection" id="fok-Zh-NTW" sceneMemberID="viewController">
                     <view key="view" id="5hr-qr-BpZ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-5s-lHP">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <clipView key="contentView" ambiguous="YES" id="OCF-gW-Err">
+                                    <rect key="frame" x="1" y="1" width="448" height="298"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView ambiguous="YES" id="2g8-HD-tgr">
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="JTQ-2k-INg">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="B06-bc-BcU">
+                                    <rect key="frame" x="1" y="273" width="448" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lix-NT-bbh">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
                     </view>
                 </viewController>
-                <customObject id="izP-Ew-thb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1395" y="652"/>
+            <point key="canvasLocation" x="1266" y="811"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="H4g-Me-otk">
             <objects>
-                <viewController id="Bz7-hR-Ktk" sceneMemberID="viewController">
+                <viewController title="Detail View Controller" id="Bz7-hR-Ktk" sceneMemberID="viewController">
                     <view key="view" id="Pm1-ZY-4If">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -828,11 +878,14 @@
                 </viewController>
                 <customObject id="MeK-1A-29s" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1395" y="1024"/>
+            <point key="canvasLocation" x="1266" y="1260"/>
         </scene>
     </scenes>
     <resources>
         <image name="atom" width="25" height="25"/>
         <image name="molecule" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eUv-td-Exc"/>
+    </inferredMetricsTieBreakers>
 </document>

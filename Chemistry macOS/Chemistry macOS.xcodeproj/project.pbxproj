@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */; };
+		0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1872281C8D90036DBBC /* CollectionViewItem.swift */; };
+		0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443A1882281C8D90036DBBC /* CollectionViewItem.xib */; };
 		0481CD4022802B58009F5830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481CD3F22802B58009F5830 /* AppDelegate.swift */; };
 		0481CD4222802B58009F5830 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481CD4122802B58009F5830 /* ViewController.swift */; };
 		0481CD4422802B5A009F5830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0481CD4322802B5A009F5830 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAtomsViewController.swift; sourceTree = "<group>"; };
+		0443A1872281C8D90036DBBC /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
+		0443A1882281C8D90036DBBC /* CollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
 		0481CD3C22802B58009F5830 /* Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0481CD3F22802B58009F5830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0481CD4122802B58009F5830 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 				0481CD4822802B5A009F5830 /* Info.plist */,
 				0481CD4922802B5A009F5830 /* Chemistry_macOS.entitlements */,
 				04A4865522807F6D00490805 /* WindowController.swift */,
+				0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */,
+				0443A1872281C8D90036DBBC /* CollectionViewItem.swift */,
+				0443A1882281C8D90036DBBC /* CollectionViewItem.xib */,
 			);
 			path = "Chemistry macOS";
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 			files = (
 				0481CD4422802B5A009F5830 /* Assets.xcassets in Resources */,
 				0481CD4722802B5A009F5830 /* Main.storyboard in Resources */,
+				0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +297,8 @@
 				04A4865622807F6D00490805 /* WindowController.swift in Sources */,
 				0481CD4222802B58009F5830 /* ViewController.swift in Sources */,
 				0481CD4022802B58009F5830 /* AppDelegate.swift in Sources */,
+				0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */,
+				0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
