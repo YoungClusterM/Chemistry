@@ -22,7 +22,20 @@ class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSourc
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"), for: indexPath)
-        guard let collectionViewItem = item as? CollectionViewItem else {fatalError("Failed to convert item to CollectionViewItem")}
+        guard let collectionViewItem = item as? CollectionViewItem else {
+            let text =  "Cannot convert NSCollectionViewItem to CollectionViewItem\n" +
+                "Seems like dataset is corrupted. Please download original or tested dataset (likes below)\n" +
+                "Latest: https://eduservice.oopscommand.com/chemistry/downloads/macOS/datasets/latest.json\n" +
+                "Tested: https://eduservice.oopscommand.com/chemistry/downloads/macOS/datasets/tested.json\n" +
+            "MOVE IT TO: \(NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)[0])/EduService/Chemistry/dataset.json"
+            let alert = NSAlert.init()
+            alert.messageText = "Error"
+            alert.informativeText = text
+            alert.alertStyle = .critical
+            alert.addButton(withTitle: "OK")
+            alert.runModal()
+            fatalError(text)
+        }
         
         collectionViewItem.atom = objects[indexPath.item]
         

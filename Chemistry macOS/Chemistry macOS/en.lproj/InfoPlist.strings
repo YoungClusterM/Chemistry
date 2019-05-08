@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Chemistry macOS
+
+  Created by Pavel Kasila on 5/8/19.
+  Copyright © 2019 Pavel Kasila. All rights reserved.
+*/
+"CFBundleDisplayName" = "Chemistry";
