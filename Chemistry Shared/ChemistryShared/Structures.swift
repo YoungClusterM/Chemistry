@@ -9,6 +9,7 @@
 import Foundation
 import CoreGraphics
 
+// Our .pack file manifest structure
 public struct ChemistryPack: Encodable, Decodable {
     public var packDetails: ChemistryPackDetails
     public var items: [ChemistryAtom]
@@ -18,6 +19,7 @@ public struct ChemistryPack: Encodable, Decodable {
     }
 }
 
+// Pack's details structure
 public struct ChemistryPackDetails: Encodable, Decodable {
     public var title: String
     public var version: String
@@ -32,6 +34,7 @@ public struct ChemistryPackDetails: Encodable, Decodable {
     }
 }
 
+// Atom's structure
 public struct ChemistryAtom: Encodable, Decodable {
     public var symbol: String
     public var number: Int
@@ -49,6 +52,7 @@ public struct ChemistryAtom: Encodable, Decodable {
     }
 }
 
+// Color's structure
 public struct ChemistryColor: Encodable, Decodable {
     public var red: CGFloat
     public var green: CGFloat
