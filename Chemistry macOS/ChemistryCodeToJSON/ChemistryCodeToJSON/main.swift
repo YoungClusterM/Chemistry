@@ -11,61 +11,29 @@ import CoreGraphics
 import ChemistryShared
 import AppKit
 
-struct ExportablePack: Encodable, Decodable {
-    var packDetails: ExportablePackDetails
-    var items: [ExportableAtom]
+func randomString(length: Int) -> String {
+    let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return String((0..<length).map{ _ in letters.randomElement()! })
 }
 
-struct ExportablePackDetails: Encodable, Decodable {
-    var title: String
-    var version: String
-    var type: String
-    var copyright: String
-}
-
-struct ExportableAtom: Encodable, Decodable {
-    var symbol: String
-    var number: Int
-    var title: String
-    var color: ExportableColor
-    var radius: Int
-    var mass: Float
-}
-
-struct ExportableColor: Encodable, Decodable {
-    var red: CGFloat
-    var green: CGFloat
-    var blue: CGFloat
-}
+let settings = ExportablePackDetails(
+    title: CommandLine.argc > 2 ? CommandLine.arguments[2] : randomString(length: 16),
+    version: CommandLine.argc > 3 ? CommandLine.arguments[3] : "0.0.0",
+    type: CommandLine.argc != 1 ? CommandLine.arguments[1] : "atoms",
+    copyright: "© 2019 " + (CommandLine.argc > 4 ? CommandLine.arguments[4] : NSFullUserName()) + ". All rights reserved."
+)
 
 var items: [ExportableAtom] = []
 
-Atoms.forEach { (arg) in
-    let (key, value) = arg
-    let color = value.color.usingColorSpace(.adobeRGB1998)
-    items.append(
-        ExportableAtom(
-            symbol: key,
-            number: Int(value.num),
-            title: value.wikipedia,
-            color: ExportableColor(
-                red: color!.redComponent,
-                green: color!.greenComponent,
-                blue: color!.blueComponent
-            ),
-            radius: Int(value.pm),
-            mass: value.atomMass
-        )
-    )
+switch(settings.type) {
+case "atoms":
+    items = packAtoms(Atoms)
+default:
+    fatalError("Cannot use type called \"\(settings.type)\"")
 }
 
 let pack = ExportablePack(
-    packDetails: ExportablePackDetails(
-        title: "Atoms",
-        version: "1.0.0",
-        type: "atoms",
-        copyright: "© 2019 Pavel Kasila. All rights reserved."
-    ),
+    packDetails: settings,
     items: items
 )
 
