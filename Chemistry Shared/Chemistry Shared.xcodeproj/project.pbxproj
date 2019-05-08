@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04298DA322831850009D358D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298DA222831850009D358D /* Structures.swift */; };
 		045799CD2280B47D00A76059 /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CB2280B47D00A76059 /* Molecules.swift */; };
 		045799CE2280B47D00A76059 /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CC2280B47D00A76059 /* Atoms.swift */; };
 		045799D52280B48500A76059 /* H2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799D02280B48500A76059 /* H2.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		04298D7D2282F446009D358D /* Atoms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Atoms.json; sourceTree = "<group>"; };
+		04298DA222831850009D358D /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		045799CB2280B47D00A76059 /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		045799CC2280B47D00A76059 /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
 		045799D02280B48500A76059 /* H2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H2.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		04A486302280368000490805 /* ChemistryShared */ = {
 			isa = PBXGroup;
 			children = (
+				04298DA222831850009D358D /* Structures.swift */,
 				04298D7C2282F430009D358D /* Resources */,
 				045799CF2280B48500A76059 /* Molecules */,
 				045799CA2280B47D00A76059 /* Chemistry */,
@@ -171,6 +174,7 @@
 				04A4864C228036BD00490805 /* ToNode.swift in Sources */,
 				045799D92280B48500A76059 /* Fe2O3.swift in Sources */,
 				045799CD2280B47D00A76059 /* Molecules.swift in Sources */,
+				04298DA322831850009D358D /* Structures.swift in Sources */,
 				045799D72280B48500A76059 /* H2O.swift in Sources */,
 				045799CE2280B47D00A76059 /* Atoms.swift in Sources */,
 				045799D52280B48500A76059 /* H2.swift in Sources */,
