@@ -32,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04298D7D2282F446009D358D /* Atoms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Atoms.json; sourceTree = "<group>"; };
 		045799CB2280B47D00A76059 /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		045799CC2280B47D00A76059 /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
 		045799D02280B48500A76059 /* H2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H2.swift; sourceTree = "<group>"; };
@@ -56,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04298D7C2282F430009D358D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04298D7D2282F446009D358D /* Atoms.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		045799CA2280B47D00A76059 /* Chemistry */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +97,7 @@
 		04A486302280368000490805 /* ChemistryShared */ = {
 			isa = PBXGroup;
 			children = (
+				04298D7C2282F430009D358D /* Resources */,
 				045799CF2280B48500A76059 /* Molecules */,
 				045799CA2280B47D00A76059 /* Chemistry */,
 				04A48644228036BC00490805 /* String.swift */,

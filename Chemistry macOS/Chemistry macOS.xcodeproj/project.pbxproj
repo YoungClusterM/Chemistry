@@ -22,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		04298D952282F5AE009D358D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04298D872282F5AD009D358D;
+			remoteInfo = ChemistryCodeToJSON;
+		};
 		0481CD4F22802B5A009F5830 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0481CD3422802B58009F5830 /* Project object */;
@@ -44,6 +51,7 @@
 		041B5EDA2282B73A00A8B23C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		041B5EDB2282B7EE00A8B23C /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/Main.strings; sourceTree = "<group>"; };
 		041B5EDC2282B7EE00A8B23C /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChemistryCodeToJSON.xcodeproj; path = ChemistryCodeToJSON/ChemistryCodeToJSON.xcodeproj; sourceTree = "<group>"; };
 		0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAtomsViewController.swift; sourceTree = "<group>"; };
 		0443A1872281C8D90036DBBC /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
 		0443A1882281C8D90036DBBC /* CollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
@@ -92,9 +100,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04298D922282F5AD009D358D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04298D962282F5AE009D358D /* ChemistryCodeToJSON */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0481CD3322802B58009F5830 = {
 			isa = PBXGroup;
 			children = (
+				04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */,
 				04A485E322802F5C00490805 /* Chemistry.entitlements */,
 				0481CD3E22802B58009F5830 /* Chemistry macOS */,
 				0481CD5122802B5A009F5830 /* Chemistry macOSTests */,
@@ -262,6 +279,12 @@
 			mainGroup = 0481CD3322802B58009F5830;
 			productRefGroup = 0481CD3D22802B58009F5830 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04298D922282F5AD009D358D /* Products */;
+					ProjectRef = 04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0481CD3B22802B58009F5830 /* Chemistry */,
@@ -270,6 +293,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		04298D962282F5AE009D358D /* ChemistryCodeToJSON */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = ChemistryCodeToJSON;
+			remoteRef = 04298D952282F5AE009D358D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0481CD3A22802B58009F5830 /* Resources */ = {

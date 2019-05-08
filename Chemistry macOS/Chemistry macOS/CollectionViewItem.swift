@@ -33,4 +33,13 @@ class CollectionViewItem: NSCollectionViewItem {
         
     }
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                let view = collectionView as! CollectionAtomsView
+                view.didSelectedItem(item: self)
+            }
+        }
+    }
+    
 }
