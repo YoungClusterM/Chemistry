@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041B5ED72282B73600A8B23C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 041B5ED92282B73600A8B23C /* InfoPlist.strings */; };
 		0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */; };
 		0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1872281C8D90036DBBC /* CollectionViewItem.swift */; };
 		0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443A1882281C8D90036DBBC /* CollectionViewItem.xib */; };
@@ -21,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		04298D952282F5AE009D358D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04298D872282F5AD009D358D;
+			remoteInfo = ChemistryCodeToJSON;
+		};
 		0481CD4F22802B5A009F5830 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0481CD3422802B58009F5830 /* Project object */;
@@ -38,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041B5ED42282B70D00A8B23C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		041B5ED82282B73600A8B23C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		041B5EDA2282B73A00A8B23C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		041B5EDB2282B7EE00A8B23C /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/Main.strings; sourceTree = "<group>"; };
+		041B5EDC2282B7EE00A8B23C /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChemistryCodeToJSON.xcodeproj; path = ChemistryCodeToJSON/ChemistryCodeToJSON.xcodeproj; sourceTree = "<group>"; };
 		0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAtomsViewController.swift; sourceTree = "<group>"; };
 		0443A1872281C8D90036DBBC /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
 		0443A1882281C8D90036DBBC /* CollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
@@ -86,9 +100,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04298D922282F5AD009D358D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04298D962282F5AE009D358D /* ChemistryCodeToJSON */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0481CD3322802B58009F5830 = {
 			isa = PBXGroup;
 			children = (
+				04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */,
 				04A485E322802F5C00490805 /* Chemistry.entitlements */,
 				0481CD3E22802B58009F5830 /* Chemistry macOS */,
 				0481CD5122802B5A009F5830 /* Chemistry macOSTests */,
@@ -121,6 +144,7 @@
 				0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */,
 				0443A1872281C8D90036DBBC /* CollectionViewItem.swift */,
 				0443A1882281C8D90036DBBC /* CollectionViewItem.xib */,
+				041B5ED92282B73600A8B23C /* InfoPlist.strings */,
 			);
 			path = "Chemistry macOS";
 			sourceTree = "<group>";
@@ -249,10 +273,18 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				be,
 			);
 			mainGroup = 0481CD3322802B58009F5830;
 			productRefGroup = 0481CD3D22802B58009F5830 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04298D922282F5AD009D358D /* Products */;
+					ProjectRef = 04298D912282F5AD009D358D /* ChemistryCodeToJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0481CD3B22802B58009F5830 /* Chemistry */,
@@ -262,12 +294,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		04298D962282F5AE009D358D /* ChemistryCodeToJSON */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = ChemistryCodeToJSON;
+			remoteRef = 04298D952282F5AE009D358D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		0481CD3A22802B58009F5830 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0481CD4422802B5A009F5830 /* Assets.xcassets in Resources */,
+				041B5ED72282B73600A8B23C /* InfoPlist.strings in Resources */,
 				0481CD4722802B5A009F5830 /* Main.storyboard in Resources */,
 				0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */,
 			);
@@ -334,10 +377,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		041B5ED92282B73600A8B23C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041B5ED82282B73600A8B23C /* ru */,
+				041B5EDA2282B73A00A8B23C /* en */,
+				041B5EDC2282B7EE00A8B23C /* be */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		0481CD4522802B5A009F5830 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0481CD4622802B5A009F5830 /* Base */,
+				041B5ED42282B70D00A8B23C /* ru */,
+				041B5EDB2282B7EE00A8B23C /* be */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -349,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -410,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
