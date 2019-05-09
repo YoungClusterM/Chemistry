@@ -61,6 +61,9 @@
                                     <items>
                                         <menuItem title="Load molecules from .pack" id="OKI-Ha-VdX">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="addMoleculesLocal:" target="Voe-Tx-rLC" id="RMu-a8-Xq2"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem title="Load molecules from Network" id="e8B-j2-RrX">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -259,7 +262,7 @@
         <scene sceneID="EVS-0W-f8Z">
             <objects>
                 <customObject id="izP-Ew-thb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController title="Molecules Collection" id="fok-Zh-NTW" sceneMemberID="viewController">
+                <viewController title="Molecules Collection" id="fok-Zh-NTW" customClass="CollectionMoleculesViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="5hr-qr-BpZ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -300,6 +303,9 @@
                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="TS3-X3-L6d">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <connections>
+                                                <action selector="addMolecules:" target="fok-Zh-NTW" id="xkN-pr-1zH"/>
+                                            </connections>
                                         </buttonCell>
                                     </button>
                                 </subviews>
@@ -321,6 +327,9 @@
                             <constraint firstItem="jF3-zN-0mA" firstAttribute="top" secondItem="5hr-qr-BpZ" secondAttribute="top" id="fgb-Bt-IXx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="2g8-HD-tgr" id="sdJ-L8-AYe"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1266" y="811"/>

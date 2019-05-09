@@ -11,7 +11,12 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    let moleculesLoader = MoleculesLoadWindow()
+    @IBAction func addMoleculesLocal(_ sender: Any) {
+        moleculesLoader.loadWindow()
+        moleculesLoader.showWindow(nil)
+    }
+    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
