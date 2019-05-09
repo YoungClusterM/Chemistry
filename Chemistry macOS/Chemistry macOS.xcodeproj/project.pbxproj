@@ -19,6 +19,9 @@
 		0481CD5E22802B5A009F5830 /* Chemistry_macOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481CD5D22802B5A009F5830 /* Chemistry_macOSUITests.swift */; };
 		04A486392280369200490805 /* libChemistryShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A486382280369200490805 /* libChemistryShared.a */; };
 		04A4865622807F6D00490805 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4865522807F6D00490805 /* WindowController.swift */; };
+		04BF9FB3228454680027267C /* MoleculesLoadWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF9FB1228454680027267C /* MoleculesLoadWindow.swift */; };
+		04BF9FB4228454680027267C /* MoleculesLoadWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BF9FB2228454680027267C /* MoleculesLoadWindow.xib */; };
+		04BF9FB72284558A0027267C /* CollectionMoleculesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF9FB62284558A0027267C /* CollectionMoleculesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		04A486282280355300490805 /* ChemistryShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChemistryShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A486382280369200490805 /* libChemistryShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libChemistryShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A4865522807F6D00490805 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		04BF9FB1228454680027267C /* MoleculesLoadWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoleculesLoadWindow.swift; sourceTree = "<group>"; };
+		04BF9FB2228454680027267C /* MoleculesLoadWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoleculesLoadWindow.xib; sourceTree = "<group>"; };
+		04BF9FB62284558A0027267C /* CollectionMoleculesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMoleculesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,9 @@
 				0443A1872281C8D90036DBBC /* CollectionViewItem.swift */,
 				0443A1882281C8D90036DBBC /* CollectionViewItem.xib */,
 				041B5ED92282B73600A8B23C /* InfoPlist.strings */,
+				04BF9FB1228454680027267C /* MoleculesLoadWindow.swift */,
+				04BF9FB2228454680027267C /* MoleculesLoadWindow.xib */,
+				04BF9FB62284558A0027267C /* CollectionMoleculesViewController.swift */,
 			);
 			path = "Chemistry macOS";
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 			files = (
 				0481CD4422802B5A009F5830 /* Assets.xcassets in Resources */,
 				041B5ED72282B73600A8B23C /* InfoPlist.strings in Resources */,
+				04BF9FB4228454680027267C /* MoleculesLoadWindow.xib in Resources */,
 				0481CD4722802B5A009F5830 /* Main.storyboard in Resources */,
 				0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */,
 			);
@@ -337,7 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BF9FB72284558A0027267C /* CollectionMoleculesViewController.swift in Sources */,
 				04A4865622807F6D00490805 /* WindowController.swift in Sources */,
+				04BF9FB3228454680027267C /* MoleculesLoadWindow.swift in Sources */,
 				0481CD4222802B58009F5830 /* ViewController.swift in Sources */,
 				0481CD4022802B58009F5830 /* AppDelegate.swift in Sources */,
 				0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */,
