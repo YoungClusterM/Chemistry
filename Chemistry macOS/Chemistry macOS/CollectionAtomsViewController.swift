@@ -9,7 +9,18 @@
 import Cocoa
 import ChemistryShared
 
-class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
+class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
+    
+    let packSource = MyPackSource()
+    
+    func pack(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func pack(didListPack pack: Dictionary<String, ChemistryPack>) {
+        
+    }
+    
 
     @IBOutlet weak var collectionView: CollectionAtomsView!
     let objects = Array(Atoms.keys).sorted { (s1, s2) -> Bool in
