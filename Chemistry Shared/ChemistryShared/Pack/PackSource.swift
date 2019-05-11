@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol PackSource {
+public protocol PackSource {
+    var delegate: PackDelegate? { get set }
+    
     func getPack(_ id: String) -> ChemistryPack
-    func listPack() -> [ChemistryPack]
+    func listPack() -> Dictionary<String, ChemistryPack>
 }

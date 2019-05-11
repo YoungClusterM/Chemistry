@@ -8,10 +8,8 @@
 
 import Foundation
 
-protocol PackDelegate {
-    func pack(shouldGetPack pack: ChemistryPack) -> ChemistryPack
+public protocol PackDelegate {
     func pack(didGetPack pack: ChemistryPack)
     
-    func pack(shouldListPack pack: [ChemistryPack]) -> [ChemistryPack]
-    func pack(didListPack pack: [ChemistryPack])
+    func pack(didListPack pack: Dictionary<String, ChemistryPack>)
 }
