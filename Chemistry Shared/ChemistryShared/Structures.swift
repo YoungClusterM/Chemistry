@@ -73,6 +73,20 @@ public struct ChemistryMolecule: Encodable, Decodable {
     }
 }
 
+public func drawChemistryMolecule(_ molecule: ChemistryMolecule) -> SCNNode {
+    let mainNode = SCNNode()
+    
+    molecule.atoms.forEach { (atom: ChemistryMoleculeAtom) in
+        let atom1 = Atoms[atom.symbol]?.draw().ToNode()
+        atom1?.position.x = CGFloat(atom.position[0])
+        atom1?.position.y = CGFloat(atom.position[1])
+        atom1?.position.z = CGFloat(atom.position[2])
+        mainNode.addChildNode(atom1!)
+    }
+    
+    return mainNode
+}
+
 public struct ChemistryMoleculeAtom: Encodable, Decodable {
     public var symbol: String
     public var position: [Float]

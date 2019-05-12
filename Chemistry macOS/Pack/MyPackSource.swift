@@ -45,7 +45,7 @@ class MyPackSource : PackSource {
         
         var files: [URL]?
         do {
-            files = try fileManager.contentsOfDirectory(at: appSupport, includingPropertiesForKeys: [], options: .skipsHiddenFiles)
+            files = try fileManager.contentsOfDirectory(at: appSupport, includingPropertiesForKeys: [.isDirectoryKey], options: .skipsHiddenFiles)
         } catch let error as NSError {
             print(error)
             return Dictionary<String,ChemistryPack>()
