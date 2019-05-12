@@ -9,8 +9,8 @@
 import Foundation
 import SceneKit
 
-class Molecule {
-    func draw() -> SCNNode {
+public class Molecule {
+    public func draw() -> SCNNode {
         return SCNNode()
     }
     

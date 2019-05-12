@@ -9,18 +9,18 @@
 import Foundation
 import ChemistryShared
 
-func packAtoms(_ atoms: Dictionary<String, Atom>) -> [ExportableAtom] {
-    var items: [ExportableAtom] = []
+func pack(atoms: Dictionary<String, Atom>) -> [ChemistryAtom] {
+    var items: [ChemistryAtom] = []
     
     atoms.forEach { (arg) in
         let (key, value) = arg
         let color = value.color.usingColorSpace(.adobeRGB1998)
         items.append(
-            ExportableAtom(
+            ChemistryAtom(
                 symbol: key,
                 number: Int(value.num),
                 title: value.wikipedia,
-                color: ExportableColor(
+                color: ChemistryColor(
                     red: color!.redComponent,
                     green: color!.greenComponent,
                     blue: color!.blueComponent

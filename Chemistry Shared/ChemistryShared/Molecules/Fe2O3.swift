@@ -19,11 +19,16 @@ class Fe2O3 : Molecule {
         let atomO3 = Atoms["O"]!.draw()
         
         let atom1Node = atom1.ToNode()
+        atom1Node.name = "Fe"
         let atom2Node = atom2.ToNode()
+        atom2Node.name = "Fe"
         
         let atomO1Node = atomO1.ToNode()
+        atomO1Node.name = "O"
         let atomO2Node = atomO2.ToNode()
+        atomO2Node.name = "O"
         let atomO3Node = atomO3.ToNode()
+        atomO3Node.name = "O"
         
         #if os(iOS) || os(watchOS) || os(tvOS)
         // Fe
@@ -56,6 +61,8 @@ class Fe2O3 : Molecule {
         moleculeNode.addChildNode(atomO1Node)
         moleculeNode.addChildNode(atomO2Node)
         moleculeNode.addChildNode(atomO3Node)
+        
+        moleculeNode.name = "Fe₂O₃"
         
         return moleculeNode
     }

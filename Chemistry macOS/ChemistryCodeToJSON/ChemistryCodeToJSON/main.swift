@@ -19,26 +19,32 @@ func randomString(length: Int) -> String {
 let settings = ChemistryPackDetails(
     title: CommandLine.argc > 2 ? CommandLine.arguments[2] : randomString(length: 16),
     version: CommandLine.argc > 3 ? CommandLine.arguments[3] : "0.0.0",
-    type: CommandLine.argc != 1 ? CommandLine.arguments[1] : "atoms",
+    type: CommandLine.argc != 1 ? CommandLine.arguments[1] : "all",
     copyright: "© 2019 " + (CommandLine.argc > 4 ? CommandLine.arguments[4] : NSFullUserName()) + ". All rights reserved."
 )
 
-var items: [ChemistryAtom] = []
+var pack: ChemistryPack
 
 switch(settings.type) {
 case "atoms":
-    items = packAtoms(Atoms)
+    pack = ChemistryPack(
+        packDetails: settings,
+        items: pack(atoms: Atoms)
+    )
+case "molecules":
+    pack = ChemistryPack(
+        packDetails: settings,
+        items: pack(molecules: Molecules)
+    )
 default:
-    fatalError("Cannot use type called \"\(settings.type)\"")
+    pack = ChemistryPack(
+        packDetails: settings,
+        atoms: pack(atoms: Atoms),
+        molecules: pack(molecules: Molecules)
+    )
 }
 
-let pack = ChemistryPack(
-    packDetails: settings,
-    items: items
-)
-
 let jsonEncoder = JSONEncoder()
-jsonEncoder.outputFormatting = .prettyPrinted
 let jsonData = try jsonEncoder.encode(pack)
 
 print(String(decoding: jsonData, as: UTF8.self))

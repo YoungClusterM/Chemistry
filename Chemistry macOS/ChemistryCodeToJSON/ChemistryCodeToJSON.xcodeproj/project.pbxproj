@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		04298D8B2282F5AD009D358D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298D8A2282F5AD009D358D /* main.swift */; };
 		04298D992282F5CE009D358D /* libChemistryShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04298D982282F5CE009D358D /* libChemistryShared.a */; };
-		04298D9B228304A7009D358D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298D9A228304A7009D358D /* Structures.swift */; };
 		04298D9D228304D2009D358D /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298D9C228304D2009D358D /* Atoms.swift */; };
+		04C9EB64228829060015AC28 /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EB63228829060015AC28 /* Molecules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +29,8 @@
 		04298D872282F5AD009D358D /* ChemistryCodeToJSON */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChemistryCodeToJSON; sourceTree = BUILT_PRODUCTS_DIR; };
 		04298D8A2282F5AD009D358D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		04298D982282F5CE009D358D /* libChemistryShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libChemistryShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		04298D9A228304A7009D358D /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		04298D9C228304D2009D358D /* Atoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
+		04C9EB63228829060015AC28 /* Molecules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				04298D8A2282F5AD009D358D /* main.swift */,
-				04298D9A228304A7009D358D /* Structures.swift */,
 				04298D9C228304D2009D358D /* Atoms.swift */,
+				04C9EB63228829060015AC28 /* Molecules.swift */,
 			);
 			path = ChemistryCodeToJSON;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04298D9D228304D2009D358D /* Atoms.swift in Sources */,
+				04C9EB64228829060015AC28 /* Molecules.swift in Sources */,
 				04298D8B2282F5AD009D358D /* main.swift in Sources */,
-				04298D9B228304A7009D358D /* Structures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

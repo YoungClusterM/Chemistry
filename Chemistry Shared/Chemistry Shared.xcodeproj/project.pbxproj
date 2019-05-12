@@ -35,7 +35,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		04298D7D2282F446009D358D /* Atoms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Atoms.json; sourceTree = "<group>"; };
 		04298DA222831850009D358D /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		045799CB2280B47D00A76059 /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		045799CC2280B47D00A76059 /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
@@ -50,7 +49,7 @@
 		04A48644228036BC00490805 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		04A714742284A76F008F1637 /* PackSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackSource.swift; sourceTree = "<group>"; };
 		04A714782284A7E5008F1637 /* PackDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDelegate.swift; sourceTree = "<group>"; };
-		04BF9FAE228365EE0027267C /* Molecules.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Molecules.json; sourceTree = "<group>"; };
+		04C9EB65228833A10015AC28 /* base.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +66,7 @@
 		04298D7C2282F430009D358D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04298D7D2282F446009D358D /* Atoms.json */,
-				04BF9FAE228365EE0027267C /* Molecules.json */,
+				04C9EB65228833A10015AC28 /* base.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

@@ -8,14 +8,25 @@
 
 import Foundation
 import CoreGraphics
+import SceneKit
 
 // Our .pack file manifest structure
 public struct ChemistryPack: Encodable, Decodable {
     public var packDetails: ChemistryPackDetails
-    public var items: [ChemistryAtom]
+    public var atoms: [ChemistryAtom] = []
+    public var molecules: [ChemistryMolecule] = []
     public init(packDetails: ChemistryPackDetails, items: [ChemistryAtom]) {
         self.packDetails = packDetails
-        self.items = items
+        self.atoms = items
+    }
+    public init(packDetails: ChemistryPackDetails, items: [ChemistryMolecule]) {
+        self.packDetails = packDetails
+        self.molecules = items
+    }
+    public init(packDetails: ChemistryPackDetails, atoms: [ChemistryAtom], molecules: [ChemistryMolecule]) {
+        self.packDetails = packDetails
+        self.atoms = atoms
+        self.molecules = molecules
     }
 }
 
@@ -49,6 +60,25 @@ public struct ChemistryAtom: Encodable, Decodable {
         self.color = color
         self.radius = radius
         self.mass = mass
+    }
+}
+
+// Molecules's struct
+public struct ChemistryMolecule: Encodable, Decodable {
+    public var title: String
+    public var atoms: [ChemistryMoleculeAtom]
+    public init(title: String, atoms: [ChemistryMoleculeAtom]) {
+        self.title = title
+        self.atoms = atoms
+    }
+}
+
+public struct ChemistryMoleculeAtom: Encodable, Decodable {
+    public var symbol: String
+    public var position: [Float]
+    public init(symbol: String, position: [Float]) {
+        self.symbol = symbol
+        self.position = position
     }
 }
 
