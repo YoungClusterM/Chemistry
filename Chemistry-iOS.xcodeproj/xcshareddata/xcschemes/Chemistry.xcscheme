@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9274DBD5217C8685007AF82A"
-               BuildableName = "Chemistry.app"
-               BlueprintName = "Chemistry"
-               ReferencedContainer = "container:Chemistry.xcodeproj">
+               BuildableName = "Chemistry-iOS.app"
+               BlueprintName = "Chemistry-iOS"
+               ReferencedContainer = "container:Chemistry-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9274DBEB217C86D6007AF82A"
-               BuildableName = "ChemistryTests.xctest"
-               BlueprintName = "ChemistryTests"
-               ReferencedContainer = "container:Chemistry.xcodeproj">
+               BuildableName = "Chemistry-iOSTests.xctest"
+               BlueprintName = "Chemistry-iOSTests"
+               ReferencedContainer = "container:Chemistry-iOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9274DBF6217C86D6007AF82A"
-               BuildableName = "ChemistryUITests.xctest"
-               BlueprintName = "ChemistryUITests"
-               ReferencedContainer = "container:Chemistry.xcodeproj">
+               BuildableName = "Chemistry-iOSUITests.xctest"
+               BlueprintName = "Chemistry-iOSUITests"
+               ReferencedContainer = "container:Chemistry-iOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9274DBD5217C8685007AF82A"
-            BuildableName = "Chemistry.app"
-            BlueprintName = "Chemistry"
-            ReferencedContainer = "container:Chemistry.xcodeproj">
+            BuildableName = "Chemistry-iOS.app"
+            BlueprintName = "Chemistry-iOS"
+            ReferencedContainer = "container:Chemistry-iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9274DBD5217C8685007AF82A"
-            BuildableName = "Chemistry.app"
-            BlueprintName = "Chemistry"
-            ReferencedContainer = "container:Chemistry.xcodeproj">
+            BuildableName = "Chemistry-iOS.app"
+            BlueprintName = "Chemistry-iOS"
+            ReferencedContainer = "container:Chemistry-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9274DBD5217C8685007AF82A"
-            BuildableName = "Chemistry.app"
-            BlueprintName = "Chemistry"
-            ReferencedContainer = "container:Chemistry.xcodeproj">
+            BuildableName = "Chemistry-iOS.app"
+            BlueprintName = "Chemistry-iOS"
+            ReferencedContainer = "container:Chemistry-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
