@@ -12,7 +12,7 @@
 		04F8DD0C227ED90500064781 /* ReactionCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */; };
 		04F8DD0E227EE34100064781 /* MasterReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8DD0D227EE34100064781 /* MasterReactionViewController.swift */; };
 		04F8DD12227EE42700064781 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04F8DD14227EE42700064781 /* InfoPlist.strings */; };
-		1709BF51B36168A05CCBA097 /* libPods-Chemistry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC19E2FC5C0368AB710DDFF /* libPods-Chemistry.a */; };
+		51C3253DF9AED4E71BDF3295 /* libPods-Chemistry-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9413192AA143D57BC1B8316B /* libPods-Chemistry-iOS.a */; };
 		9238AE7D223E7A860022BA1E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */; };
 		9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */; };
 		9238AE81223E96010022BA1E /* MasterAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */; };
@@ -57,24 +57,24 @@
 		04F8DD0D227EE34100064781 /* MasterReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterReactionViewController.swift; sourceTree = "<group>"; };
 		04F8DD13227EE42700064781 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04F8DD15227EE43100064781 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B16FB72A6561BEC674FD8AF /* Pods-Chemistry-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemistry-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Chemistry-iOS/Pods-Chemistry-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4D835E0665A1D46F9BBA56A6 /* Pods-Chemistry-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemistry-iOS.release.xcconfig"; path = "Target Support Files/Pods-Chemistry-iOS/Pods-Chemistry-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9238AE7C223E7A860022BA1E /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMoleculesViewController.swift; sourceTree = "<group>"; };
 		9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterAtomsViewController.swift; sourceTree = "<group>"; };
-		9274DBD6217C8686007AF82A /* Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9274DBD6217C8686007AF82A /* Chemistry-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chemistry-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBD9217C8687007AF82A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9274DBDD217C8687007AF82A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9274DBE2217C86D5007AF82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9274DBE7217C86D5007AF82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9274DBEC217C86D6007AF82A /* ChemistryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemistryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9274DBEC217C86D6007AF82A /* Chemistry-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chemistry-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBF0217C86D6007AF82A /* ChemistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryTests.swift; sourceTree = "<group>"; };
 		9274DBF2217C86D6007AF82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9274DBF7217C86D6007AF82A /* ChemistryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemistryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9274DBF7217C86D6007AF82A /* Chemistry-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chemistry-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBFB217C86D6007AF82A /* ChemistryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryUITests.swift; sourceTree = "<group>"; };
 		9274DBFD217C86D6007AF82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D6F182223FD8F000C0F3A3 /* MasterNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterNavigationController.swift; sourceTree = "<group>"; };
-		AEC19E2FC5C0368AB710DDFF /* libPods-Chemistry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chemistry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B98B191E5BAF0D169BF48E9E /* Pods-Chemistry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemistry.release.xcconfig"; path = "Target Support Files/Pods-Chemistry/Pods-Chemistry.release.xcconfig"; sourceTree = "<group>"; };
-		C40F26F0682F1E45644ADE6E /* Pods-Chemistry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemistry.debug.xcconfig"; path = "Target Support Files/Pods-Chemistry/Pods-Chemistry.debug.xcconfig"; sourceTree = "<group>"; };
+		9413192AA143D57BC1B8316B /* libPods-Chemistry-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chemistry-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1709BF51B36168A05CCBA097 /* libPods-Chemistry.a in Frameworks */,
 				04A486372280368B00490805 /* libChemistryShared.a in Frameworks */,
+				51C3253DF9AED4E71BDF3295 /* libPods-Chemistry-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +107,9 @@
 		043B10B5224FCAD3009E33D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AEC19E2FC5C0368AB710DDFF /* libPods-Chemistry.a */,
 				04A486362280368B00490805 /* libChemistryShared.a */,
 				04A486252280354500490805 /* ChemistryShared.framework */,
+				9413192AA143D57BC1B8316B /* libPods-Chemistry-iOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,8 +125,8 @@
 		6F48A7D34CC40BB71FD64B8D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C40F26F0682F1E45644ADE6E /* Pods-Chemistry.debug.xcconfig */,
-				B98B191E5BAF0D169BF48E9E /* Pods-Chemistry.release.xcconfig */,
+				4B16FB72A6561BEC674FD8AF /* Pods-Chemistry-iOS.debug.xcconfig */,
+				4D835E0665A1D46F9BBA56A6 /* Pods-Chemistry-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 		9274DBD7217C8686007AF82A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9274DBD6217C8686007AF82A /* Chemistry.app */,
-				9274DBEC217C86D6007AF82A /* ChemistryTests.xctest */,
-				9274DBF7217C86D6007AF82A /* ChemistryUITests.xctest */,
+				9274DBD6217C8686007AF82A /* Chemistry-iOS.app */,
+				9274DBEC217C86D6007AF82A /* Chemistry-iOSTests.xctest */,
+				9274DBF7217C86D6007AF82A /* Chemistry-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,28 +196,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9274DBD5217C8685007AF82A /* Chemistry */ = {
+		9274DBD5217C8685007AF82A /* Chemistry-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9274DC00217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry" */;
+			buildConfigurationList = 9274DC00217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry-iOS" */;
 			buildPhases = (
-				BE1CC7D5068CDC20E38F59C3 /* [CP] Check Pods Manifest.lock */,
+				287A8D34C265B490A59543C1 /* [CP] Check Pods Manifest.lock */,
 				9274DBD2217C8685007AF82A /* Sources */,
 				9274DBD3217C8685007AF82A /* Frameworks */,
 				9274DBD4217C8685007AF82A /* Resources */,
-				7311E4141A5A979ED3EEA49A /* [CP] Copy Pods Resources */,
+				A32B0D34344C3C78EE396C3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Chemistry;
+			name = "Chemistry-iOS";
 			productName = Chemistry;
-			productReference = 9274DBD6217C8686007AF82A /* Chemistry.app */;
+			productReference = 9274DBD6217C8686007AF82A /* Chemistry-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9274DBEB217C86D6007AF82A /* ChemistryTests */ = {
+		9274DBEB217C86D6007AF82A /* Chemistry-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9274DC03217C86D6007AF82A /* Build configuration list for PBXNativeTarget "ChemistryTests" */;
+			buildConfigurationList = 9274DC03217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry-iOSTests" */;
 			buildPhases = (
 				9274DBE8217C86D6007AF82A /* Sources */,
 				9274DBE9217C86D6007AF82A /* Frameworks */,
@@ -228,14 +228,14 @@
 			dependencies = (
 				9274DBEE217C86D6007AF82A /* PBXTargetDependency */,
 			);
-			name = ChemistryTests;
+			name = "Chemistry-iOSTests";
 			productName = ChemistryTests;
-			productReference = 9274DBEC217C86D6007AF82A /* ChemistryTests.xctest */;
+			productReference = 9274DBEC217C86D6007AF82A /* Chemistry-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9274DBF6217C86D6007AF82A /* ChemistryUITests */ = {
+		9274DBF6217C86D6007AF82A /* Chemistry-iOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9274DC06217C86D6007AF82A /* Build configuration list for PBXNativeTarget "ChemistryUITests" */;
+			buildConfigurationList = 9274DC06217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry-iOSUITests" */;
 			buildPhases = (
 				9274DBF3217C86D6007AF82A /* Sources */,
 				9274DBF4217C86D6007AF82A /* Frameworks */,
@@ -246,9 +246,9 @@
 			dependencies = (
 				9274DBF9217C86D6007AF82A /* PBXTargetDependency */,
 			);
-			name = ChemistryUITests;
+			name = "Chemistry-iOSUITests";
 			productName = ChemistryUITests;
-			productReference = 9274DBF7217C86D6007AF82A /* ChemistryUITests.xctest */;
+			productReference = 9274DBF7217C86D6007AF82A /* Chemistry-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -284,7 +284,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9274DBD1217C8684007AF82A /* Build configuration list for PBXProject "Chemistry" */;
+			buildConfigurationList = 9274DBD1217C8684007AF82A /* Build configuration list for PBXProject "Chemistry-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -298,9 +298,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9274DBD5217C8685007AF82A /* Chemistry */,
-				9274DBEB217C86D6007AF82A /* ChemistryTests */,
-				9274DBF6217C86D6007AF82A /* ChemistryUITests */,
+				9274DBD5217C8685007AF82A /* Chemistry-iOS */,
+				9274DBEB217C86D6007AF82A /* Chemistry-iOSTests */,
+				9274DBF6217C86D6007AF82A /* Chemistry-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +335,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7311E4141A5A979ED3EEA49A /* [CP] Copy Pods Resources */ = {
+		287A8D34C265B490A59543C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,7 +343,29 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chemistry/Pods-Chemistry-resources.sh",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chemistry-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A32B0D34344C3C78EE396C3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chemistry-iOS/Pods-Chemistry-iOS-resources.sh",
 				"${PODS_ROOT}/BulletinBoard/Resources/CloseGlyph.png",
 				"${PODS_ROOT}/BulletinBoard/Resources/CloseGlyph@2x.png",
 				"${PODS_ROOT}/BulletinBoard/Resources/CloseGlyph@3x.png",
@@ -426,29 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chemistry/Pods-Chemistry-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE1CC7D5068CDC20E38F59C3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Chemistry-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chemistry-iOS/Pods-Chemistry-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -490,12 +490,12 @@
 /* Begin PBXTargetDependency section */
 		9274DBEE217C86D6007AF82A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9274DBD5217C8685007AF82A /* Chemistry */;
+			target = 9274DBD5217C8685007AF82A /* Chemistry-iOS */;
 			targetProxy = 9274DBED217C86D6007AF82A /* PBXContainerItemProxy */;
 		};
 		9274DBF9217C86D6007AF82A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9274DBD5217C8685007AF82A /* Chemistry */;
+			target = 9274DBD5217C8685007AF82A /* Chemistry-iOS */;
 			targetProxy = 9274DBF8217C86D6007AF82A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -658,7 +658,7 @@
 		};
 		9274DC01217C86D6007AF82A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C40F26F0682F1E45644ADE6E /* Pods-Chemistry.debug.xcconfig */;
+			baseConfigurationReference = 4B16FB72A6561BEC674FD8AF /* Pods-Chemistry-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,6 +668,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = me.pkosilo.Chemistry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -677,7 +679,7 @@
 		};
 		9274DC02217C86D6007AF82A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B98B191E5BAF0D169BF48E9E /* Pods-Chemistry.release.xcconfig */;
+			baseConfigurationReference = 4D835E0665A1D46F9BBA56A6 /* Pods-Chemistry-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -687,6 +689,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = me.pkosilo.Chemistry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -711,7 +715,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chemistry.app/Chemistry";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chemistry-iOS.app/Chemistry-iOS";
 			};
 			name = Debug;
 		};
@@ -732,7 +736,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chemistry.app/Chemistry";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chemistry-iOS.app/Chemistry-iOS";
 			};
 			name = Release;
 		};
@@ -779,7 +783,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9274DBD1217C8684007AF82A /* Build configuration list for PBXProject "Chemistry" */ = {
+		9274DBD1217C8684007AF82A /* Build configuration list for PBXProject "Chemistry-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9274DBFE217C86D6007AF82A /* Debug */,
@@ -788,7 +792,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9274DC00217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry" */ = {
+		9274DC00217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9274DC01217C86D6007AF82A /* Debug */,
@@ -797,7 +801,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9274DC03217C86D6007AF82A /* Build configuration list for PBXNativeTarget "ChemistryTests" */ = {
+		9274DC03217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9274DC04217C86D6007AF82A /* Debug */,
@@ -806,7 +810,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9274DC06217C86D6007AF82A /* Build configuration list for PBXNativeTarget "ChemistryUITests" */ = {
+		9274DC06217C86D6007AF82A /* Build configuration list for PBXNativeTarget "Chemistry-iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9274DC07217C86D6007AF82A /* Debug */,

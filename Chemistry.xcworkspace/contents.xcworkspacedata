@@ -8,12 +8,15 @@
       location = "group:/Users/pavelkasila/Documents/Chemistry/Chemistry macOS/Chemistry macOS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Chemistry.xcodeproj">
+      location = "group:/Users/pavelkasila/Documents/Chemistry/Chemistry-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Chemistry macOS/Chemistry macOS.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Chemistry macOS/Chemistry macOS.xcodeproj">
+      location = "group:Chemistry-iOS.xcodeproj">
    </FileRef>
 </Workspace>

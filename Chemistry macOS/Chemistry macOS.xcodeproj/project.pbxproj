@@ -212,7 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0481CD6222802B5A009F5830 /* Build configuration list for PBXNativeTarget "Chemistry" */;
 			buildPhases = (
-				74732ECD68C614C0DD93DC8E /* [CP] Check Pods Manifest.lock */,
+				797C705FAF01C2509F92AB44 /* [CP] Check Pods Manifest.lock */,
 				0481CD3822802B58009F5830 /* Sources */,
 				0481CD3922802B58009F5830 /* Frameworks */,
 				0481CD3A22802B58009F5830 /* Resources */,
@@ -349,7 +349,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		74732ECD68C614C0DD93DC8E /* [CP] Check Pods Manifest.lock */ = {
+		797C705FAF01C2509F92AB44 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
