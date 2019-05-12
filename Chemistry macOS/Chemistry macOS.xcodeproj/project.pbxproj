@@ -11,6 +11,8 @@
 		041FEA6722884E0200914697 /* PackagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FEA6622884E0200914697 /* PackagerUtils.swift */; };
 		041FEA6A2288559E00914697 /* DatasetExportWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FEA682288559E00914697 /* DatasetExportWindow.swift */; };
 		041FEA6B2288559E00914697 /* DatasetExportWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041FEA692288559E00914697 /* DatasetExportWindow.xib */; };
+		0429C2292288A1A100762D08 /* CollectionMoleculeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C2272288A1A100762D08 /* CollectionMoleculeItem.swift */; };
+		0429C22A2288A1A100762D08 /* CollectionMoleculeItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0429C2282288A1A100762D08 /* CollectionMoleculeItem.xib */; };
 		0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */; };
 		0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1872281C8D90036DBBC /* CollectionViewItem.swift */; };
 		0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443A1882281C8D90036DBBC /* CollectionViewItem.xib */; };
@@ -55,6 +57,8 @@
 		041FEA6622884E0200914697 /* PackagerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagerUtils.swift; sourceTree = "<group>"; };
 		041FEA682288559E00914697 /* DatasetExportWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasetExportWindow.swift; sourceTree = "<group>"; };
 		041FEA692288559E00914697 /* DatasetExportWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatasetExportWindow.xib; sourceTree = "<group>"; };
+		0429C2272288A1A100762D08 /* CollectionMoleculeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMoleculeItem.swift; sourceTree = "<group>"; };
+		0429C2282288A1A100762D08 /* CollectionMoleculeItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionMoleculeItem.xib; sourceTree = "<group>"; };
 		0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAtomsViewController.swift; sourceTree = "<group>"; };
 		0443A1872281C8D90036DBBC /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
 		0443A1882281C8D90036DBBC /* CollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				04BF9FB2228454680027267C /* MoleculesLoadWindow.xib */,
 				041FEA682288559E00914697 /* DatasetExportWindow.swift */,
 				041FEA692288559E00914697 /* DatasetExportWindow.xib */,
+				0429C2272288A1A100762D08 /* CollectionMoleculeItem.swift */,
+				0429C2282288A1A100762D08 /* CollectionMoleculeItem.xib */,
 			);
 			path = "Chemistry macOS";
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				0481CD4722802B5A009F5830 /* Main.storyboard in Resources */,
 				041FEA6B2288559E00914697 /* DatasetExportWindow.xib in Resources */,
 				0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */,
+				0429C22A2288A1A100762D08 /* CollectionMoleculeItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +392,7 @@
 				041FEA6A2288559E00914697 /* DatasetExportWindow.swift in Sources */,
 				0481CD4222802B58009F5830 /* ViewController.swift in Sources */,
 				0481CD4022802B58009F5830 /* AppDelegate.swift in Sources */,
+				0429C2292288A1A100762D08 /* CollectionMoleculeItem.swift in Sources */,
 				041FEA6722884E0200914697 /* PackagerUtils.swift in Sources */,
 				0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */,
 				0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */,

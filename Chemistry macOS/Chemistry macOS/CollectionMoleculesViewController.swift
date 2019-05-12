@@ -25,19 +25,19 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     
     @IBOutlet weak var collectionView: NSCollectionView!
     
-    var objects = Array<String>()
+    var objects: [String : ChemistryMolecule] = [:]
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return objects.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"), for: indexPath)
-        guard let collectionViewItem = item as? CollectionViewItem else {
-            return CollectionViewItem()
+        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionMoleculeItem"), for: indexPath)
+        guard let collectionViewItem = item as? CollectionMoleculeItem else {
+            return CollectionMoleculeItem()
         }
         
-        collectionViewItem.atom = objects[indexPath.item]
+        collectionViewItem.molecule = objects[Array(objects.keys)[indexPath.item]]
         
         return collectionViewItem
     }
@@ -45,8 +45,8 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt
         indexPaths: Set<IndexPath>) {
         for index in indexPaths {
-            let key = objects[index.item] as String
-            didSelectedItem(symbol: key, atom: Atoms[key]!)
+            let key = Array(objects.keys)[index.item] as String
+            didSelectedItem(symbol: key, molecule: objects[key]!)
         }
     }
     
@@ -59,15 +59,14 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
         
         let packs = packSource?.listPack()
         
-        var obj = Array<String>()
         packs?.forEach({ (arg0) in
-            let (key, _) = arg0
-            obj.append(key)
+            let (_, value) = arg0
+            value.molecules.forEach({ (molecule: ChemistryMolecule) in
+                objects[molecule.title] = molecule
+            })
         })
         
-        objects.append(contentsOf: obj)
-        
-        collectionView.register(CollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"))
+        collectionView.register(CollectionMoleculeItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionMoleculeItem"))
         collectionView.reloadData()
     }
     
@@ -78,15 +77,19 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     
     var selectedItem: CollectionViewItem?
     
-    func didSelectedItem(symbol: String, atom: Atom) {
+    func didSelectedItem(symbol: String, molecule: ChemistryMolecule) {
+        var jsonData: Data?
+        do {
+             jsonData = try JSONEncoder().encode(molecule)
+        } catch let error as NSError {
+            fatalError("Error: \(error)")
+        }
+        
         let text =
-            "Symbol: \(symbol)\n" +
-                "Title: \(atom.wikipedia)\n" +
-                "Number: \(atom.num)\n" +
-                "Mass: \(atom.atomMass)\n" +
-        "Radius: \(atom.pm) pm\n"
+        "Symbol: \(symbol)\n" +
+        "Data: \(String(data: jsonData!, encoding: .utf8) ?? "")\n"
         let alert = NSAlert.init()
-        alert.messageText = "Atom"
+        alert.messageText = "Molecule"
         alert.informativeText = text
         alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
