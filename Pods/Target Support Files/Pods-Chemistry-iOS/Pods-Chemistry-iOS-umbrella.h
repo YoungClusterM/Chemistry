@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ChemistryVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ChemistryVersionString[];
+FOUNDATION_EXPORT double Pods_Chemistry_iOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Chemistry_iOSVersionString[];
 

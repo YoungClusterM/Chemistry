@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83ADB78B93B70D699915E7F4946041D7"
-               BuildableName = "libSSZipArchive-iOS.a"
-               BlueprintName = "SSZipArchive-iOS"
+               BlueprintIdentifier = "9C1C44632A61DC7C748579196DB893A5"
+               BuildableName = "libPods-Chemistry-iOS.a"
+               BlueprintName = "Pods-Chemistry-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
