@@ -15,7 +15,9 @@ class O2 : Molecule {
         let atom2 = Atoms["O"]!.draw()
         
         let atom1Node = atom1.ToNode()
+        atom1Node.name = "O"
         let atom2Node = atom2.ToNode()
+        atom2Node.name = "O"
         
         #if os(iOS) || os(watchOS) || os(tvOS)
         atom1Node.position.x = Float(atom2.radius)/2
@@ -28,6 +30,8 @@ class O2 : Molecule {
         let moleculeNode = SCNNode()
         moleculeNode.addChildNode(atom1Node)
         moleculeNode.addChildNode(atom2Node)
+        
+        moleculeNode.name = "O₂"
         
         return moleculeNode
     }

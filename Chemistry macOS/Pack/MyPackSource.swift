@@ -15,6 +15,14 @@ class MyPackSource : PackSource {
     
     var delegate: PackDelegate?
     
+    init() {
+        
+    }
+    
+    init(delegate: PackDelegate) {
+        self.delegate = delegate
+    }
+    
     func getPack(_ id: String) -> ChemistryPack {
         let packs = listPack()
         
