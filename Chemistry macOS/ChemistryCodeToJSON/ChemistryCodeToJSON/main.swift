@@ -45,7 +45,6 @@ default:
 }
 
 let jsonEncoder = JSONEncoder()
-jsonEncoder.outputFormatting = .prettyPrinted
 let jsonData = try jsonEncoder.encode(pack)
 
 print(String(decoding: jsonData, as: UTF8.self))
