@@ -7,17 +7,23 @@
 //
 
 import Cocoa
+import ChemistryShared
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let moleculesLoader = MoleculesLoadWindow()
     @IBAction func addMoleculesLocal(_ sender: Any) {
+        let moleculesLoader = MoleculesLoadWindow()
         moleculesLoader.loadWindow()
         moleculesLoader.showWindow(nil)
     }
     
-
+    @IBAction func exportDatasetToManifest(_ sender: Any) {
+        let exporter = DatasetExportWindow()
+        exporter.loadWindow()
+        exporter.showWindow(nil)
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }

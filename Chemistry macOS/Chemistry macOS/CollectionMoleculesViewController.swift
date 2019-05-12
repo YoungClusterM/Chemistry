@@ -58,13 +58,14 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
         packSource = MyPackSource(delegate: self)
         
         let packs = packSource?.listPack()
-        var molecules: Dictionary<String, ChemistryMolecule> = []
         
-        packs?.forEach({ ((key: String, value: ChemistryPack)) in
-            molecules
+        var obj = Array<String>()
+        packs?.forEach({ (arg0) in
+            let (key, _) = arg0
+            obj.append(key)
         })
         
-        objects.append(contentsOf: )
+        objects.append(contentsOf: obj)
         
         collectionView.register(CollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"))
         collectionView.reloadData()

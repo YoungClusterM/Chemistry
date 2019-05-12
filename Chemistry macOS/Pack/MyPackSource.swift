@@ -34,7 +34,7 @@ class MyPackSource : PackSource {
     }
     
     func listPack() -> Dictionary<String, ChemistryPack> {
-        guard let appSupport1 = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else { fatalError("Application cannot find Application Support Directory") }
+        guard let appSupport1 = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else { return Dictionary<String,ChemistryPack>() }
         let appSupport = appSupport1.appendingPathComponent("Chemistry", isDirectory: true)
         
         do {
@@ -47,7 +47,8 @@ class MyPackSource : PackSource {
         do {
             files = try fileManager.contentsOfDirectory(at: appSupport, includingPropertiesForKeys: [], options: .skipsHiddenFiles)
         } catch let error as NSError {
-            fatalError("cannot read directories from Application Support \(error)")
+            print(error)
+            return Dictionary<String,ChemistryPack>()
         }
         
         var packsDict = Dictionary<String, ChemistryPack>()

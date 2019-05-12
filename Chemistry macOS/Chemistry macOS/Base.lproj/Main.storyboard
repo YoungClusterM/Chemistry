@@ -78,6 +78,19 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Export" id="0y7-8G-avj">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Export" id="GHR-gq-T9t">
+                                    <items>
+                                        <menuItem title="Export Atoms and Molecules manifest" id="zGD-db-HAv">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="exportDatasetToManifest:" target="Voe-Tx-rLC" id="uSA-IF-srk"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Help" id="wpr-3q-Mcd">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
@@ -108,7 +121,6 @@
                 <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Chemistry" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
