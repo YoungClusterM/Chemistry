@@ -10,13 +10,22 @@ import Foundation
 import AppKit
 import ChemistryShared
 
-class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
+class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
+    
+    var packSource: PackSource?
+    
+    func pack(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func pack(didListPack pack: Dictionary<String, ChemistryPack>) {
+        
+    }
+    
     
     @IBOutlet weak var collectionView: NSCollectionView!
     
-    let objects = Array(Atoms.keys).sorted { (s1, s2) -> Bool in
-        return Atoms[s1]!.num < Atoms[s2]!.num
-    }
+    var objects = Array<String>()
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return objects.count
@@ -45,6 +54,18 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        packSource = MyPackSource(delegate: self)
+        
+        let packs = packSource?.listPack()
+        var molecules: Dictionary<String, ChemistryMolecule> = []
+        
+        packs?.forEach({ ((key: String, value: ChemistryPack)) in
+            molecules
+        })
+        
+        objects.append(contentsOf: )
+        
         collectionView.register(CollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"))
         collectionView.reloadData()
     }

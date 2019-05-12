@@ -16,8 +16,11 @@ class H2O : Molecule {
         let atom3 = Atoms["O"]!.draw()
         
         let atom1Node = atom1.ToNode()
+        atom1Node.name = "H"
         let atom2Node = atom2.ToNode()
+        atom2Node.name = "H"
         let atom3Node = atom3.ToNode()
+        atom3Node.name = "O"
         
         #if os(iOS) || os(watchOS) || os(tvOS)
         atom1Node.position.x = Float(atom3.radius)
@@ -31,6 +34,8 @@ class H2O : Molecule {
         moleculeNode.addChildNode(atom1Node)
         moleculeNode.addChildNode(atom2Node)
         moleculeNode.addChildNode(atom3Node)
+        
+        moleculeNode.name = "H₂O"
         
         return moleculeNode
     }

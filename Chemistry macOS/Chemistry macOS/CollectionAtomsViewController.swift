@@ -9,17 +9,7 @@
 import Cocoa
 import ChemistryShared
 
-class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
-    
-    let packSource = MyPackSource()
-    
-    func pack(didGetPack pack: ChemistryPack) {
-        
-    }
-    
-    func pack(didListPack pack: Dictionary<String, ChemistryPack>) {
-        
-    }
+class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
     
 
     @IBOutlet weak var collectionView: CollectionAtomsView!
