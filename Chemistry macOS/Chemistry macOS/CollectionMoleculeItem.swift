@@ -70,6 +70,7 @@ class CollectionMoleculeItem: NSCollectionViewItem {
     func setColor(_ color: CGColor) {
         view.layer?.backgroundColor = isSelected ? color.copy(alpha: 0.2) : color
         nameLabel.textColor = isSelected ? nameLabel.textColor?.withAlphaComponent(1) : NSColor.labelColor
+        massLabel.textColor = isSelected ? massLabel.textColor?.withAlphaComponent(1) : NSColor.labelColor
     }
     
 }

@@ -89,7 +89,7 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
         "Symbol: \(symbol)\n" +
         "Data: \(String(data: jsonData!, encoding: .utf8) ?? "")\n"
         let alert = NSAlert.init()
-        alert.messageText = "Atom"
+        alert.messageText = "Molecule"
         alert.informativeText = text
         alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
