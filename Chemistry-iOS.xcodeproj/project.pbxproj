@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0425A4932289A1F2008E715D /* MyPackSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A4922289A1F2008E715D /* MyPackSource.swift */; };
+		0425A4A72289E517008E715D /* base.json in Resources */ = {isa = PBXBuildFile; fileRef = 0425A4A52289E509008E715D /* base.json */; };
 		045F307F227EFDF100816C02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 045F3081227EFDF100816C02 /* Localizable.strings */; };
 		04A486372280368B00490805 /* libChemistryShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A486362280368B00490805 /* libChemistryShared.a */; };
 		04F8DD0C227ED90500064781 /* ReactionCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		0425A4922289A1F2008E715D /* MyPackSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPackSource.swift; sourceTree = "<group>"; };
+		0425A4A52289E509008E715D /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		0458BD9C227DEA1C00FF26AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCalculatorViewController.swift; sourceTree = "<group>"; };
 		045F3080227EFDF100816C02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -114,6 +116,15 @@
 			path = Pack;
 			sourceTree = "<group>";
 		};
+		0425A4A62289E509008E715D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0425A4A52289E509008E715D /* base.json */,
+			);
+			name = Resources;
+			path = "../Chemistry Shared/ChemistryShared/Resources";
+			sourceTree = "<group>";
+		};
 		043B10B5224FCAD3009E33D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				0425A4912289A1E1008E715D /* Pack */,
+				0425A4A62289E509008E715D /* Resources */,
 				04A4865222805B4100490805 /* Chemistry.entitlements */,
 				9274DBD9217C8687007AF82A /* AppDelegate.swift */,
 				9274DBDF217C8688007AF82A /* Main.storyboard */,
@@ -326,6 +338,7 @@
 				9274DBE3217C86D5007AF82A /* Assets.xcassets in Resources */,
 				9274DBE1217C8688007AF82A /* Main.storyboard in Resources */,
 				04F8DD12227EE42700064781 /* InfoPlist.strings in Resources */,
+				0425A4A72289E517008E715D /* base.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

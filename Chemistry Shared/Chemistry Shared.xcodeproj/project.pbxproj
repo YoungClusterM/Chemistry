@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0425A4952289A38B008E715D /* PackagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A4942289A38B008E715D /* PackagerUtils.swift */; };
+		0425A49A2289E3FF008E715D /* base.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0425A4982289E292008E715D /* base.json */; };
 		04298DA322831850009D358D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298DA222831850009D358D /* Structures.swift */; };
 		045799CD2280B47D00A76059 /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CB2280B47D00A76059 /* Molecules.swift */; };
 		045799CE2280B47D00A76059 /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CC2280B47D00A76059 /* Atoms.swift */; };
@@ -30,6 +31,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				0425A49A2289E3FF008E715D /* base.json in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0425A4942289A38B008E715D /* PackagerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagerUtils.swift; sourceTree = "<group>"; };
+		0425A4982289E292008E715D /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		04298DA222831850009D358D /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		045799CB2280B47D00A76059 /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		045799CC2280B47D00A76059 /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		04A48644228036BC00490805 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		04A714742284A76F008F1637 /* PackSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackSource.swift; sourceTree = "<group>"; };
 		04A714782284A7E5008F1637 /* PackDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDelegate.swift; sourceTree = "<group>"; };
-		04C9EB65228833A10015AC28 /* base.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 		04298D7C2282F430009D358D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04C9EB65228833A10015AC28 /* base.json */,
+				0425A4982289E292008E715D /* base.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
