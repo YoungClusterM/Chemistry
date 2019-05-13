@@ -7,24 +7,34 @@
 //
 
 import Foundation
-import ChemistryShared
 import SceneKit
 
-func pack(atoms: Dictionary<String, Atom>) -> [ChemistryAtom] {
+public func pack(atoms: Dictionary<String, Atom>) -> [ChemistryAtom] {
     var items: [ChemistryAtom] = []
     
     atoms.forEach { (arg) in
         let (key, value) = arg
+        #if os(iOS) || os(watchOS) || os(tvOS)
+        let color: UIColor? = value.color
+        let color_red = color!.ciColor.red
+        let color_green = color!.ciColor.green
+        let color_blue = color!.ciColor.blue
+        #elseif os(OSX)
         let color = value.color.usingColorSpace(.adobeRGB1998)
+        let color_red = color!.redComponent
+        let color_green = color!.greenComponent
+        let color_blue = color!.blueComponent
+        #endif
+       
         items.append(
             ChemistryAtom(
                 symbol: key,
                 number: Int(value.num),
                 title: value.wikipedia,
                 color: ChemistryColor(
-                    red: color!.redComponent,
-                    green: color!.greenComponent,
-                    blue: color!.blueComponent
+                    red: color_red,
+                    green: color_green,
+                    blue: color_blue
                 ),
                 radius: Int(value.pm),
                 mass: value.atomMass
@@ -35,7 +45,7 @@ func pack(atoms: Dictionary<String, Atom>) -> [ChemistryAtom] {
     return items
 }
 
-func pack(molecules: [String : SCNNode]) -> [ChemistryMolecule] {
+public func pack(molecules: [String : SCNNode]) -> [ChemistryMolecule] {
     var items: [ChemistryMolecule] = []
     
     molecules.forEach { (arg) in

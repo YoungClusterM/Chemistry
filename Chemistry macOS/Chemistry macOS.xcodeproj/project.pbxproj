@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		041B5ED72282B73600A8B23C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 041B5ED92282B73600A8B23C /* InfoPlist.strings */; };
-		041FEA6722884E0200914697 /* PackagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FEA6622884E0200914697 /* PackagerUtils.swift */; };
 		041FEA6A2288559E00914697 /* DatasetExportWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FEA682288559E00914697 /* DatasetExportWindow.swift */; };
 		041FEA6B2288559E00914697 /* DatasetExportWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041FEA692288559E00914697 /* DatasetExportWindow.xib */; };
 		0429C2292288A1A100762D08 /* CollectionMoleculeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C2272288A1A100762D08 /* CollectionMoleculeItem.swift */; };
@@ -54,7 +53,6 @@
 		041B5EDA2282B73A00A8B23C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		041B5EDB2282B7EE00A8B23C /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/Main.strings; sourceTree = "<group>"; };
 		041B5EDC2282B7EE00A8B23C /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		041FEA6622884E0200914697 /* PackagerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagerUtils.swift; sourceTree = "<group>"; };
 		041FEA682288559E00914697 /* DatasetExportWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasetExportWindow.swift; sourceTree = "<group>"; };
 		041FEA692288559E00914697 /* DatasetExportWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatasetExportWindow.xib; sourceTree = "<group>"; };
 		0429C2272288A1A100762D08 /* CollectionMoleculeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMoleculeItem.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				04ABC35C228729A100A6B154 /* MyPackSource.swift */,
-				041FEA6622884E0200914697 /* PackagerUtils.swift */,
 			);
 			path = Pack;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 				0481CD4222802B58009F5830 /* ViewController.swift in Sources */,
 				0481CD4022802B58009F5830 /* AppDelegate.swift in Sources */,
 				0429C2292288A1A100762D08 /* CollectionMoleculeItem.swift in Sources */,
-				041FEA6722884E0200914697 /* PackagerUtils.swift in Sources */,
 				0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */,
 				0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */,
 			);

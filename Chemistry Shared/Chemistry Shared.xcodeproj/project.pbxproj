@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0425A4952289A38B008E715D /* PackagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A4942289A38B008E715D /* PackagerUtils.swift */; };
 		04298DA322831850009D358D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298DA222831850009D358D /* Structures.swift */; };
 		045799CD2280B47D00A76059 /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CB2280B47D00A76059 /* Molecules.swift */; };
 		045799CE2280B47D00A76059 /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CC2280B47D00A76059 /* Atoms.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0425A4942289A38B008E715D /* PackagerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagerUtils.swift; sourceTree = "<group>"; };
 		04298DA222831850009D358D /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		045799CB2280B47D00A76059 /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		045799CC2280B47D00A76059 /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		04A714732284A760008F1637 /* Pack */ = {
 			isa = PBXGroup;
 			children = (
+				0425A4942289A38B008E715D /* PackagerUtils.swift */,
 				04A714742284A76F008F1637 /* PackSource.swift */,
 				04A714782284A7E5008F1637 /* PackDelegate.swift */,
 			);
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A486322280368000490805 /* ChemistryShared.swift in Sources */,
+				0425A4952289A38B008E715D /* PackagerUtils.swift in Sources */,
 				045799D62280B48500A76059 /* F2.swift in Sources */,
 				045799D82280B48500A76059 /* O2.swift in Sources */,
 				04A714752284A76F008F1637 /* PackSource.swift in Sources */,
