@@ -78,9 +78,15 @@ public func drawChemistryMolecule(_ molecule: ChemistryMolecule) -> SCNNode {
     
     molecule.atoms.forEach { (atom: ChemistryMoleculeAtom) in
         let atom1 = Atoms[atom.symbol]?.draw().ToNode()
+        #if os(iOS) || os(watchOS) || os(tvOS)
+        atom1?.position.x = Float(atom.position[0])
+        atom1?.position.y = Float(atom.position[1])
+        atom1?.position.z = Float(atom.position[2])
+        #elseif os(OSX)
         atom1?.position.x = CGFloat(atom.position[0])
         atom1?.position.y = CGFloat(atom.position[1])
         atom1?.position.z = CGFloat(atom.position[2])
+        #endif
         mainNode.addChildNode(atom1!)
     }
     
