@@ -71,3 +71,17 @@ public func pack(molecules: [String : SCNNode]) -> [ChemistryMolecule] {
     
     return items
 }
+
+public func getBasePack() -> ChemistryPack {
+    var sourceURL = URL(fileURLWithPath: Bundle.main.resourcePath!)
+    sourceURL.appendPathComponent("base.json")
+    print(sourceURL.absoluteString)
+    do {
+        let data = try Data(contentsOf: sourceURL, options: .alwaysMapped)
+        let pack = try JSONDecoder().decode(ChemistryPack.self, from: data)
+        return pack
+    } catch let error as NSError {
+        print("parse error: \(error.localizedDescription)")
+    }
+    fatalError("Invalid filename/path.")
+}

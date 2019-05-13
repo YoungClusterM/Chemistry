@@ -57,7 +57,9 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
         
         packSource = MyPackSource(delegate: self)
         
-        let packs = packSource?.listPack()
+        var packs = packSource?.listPack()
+        let base = getBasePack()
+        packs?["Base"] = base
         
         packs?.forEach({ (arg0) in
             let (_, value) = arg0
