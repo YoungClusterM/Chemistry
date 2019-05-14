@@ -103,14 +103,14 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object: String
+                let object: ChemistryMolecule
                 if searchController.isActive {
-                    object = filteredMolecules[indexPath.row]
+                    object = objects[filteredMolecules[indexPath.row]]!
                 } else {
-                    object = Array(objects.keys)[indexPath.row]
+                    object = objects[Array(objects.keys)[indexPath.row]]!
                 }
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                controller.detailMolecule = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
