@@ -12,11 +12,11 @@ import ChemistryShared
 
 class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdating, PackDelegate {
     
-    func pack(didGetPack pack: ChemistryPack) {
+    func packObserve(didGetPack pack: ChemistryPack) {
         
     }
     
-    func pack(didListPack pack: Dictionary<String, ChemistryPack>) {
+    func packObserve(didListPack pack: Dictionary<String, ChemistryPack>) {
         
     }
     

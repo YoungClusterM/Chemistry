@@ -12,12 +12,12 @@ import ChemistryShared
 
 class CollectionViewItem: NSCollectionViewItem {
     
-    var atom: String? {
+    var atom: ChemistryAtom? {
         didSet {
-            atomTitle.stringValue = Atoms[atom!]!.wikipedia
-            atomLabel.stringValue = atom!
-            atomNumber.stringValue = String(Atoms[atom!]!.num)
-            atomMass.stringValue = Atoms[atom!]!.atomMass != -1 ? String(Atoms[atom!]!.atomMass) : "Unknown"
+            atomTitle.stringValue = atom!.title.base!
+            atomLabel.stringValue = atom!.symbol
+            atomNumber.stringValue = String(atom!.number)
+            atomMass.stringValue = atom!.mass != -1 ? String(atom!.mass) : "Unknown"
         }
     }
     
