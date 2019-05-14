@@ -40,7 +40,7 @@ class DatasetExportWin: NSWindow {
                 title: titleField.stringValue,
                 version: versionField.stringValue,
                 type: "chemistry",
-                copyright: "© 2019 " + authorField.stringValue + ". All rights reserved."
+                copyright: "© \(Calendar.current.component(.year, from: Date())) \(authorField.stringValue). All rights reserved."
             )
             
             let atoms = pack(atoms: Atoms)
