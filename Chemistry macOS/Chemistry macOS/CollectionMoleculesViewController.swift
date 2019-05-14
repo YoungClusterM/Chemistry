@@ -11,16 +11,16 @@ import AppKit
 import ChemistryShared
 
 class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
+    func packObserve(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func packObserve(didListPack pack: Dictionary<String, ChemistryPack>) {
+        
+    }
+    
     
     var packSource: PackSource?
-    
-    func pack(didGetPack pack: ChemistryPack) {
-        
-    }
-    
-    func pack(didListPack pack: Dictionary<String, ChemistryPack>) {
-        
-    }
     
     
     @IBOutlet weak var collectionView: NSCollectionView!
