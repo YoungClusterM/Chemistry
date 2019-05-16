@@ -11,9 +11,17 @@ import SceneKit
 import WebKit
 import ChemistryShared
 
+enum DetailViewControllerMode {
+    case molecule
+    case atom
+    case none
+}
+
 class DetailViewController: UIViewController, WKUIDelegate {
     
     var sceneView = SCNView(frame: CGRect(x: 0, y: 0, width: 512, height: 512))
+    
+    var mode = DetailViewControllerMode.none
     
     func configureSceneView(node: SCNNode) {
         let scene = SCNScene()
@@ -33,22 +41,21 @@ class DetailViewController: UIViewController, WKUIDelegate {
     
     func configureView() {
         self.navigationItem.largeTitleDisplayMode = .never
-        // Update the user interface for the detail item.
-        if detailMolecule != nil { // Is it in Molecules
+        if mode == .molecule { // Is it in Molecules
             self.view = sceneView
             configureSceneView(node: drawChemistryMolecule(detailMolecule!))
-        }
-        if detailAtom != nil { // Is it in Atoms
+        } else if mode == .atom { // Is it in Atoms
             self.title = NSLocalizedString((detailAtom?.title.base!)!, comment: "")
             let webConfiguration = WKWebViewConfiguration()
             let webView = WKWebView(frame: .zero, configuration: webConfiguration)
             self.view = webView
             
             let link = "https://en.wikipedia.org/wiki/"
-            let s_link = NSLocalizedString((detailAtom?.title.base!)!, comment: "").addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed)!
-            let myURL = URL(string:link + s_link)
+            let myURL = URL(string:link + (detailAtom?.title.base!)!)
             let myRequest = URLRequest(url: myURL!)
             webView.load(myRequest)
+        } else {
+            print("Nothing to configure")
         }
     }
 
@@ -60,7 +67,7 @@ class DetailViewController: UIViewController, WKUIDelegate {
 
     var detailAtom: ChemistryAtom? {
         didSet {
-            detailMolecule = nil
+            mode = .atom
             // Update the view.
             self.title = detailAtom?.title.base!
             configureView()
@@ -69,7 +76,7 @@ class DetailViewController: UIViewController, WKUIDelegate {
     
     var detailMolecule: ChemistryMolecule? {
         didSet {
-            detailAtom = nil
+            mode = .molecule
             // Update the view.
             self.title = detailMolecule?.title
             configureView()

@@ -141,7 +141,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
         if searchController.isActive {
             object = filteredAtoms[Array(filteredAtoms.keys)[indexPath.row]]!
         } else {
-            object = objects[Array(objects.keys)[indexPath.row]]!
+            object = objects[Array(objects_keys)[indexPath.row]]!
         }
         cell.textLabel!.text = object.symbol
         cell.detailTextLabel!.text = NSLocalizedString(object.title.base!, comment: "")
