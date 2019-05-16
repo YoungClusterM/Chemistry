@@ -80,20 +80,15 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     var selectedItem: CollectionViewItem?
     
     func didSelectedItem(symbol: String, molecule: ChemistryMolecule) {
-        var jsonData: Data?
-        do {
-             jsonData = try JSONEncoder().encode(molecule)
-        } catch let error as NSError {
-            fatalError("Error: \(error)")
-        }
-        
-        let text =
-        "Symbol: \(symbol)\n" +
-        "Data: \(String(data: jsonData!, encoding: .utf8) ?? "")\n"
         let alert = NSAlert.init()
         alert.messageText = "Molecule"
-        alert.informativeText = text
-        alert.alertStyle = .informational
+        do{
+            alert.informativeText = String(data: try JSONEncoder().encode(molecule), encoding: .utf8)!
+            alert.alertStyle = .informational
+        } catch _ as NSError {
+            alert.informativeText = "Something went wrong!"
+            alert.alertStyle = .critical
+        }
         alert.addButton(withTitle: "OK")
         alert.runModal()
     }
