@@ -62,4 +62,9 @@ class DatasetExportWin: NSWindow {
             self.close()
         }
     }
+    
+    override func close() {
+        super.close()
+        NSApplication.shared.stopModal()
+    }
 }

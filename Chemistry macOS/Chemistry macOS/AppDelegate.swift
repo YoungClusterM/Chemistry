@@ -21,7 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func exportDatasetToManifest(_ sender: Any) {
         let exporter = DatasetExportWindow()
         exporter.loadWindow()
-        exporter.showWindow(nil)
+        //exporter.showWindow(nil)
+        NSApplication.shared.runModal(for: exporter.window!)
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
