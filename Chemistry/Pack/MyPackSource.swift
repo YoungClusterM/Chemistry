@@ -28,7 +28,7 @@ class MyPackSource : PackSource {
         
         guard let pack = packs[id] else { fatalError("Unknown id (\(id)) for getPack") }
         
-        delegate?.pack(didGetPack: pack)
+        delegate?.packObserve(didGetPack: pack)
         
         return pack
     }
@@ -66,7 +66,7 @@ class MyPackSource : PackSource {
             }
         })
         
-        delegate?.pack(didListPack: packsDict)
+        delegate?.packObserve(didListPack: packsDict)
         return packsDict
     }
     

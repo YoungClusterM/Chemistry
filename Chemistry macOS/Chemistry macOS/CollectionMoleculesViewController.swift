@@ -11,16 +11,18 @@ import AppKit
 import ChemistryShared
 
 class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
+    func packObserve(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func packObserve(didListPack pack: Dictionary<String, ChemistryPack>) {
+        
+    }
+    
     
     var packSource: PackSource?
     
-    func pack(didGetPack pack: ChemistryPack) {
-        
-    }
-    
-    func pack(didListPack pack: Dictionary<String, ChemistryPack>) {
-        
-    }
+    var detailDelegate: DetailDelegate?
     
     
     @IBOutlet weak var collectionView: NSCollectionView!
@@ -80,22 +82,7 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     var selectedItem: CollectionViewItem?
     
     func didSelectedItem(symbol: String, molecule: ChemistryMolecule) {
-        var jsonData: Data?
-        do {
-             jsonData = try JSONEncoder().encode(molecule)
-        } catch let error as NSError {
-            fatalError("Error: \(error)")
-        }
-        
-        let text =
-        "Symbol: \(symbol)\n" +
-        "Data: \(String(data: jsonData!, encoding: .utf8) ?? "")\n"
-        let alert = NSAlert.init()
-        alert.messageText = "Molecule"
-        alert.informativeText = text
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "OK")
-        alert.runModal()
+        detailDelegate?.show(molecule: molecule)
     }
     
     let moleculesLoader = MoleculesLoadWindow()

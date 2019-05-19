@@ -60,17 +60,11 @@ class CollectionMoleculeItem: NSCollectionViewItem {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                setColor(NSColor.controlAccentColor.cgColor)
+                view.layer?.backgroundColor =  NSColor.controlAccentColor.cgColor.copy(alpha: 0.2)
             } else {
-                setColor(.clear)
+                view.layer?.backgroundColor =  .clear
             }
         }
-    }
-    
-    func setColor(_ color: CGColor) {
-        view.layer?.backgroundColor = isSelected ? color.copy(alpha: 0.2) : color
-        nameLabel.textColor = isSelected ? nameLabel.textColor?.withAlphaComponent(1) : NSColor.labelColor
-        massLabel.textColor = isSelected ? massLabel.textColor?.withAlphaComponent(1) : NSColor.labelColor
     }
     
 }

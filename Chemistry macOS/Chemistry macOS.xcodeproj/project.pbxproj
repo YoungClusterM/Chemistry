@@ -22,6 +22,8 @@
 		0481CD4722802B5A009F5830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0481CD4522802B5A009F5830 /* Main.storyboard */; };
 		0481CD5322802B5A009F5830 /* Chemistry_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481CD5222802B5A009F5830 /* Chemistry_macOSTests.swift */; };
 		0481CD5E22802B5A009F5830 /* Chemistry_macOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481CD5D22802B5A009F5830 /* Chemistry_macOSUITests.swift */; };
+		0498AA1F22916CDA00CCDBA7 /* MoleculesSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AA1E22916CDA00CCDBA7 /* MoleculesSplitViewController.swift */; };
+		0498AA2122916D2D00CCDBA7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498AA2022916D2D00CCDBA7 /* DetailViewController.swift */; };
 		04A486392280369200490805 /* libChemistryShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A486382280369200490805 /* libChemistryShared.a */; };
 		04A4865622807F6D00490805 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4865522807F6D00490805 /* WindowController.swift */; };
 		04ABC35D228729A100A6B154 /* MyPackSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ABC35C228729A100A6B154 /* MyPackSource.swift */; };
@@ -75,6 +77,8 @@
 		0481CD5922802B5A009F5830 /* ChemistryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemistryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0481CD5D22802B5A009F5830 /* Chemistry_macOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemistry_macOSUITests.swift; sourceTree = "<group>"; };
 		0481CD5F22802B5A009F5830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0498AA1E22916CDA00CCDBA7 /* MoleculesSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoleculesSplitViewController.swift; sourceTree = "<group>"; };
+		0498AA2022916D2D00CCDBA7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		04A485E322802F5C00490805 /* Chemistry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chemistry.entitlements; sourceTree = "<group>"; };
 		04A486282280355300490805 /* ChemistryShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChemistryShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A486382280369200490805 /* libChemistryShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libChemistryShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,8 @@
 				041FEA692288559E00914697 /* DatasetExportWindow.xib */,
 				0429C2272288A1A100762D08 /* CollectionMoleculeItem.swift */,
 				0429C2282288A1A100762D08 /* CollectionMoleculeItem.xib */,
+				0498AA1E22916CDA00CCDBA7 /* MoleculesSplitViewController.swift */,
+				0498AA2022916D2D00CCDBA7 /* DetailViewController.swift */,
 			);
 			path = "Chemistry macOS";
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				04BF9FB72284558A0027267C /* CollectionMoleculesViewController.swift in Sources */,
 				04A4865622807F6D00490805 /* WindowController.swift in Sources */,
 				04BF9FB3228454680027267C /* MoleculesLoadWindow.swift in Sources */,
+				0498AA2122916D2D00CCDBA7 /* DetailViewController.swift in Sources */,
 				04ABC35D228729A100A6B154 /* MyPackSource.swift in Sources */,
 				041FEA6A2288559E00914697 /* DatasetExportWindow.swift in Sources */,
 				0481CD4222802B58009F5830 /* ViewController.swift in Sources */,
@@ -405,6 +412,7 @@
 				0429C2292288A1A100762D08 /* CollectionMoleculeItem.swift in Sources */,
 				0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */,
 				0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */,
+				0498AA1F22916CDA00CCDBA7 /* MoleculesSplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
