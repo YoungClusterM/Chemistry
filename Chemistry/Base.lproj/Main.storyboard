@@ -43,17 +43,33 @@
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXp-SK-aiv">
+                                <rect key="frame" x="347" y="812" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reloadAction" destination="JEX-9P-axG" eventType="touchDown" id="CO2-E4-LRR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IXp-SK-aiv" firstAttribute="bottom" secondItem="VUw-jc-0yf" secondAttribute="bottom" constant="-20" id="CaH-ec-fPH"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="IXp-SK-aiv" secondAttribute="trailing" constant="20" id="pHj-0Z-1xA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="scnSwitch" destination="IXp-SK-aiv" id="rb8-bY-CTo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3159" y="-330"/>
+            <point key="canvasLocation" x="3157.971014492754" y="-330.13392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iCk-u8-4G6">

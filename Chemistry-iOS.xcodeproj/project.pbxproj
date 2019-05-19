@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0425A4932289A1F2008E715D /* MyPackSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A4922289A1F2008E715D /* MyPackSource.swift */; };
 		0425A4A72289E517008E715D /* base.json in Resources */ = {isa = PBXBuildFile; fileRef = 0425A4A52289E509008E715D /* base.json */; };
+		04419A9C2291D6CC00010208 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04419A9B2291D6CC00010208 /* DetailViewController.swift */; };
 		045F307F227EFDF100816C02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 045F3081227EFDF100816C02 /* Localizable.strings */; };
 		04A486372280368B00490805 /* libChemistryShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A486362280368B00490805 /* libChemistryShared.a */; };
 		04F8DD0C227ED90500064781 /* ReactionCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */; };
@@ -18,7 +19,6 @@
 		9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE7E223E900F0022BA1E /* MasterMoleculesViewController.swift */; };
 		9238AE81223E96010022BA1E /* MasterAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */; };
 		9274DBDA217C8687007AF82A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBD9217C8687007AF82A /* AppDelegate.swift */; };
-		9274DBDE217C8687007AF82A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274DBDD217C8687007AF82A /* DetailViewController.swift */; };
 		9274DBE1217C8688007AF82A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9274DBDF217C8688007AF82A /* Main.storyboard */; };
 		9274DBE3217C86D5007AF82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9274DBE2217C86D5007AF82A /* Assets.xcassets */; };
 		9274DBE6217C86D5007AF82A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9274DBE4217C86D5007AF82A /* LaunchScreen.storyboard */; };
@@ -48,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0425A4922289A1F2008E715D /* MyPackSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPackSource.swift; sourceTree = "<group>"; };
 		0425A4A52289E509008E715D /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
+		04419A9B2291D6CC00010208 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0458BD9C227DEA1C00FF26AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		0458BD9F227DF85600FF26AD /* ReactionCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCalculatorViewController.swift; sourceTree = "<group>"; };
 		045F3080227EFDF100816C02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		9238AE80223E96010022BA1E /* MasterAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterAtomsViewController.swift; sourceTree = "<group>"; };
 		9274DBD6217C8686007AF82A /* Chemistry-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chemistry-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9274DBD9217C8687007AF82A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9274DBDD217C8687007AF82A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9274DBE2217C86D5007AF82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9274DBE7217C86D5007AF82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9274DBEC217C86D6007AF82A /* Chemistry-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chemistry-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +182,7 @@
 				04A4865222805B4100490805 /* Chemistry.entitlements */,
 				9274DBD9217C8687007AF82A /* AppDelegate.swift */,
 				9274DBDF217C8688007AF82A /* Main.storyboard */,
-				9274DBDD217C8687007AF82A /* DetailViewController.swift */,
+				04419A9B2291D6CC00010208 /* DetailViewController.swift */,
 				9274DBE2217C86D5007AF82A /* Assets.xcassets */,
 				9274DBE4217C86D5007AF82A /* LaunchScreen.storyboard */,
 				9274DBE7217C86D5007AF82A /* Info.plist */,
@@ -482,7 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9274DBDE217C8687007AF82A /* DetailViewController.swift in Sources */,
+				04419A9C2291D6CC00010208 /* DetailViewController.swift in Sources */,
 				9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */,
 				04F8DD0C227ED90500064781 /* ReactionCalculatorViewController.swift in Sources */,
 				92D6F183223FD8F000C0F3A3 /* MasterNavigationController.swift in Sources */,
