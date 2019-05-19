@@ -32,7 +32,7 @@ class DetailViewController: NSViewController, DetailDelegate {
         sceneView.scene!.rootNode.addChildNode(node)
         node.rotation = SCNVector4(x: 0.0, y: 0.0, z: 0.0, w: 0.0)
         
-        view.subviews = []
+        view.subviews = [view.subviews[0]]
         view.addSubview(sceneView)
         sceneView.autoresizingMask = .init(arrayLiteral: .height, .width)
     }
