@@ -10,13 +10,24 @@ import UIKit
 import BLTNBoard
 import ChemistryShared
 
-class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating {
+class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating, PackDelegate {
+    func packObserve(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func packObserve(didListPack pack: Dictionary<String, ChemistryPack>) {
+        
+    }
+    
     
     var detailViewController: DetailViewController? = nil
-    var objects = [String]()
+    
+    var packSource: PackSource?
+    var objects_keys: [String] = []
+    var objects: [String : ChemistryAtom] = [:]
     
     var searchController = UISearchController()
-    var filteredAtoms: [String] = []
+    var filteredAtoms: [String : ChemistryAtom] = [:]
     
     lazy var descriptor: BLTNItemManager = {
         let page = BLTNPageItem(title: LocalizedStringSpecific("AtomsDescriptorTitle"))
@@ -70,8 +81,22 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     
     @objc
     func insertAtoms(_ sender: Any) {
-        for atom in Atoms {
-            objects.insert(atom.key, at: 0)
+        packSource = MyPackSource(delegate: self)
+        
+        var packs = packSource?.listPack()
+        let base = getBasePack()
+        packs?["Base"] = base
+        
+        packs?.forEach({ (arg0) in
+            let (_, value) = arg0
+            value.atoms.forEach({ (molecule: ChemistryAtom) in
+                objects_keys.append(molecule.title.base!)
+                objects[molecule.title.base!] = molecule
+            })
+        })
+        
+        objects_keys = objects_keys.sorted { (s0, s1) -> Bool in
+            return objects[s0]!.number < objects[s1]!.number
         }
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
@@ -82,14 +107,14 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object: String
+                let object: ChemistryAtom
                 if searchController.isActive {
-                    object = filteredAtoms[indexPath.row]
+                    object = filteredAtoms[Array(filteredAtoms.keys)[indexPath.row]]!
                 } else {
-                    object = objects[indexPath.row]
+                    object = objects[objects_keys[indexPath.row]]!
                 }
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                controller.detailAtom = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -112,14 +137,14 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let object: String
+        let object: ChemistryAtom
         if searchController.isActive {
-            object = filteredAtoms[indexPath.row]
+            object = filteredAtoms[Array(filteredAtoms.keys)[indexPath.row]]!
         } else {
-            object = objects[indexPath.row]
+            object = objects[Array(objects_keys)[indexPath.row]]!
         }
-        cell.textLabel!.text = object.description
-        cell.detailTextLabel!.text = NSLocalizedString(Atoms[object.description]!.wikipedia, comment: "")
+        cell.textLabel!.text = object.symbol
+        cell.detailTextLabel!.text = NSLocalizedString(object.title.base!, comment: "")
         return cell
     }
     
@@ -128,27 +153,25 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating 
         return false
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-    
     func updateSearchResults(for searchController: UISearchController) {
         filteredAtoms.removeAll(keepingCapacity: false)
         
-        let array = (objects as Array).filter({atom -> Bool in
-            return atom.lowercased().contains(searchController.searchBar.text!.lowercased())
+        let array = objects.filter({atom -> Bool in
+            return atom.value.title.base!.lowercased().contains(searchController.searchBar.text!.lowercased())
         }) // Symbols
-        let array2 = (objects as Array).filter({atom -> Bool in
-            return NSLocalizedString(Atoms[atom]!.wikipedia, comment: "").lowercased().contains(searchController.searchBar.text!.lowercased())
+        let array2 = objects.filter({atom -> Bool in
+            return atom.value.title.base!.lowercased().contains(searchController.searchBar.text!.lowercased())
         }) // Names
         
-        filteredAtoms = array + array2
+        filteredAtoms += array
+        filteredAtoms += array2
         
         self.tableView.reloadData()
+    }
+}
+
+func += <K, V> (left: inout [K:V], right: [K:V]) {
+    for (k, v) in right {
+        left[k] = v
     }
 }

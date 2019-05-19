@@ -165,7 +165,7 @@
         <!--Molecules-->
         <scene sceneID="RWq-QD-Ny7">
             <objects>
-                <splitViewController title="Molecules" id="JxP-jJ-o2c" sceneMemberID="viewController">
+                <splitViewController title="Molecules" id="JxP-jJ-o2c" customClass="MoleculesSplitViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="hqd-9k-WAU"/>
                         <splitViewItem id="nHl-Di-g1E"/>
@@ -354,10 +354,21 @@
         <!--Detail View Controller-->
         <scene sceneID="H4g-Me-otk">
             <objects>
-                <viewController title="Detail View Controller" id="Bz7-hR-Ktk" sceneMemberID="viewController">
+                <viewController title="Detail View Controller" id="Bz7-hR-Ktk" customClass="DetailViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Pm1-ZY-4If">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Xrz-KK-l3y">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xrz-KK-l3y" secondAttribute="trailing" id="GsU-f6-dsg"/>
+                            <constraint firstItem="Xrz-KK-l3y" firstAttribute="leading" secondItem="Pm1-ZY-4If" secondAttribute="leading" id="coK-41-SOz"/>
+                            <constraint firstItem="Xrz-KK-l3y" firstAttribute="top" secondItem="Pm1-ZY-4If" secondAttribute="top" id="f2s-zB-zX7"/>
+                            <constraint firstAttribute="bottom" secondItem="Xrz-KK-l3y" secondAttribute="bottom" id="okC-ZG-qnB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="MeK-1A-29s" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -371,6 +382,6 @@
         <image name="molecule" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jXW-Re-rO0"/>
+        <segue reference="eUv-td-Exc"/>
     </inferredMetricsTieBreakers>
 </document>

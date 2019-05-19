@@ -49,11 +49,11 @@ public struct ChemistryPackDetails: Encodable, Decodable {
 public struct ChemistryAtom: Encodable, Decodable {
     public var symbol: String
     public var number: Int
-    public var title: String
+    public var title: ChemistryAtomTitle
     public var color: ChemistryColor
     public var radius: Int
     public var mass: Float
-    public init(symbol: String, number: Int, title: String, color: ChemistryColor, radius: Int, mass: Float) {
+    public init(symbol: String, number: Int, title: ChemistryAtomTitle, color: ChemistryColor, radius: Int, mass: Float) {
         self.symbol = symbol
         self.number = number
         self.title = title
@@ -61,6 +61,13 @@ public struct ChemistryAtom: Encodable, Decodable {
         self.radius = radius
         self.mass = mass
     }
+}
+
+public struct ChemistryAtomTitle: Encodable, Decodable {
+    public var base: String? // Base
+    public var en: String?   // English
+    public var ru: String?   // Russian
+    public var be: String?   // Belarusian
 }
 
 // Molecules's struct

@@ -25,12 +25,15 @@ public func pack(atoms: Dictionary<String, Atom>) -> [ChemistryAtom] {
         let color_green = color!.greenComponent
         let color_blue = color!.blueComponent
         #endif
+        
+        var atomTitle = ChemistryAtomTitle()
+        atomTitle.base = value.wikipedia
        
         items.append(
             ChemistryAtom(
                 symbol: key,
                 number: Int(value.num),
-                title: value.wikipedia,
+                title: atomTitle,
                 color: ChemistryColor(
                     red: color_red,
                     green: color_green,
