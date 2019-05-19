@@ -22,6 +22,8 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     
     var packSource: PackSource?
     
+    var detailDelegate: DetailDelegate?
+    
     
     @IBOutlet weak var collectionView: NSCollectionView!
     
@@ -80,17 +82,7 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     var selectedItem: CollectionViewItem?
     
     func didSelectedItem(symbol: String, molecule: ChemistryMolecule) {
-        let alert = NSAlert.init()
-        alert.messageText = "Molecule"
-        do{
-            alert.informativeText = String(data: try JSONEncoder().encode(molecule), encoding: .utf8)!
-            alert.alertStyle = .informational
-        } catch _ as NSError {
-            alert.informativeText = "Something went wrong!"
-            alert.alertStyle = .critical
-        }
-        alert.addButton(withTitle: "OK")
-        alert.runModal()
+        detailDelegate?.show(molecule: molecule)
     }
     
     let moleculesLoader = MoleculesLoadWindow()

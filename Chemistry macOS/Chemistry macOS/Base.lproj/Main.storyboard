@@ -165,7 +165,7 @@
         <!--Molecules-->
         <scene sceneID="RWq-QD-Ny7">
             <objects>
-                <splitViewController title="Molecules" id="JxP-jJ-o2c" sceneMemberID="viewController">
+                <splitViewController title="Molecules" id="JxP-jJ-o2c" customClass="MoleculesSplitViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="hqd-9k-WAU"/>
                         <splitViewItem id="nHl-Di-g1E"/>
@@ -354,7 +354,7 @@
         <!--Detail View Controller-->
         <scene sceneID="H4g-Me-otk">
             <objects>
-                <viewController title="Detail View Controller" id="Bz7-hR-Ktk" sceneMemberID="viewController">
+                <viewController title="Detail View Controller" id="Bz7-hR-Ktk" customClass="DetailViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Pm1-ZY-4If">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -371,6 +371,6 @@
         <image name="molecule" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jXW-Re-rO0"/>
+        <segue reference="eUv-td-Exc"/>
     </inferredMetricsTieBreakers>
 </document>
