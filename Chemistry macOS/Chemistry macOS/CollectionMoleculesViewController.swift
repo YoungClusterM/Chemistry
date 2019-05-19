@@ -10,7 +10,7 @@ import Foundation
 import AppKit
 import ChemistryShared
 
-class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
+class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate, DetailSource {
     func packObserve(didGetPack pack: ChemistryPack) {
         
     }
@@ -72,10 +72,20 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
         
         collectionView.register(CollectionMoleculeItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionMoleculeItem"))
         collectionView.reloadData()
+        setupViewRect()
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
+        setupViewRect()
+    }
+    
+    override func viewDidAppear() {
+        collectionView.reloadData()
+        setupViewRect()
+    }
+    
+    func setupViewRect() {
         collectionView.frame = CGRect(x: 0, y: 0, width: collectionView.frame.width, height: (collectionView.collectionViewLayout?.collectionViewContentSize.height)!)
     }
     

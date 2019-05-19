@@ -9,7 +9,9 @@
 import Cocoa
 import ChemistryShared
 
-class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
+class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate, DetailSource {
+    var detailDelegate: DetailDelegate?
+    
     func packObserve(didGetPack pack: ChemistryPack) {
         
     }
@@ -75,25 +77,19 @@ class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSourc
         collectionView.reloadData()
     }
     
-    override func viewDidLayout() {
-        super.viewDidLayout()
+    override func viewDidAppear() {
+        collectionView.reloadData()
+        setupViewRect()
+    }
+    
+    func setupViewRect() {
         collectionView.frame = CGRect(x: 0, y: 0, width: collectionView.frame.width, height: (collectionView.collectionViewLayout?.collectionViewContentSize.height)!)
     }
     
     var selectedItem: CollectionViewItem?
     
     func didSelectedItem(symbol: String, atom: ChemistryAtom) {
-        let alert = NSAlert.init()
-        alert.messageText = "Atom"
-        do{
-            alert.informativeText = String(data: try JSONEncoder().encode(atom), encoding: .utf8)!
-            alert.alertStyle = .informational
-        } catch _ as NSError {
-            alert.informativeText = "Something went wrong!"
-            alert.alertStyle = .critical
-        }
-        alert.addButton(withTitle: "OK")
-        alert.runModal()
+        detailDelegate?.show(atom: atom)
     }
 }
 
