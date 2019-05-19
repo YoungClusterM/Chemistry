@@ -15,33 +15,33 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="272" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="272" height="273"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-Um-OHB">
-                    <rect key="frame" x="-2" y="116" width="276" height="39"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Molecule Name" id="UYN-rD-tQW">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-Um-OHB">
+                    <rect key="frame" x="0.0" y="117" width="272" height="39"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Molecule Name" drawsBackground="YES" id="UYN-rD-tQW">
                         <font key="font" metaFont="system" size="32"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-jF-eHX">
-                    <rect key="frame" x="-2" y="91" width="276" height="17"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Molecular Mass" id="ExV-qK-Sdm">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-jF-eHX">
+                    <rect key="frame" x="0.0" y="92" width="272" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Molecular Mass" drawsBackground="YES" id="ExV-qK-Sdm">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </textFieldCell>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="gWg-Um-OHB" firstAttribute="trailing" secondItem="1I1-jF-eHX" secondAttribute="trailing" id="3xb-4h-XCn"/>
-                <constraint firstItem="gWg-Um-OHB" firstAttribute="leading" secondItem="1I1-jF-eHX" secondAttribute="leading" id="jPj-b8-g62"/>
-                <constraint firstItem="gWg-Um-OHB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="pMa-Yv-4sz"/>
-                <constraint firstItem="gWg-Um-OHB" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="sQk-Az-HD9"/>
-                <constraint firstItem="1I1-jF-eHX" firstAttribute="top" secondItem="gWg-Um-OHB" secondAttribute="bottom" constant="8" symbolic="YES" id="xYD-68-mM0"/>
-                <constraint firstAttribute="trailing" secondItem="gWg-Um-OHB" secondAttribute="trailing" id="yRr-Zn-VoS"/>
+                <constraint firstItem="gWg-Um-OHB" firstAttribute="trailing" secondItem="1I1-jF-eHX" secondAttribute="trailing" id="0VX-zm-Ckd"/>
+                <constraint firstAttribute="trailing" secondItem="gWg-Um-OHB" secondAttribute="trailing" id="4Vh-sR-x6g"/>
+                <constraint firstItem="gWg-Um-OHB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="EKp-yP-s5Q"/>
+                <constraint firstItem="gWg-Um-OHB" firstAttribute="leading" secondItem="1I1-jF-eHX" secondAttribute="leading" id="IUS-3j-Sd6"/>
+                <constraint firstItem="gWg-Um-OHB" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="i9h-Nx-il9"/>
+                <constraint firstItem="1I1-jF-eHX" firstAttribute="top" secondItem="gWg-Um-OHB" secondAttribute="bottom" constant="8" id="t3n-FP-XWJ"/>
             </constraints>
             <point key="canvasLocation" x="33" y="152"/>
         </customView>

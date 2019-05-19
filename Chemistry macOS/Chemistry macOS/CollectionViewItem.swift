@@ -58,19 +58,11 @@ class CollectionViewItem: NSCollectionViewItem {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                setColor(NSColor.controlAccentColor.cgColor)
+                view.layer?.backgroundColor =  NSColor.controlAccentColor.cgColor.copy(alpha: 0.2)
             } else {
-                setColor(.clear)
+                view.layer?.backgroundColor =  .clear
             }
         }
-    }
-    
-    func setColor(_ color: CGColor) {
-        view.layer?.backgroundColor = isSelected ? color.copy(alpha: 0.2) : color
-        atomTitle.textColor = isSelected ? atomTitle.textColor?.withAlphaComponent(1) : NSColor.labelColor
-        atomLabel.textColor = isSelected ? atomLabel.textColor?.withAlphaComponent(1) : NSColor.labelColor
-        atomNumber.textColor = isSelected ? atomNumber.textColor?.withAlphaComponent(1) : NSColor.labelColor
-        atomMass.textColor = isSelected ? atomMass.textColor?.withAlphaComponent(1) : NSColor.labelColor
     }
     
 }
