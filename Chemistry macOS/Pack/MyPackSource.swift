@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 import ChemistryShared
 
 class MyPackSource : PackSource {
@@ -16,11 +17,31 @@ class MyPackSource : PackSource {
     var delegate: PackDelegate?
     
     init() {
-        
+        loadAtoms()
     }
     
     init(delegate: PackDelegate) {
         self.delegate = delegate
+        loadAtoms()
+    }
+    
+    private func loadAtoms() {
+        var packs = self.listPack()
+        let base = getBasePack()
+        packs["Base"] = base
+        
+        packs.forEach({ (arg0) in
+            let (_, value) = arg0
+            value.atoms.forEach({ (atom: ChemistryAtom) in
+                Atoms[atom.symbol] = Atom(
+                    pm: Float(atom.radius),
+                    color: NSColor(cgColor: CGColor.init(red: atom.color.red, green: atom.color.green, blue: atom.color.blue, alpha: 1))!,
+                    num: Int8(atom.number),
+                    wikipedia: atom.title.base!,
+                    atomMass: atom.mass
+                )
+            })
+        })
     }
     
     func getPack(_ id: String) -> ChemistryPack {

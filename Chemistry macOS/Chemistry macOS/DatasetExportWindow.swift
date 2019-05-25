@@ -44,7 +44,8 @@ class DatasetExportWin: NSWindow {
             )
             
             let atoms = pack(atoms: Atoms)
-            let molecules = pack(molecules: Molecules)
+            //let molecules = pack(molecules: Molecules)
+            let molecules = Array<ChemistryMolecule>()
             
             let pack = ChemistryPack(
                 packDetails: settings,
