@@ -52,11 +52,13 @@ class DetailViewController: UIViewController, WKUIDelegate {
     func configureView() {
         self.navigationItem.largeTitleDisplayMode = .never
         if mode == .molecule { // Is it in Molecules
+            self.sceneView.removeFromSuperview()
             configureSceneView(node: drawChemistryMolecule(detailMolecule!))
             self.webView.removeFromSuperview()
             self.view.insertSubview(sceneView, belowSubview: scnSwitch)
             sceneView.autoresizingMask = .init(arrayLiteral: .flexibleWidth, .flexibleHeight)
         } else if mode == .atom { // Is it in Atoms
+            self.webView.removeFromSuperview()
             self.title = NSLocalizedString((detailAtom?.title.base!)!, comment: "")
             let webConfiguration = WKWebViewConfiguration()
             webView = WKWebView(frame: view.bounds, configuration: webConfiguration)
