@@ -9,10 +9,9 @@
 import Cocoa
 import ChemistryShared
 import SceneKit
+import WebKit
 
-class DetailViewController: NSViewController, DetailDelegate {
-    var sceneView = SCNView()
-    
+class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
     func show(molecule: ChemistryMolecule) {
         let sceneView = SCNView(frame: view.frame)
         sceneView.backgroundColor = .clear
@@ -38,7 +37,18 @@ class DetailViewController: NSViewController, DetailDelegate {
     }
     
     func show(atom: ChemistryAtom) {
+        let webConfiguration = WKWebViewConfiguration()
+        let webView = WKWebView(frame: view.frame, configuration: webConfiguration)
         
+        webView.uiDelegate = self
+        
+        let myURL = URL(string:"https://en.m.wikipedia.org/wiki/\(atom.title.base!)")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+        
+        view.subviews = [view.subviews[0]]
+        view.addSubview(webView)
+        webView.autoresizingMask = .init(arrayLiteral: .height, .width)
     }
     
 

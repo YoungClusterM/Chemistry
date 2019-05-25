@@ -9,15 +9,19 @@
 import Foundation
 import AppKit
 
-class MoleculesSplitViewController: NSSplitViewController {
+class SplitViewController: NSSplitViewController {
     var detailViewController: DetailViewController?
-    var masterViewController: CollectionMoleculesViewController?
+    var masterViewController: DetailSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         detailViewController = splitViewItems[1].viewController as? DetailViewController
-        masterViewController = splitViewItems[0].viewController as? CollectionMoleculesViewController
+        masterViewController = splitViewItems[0].viewController as? DetailSource
         
         masterViewController?.detailDelegate = detailViewController
     }
+}
+
+protocol DetailSource {
+    var detailDelegate: DetailDelegate? { get set }
 }

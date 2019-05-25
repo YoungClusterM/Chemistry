@@ -53,23 +53,19 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
         insertAtoms(self)
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController = (controllers[controllers.count-1] as? UINavigationController)?.topViewController as? DetailViewController
         }
         
-        searchController = ({
-            let controller = UISearchController(searchResultsController: nil)
-            controller.searchResultsUpdater = self
-            controller.dimsBackgroundDuringPresentation = false
-            controller.searchBar.sizeToFit()
-            
-            tableView.tableHeaderView = controller.searchBar
-            
-            return controller
-        })()
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        
+        tableView.tableHeaderView = searchController.searchBar
         
         tableView.reloadData()
         
-        if (!(userDefaults?.bool(forKey: "atoms_descripted") ?? false)) {
+        if !(userDefaults?.bool(forKey: "molecules_descripted"))! {
             descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
         }
     }
@@ -105,19 +101,17 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let object: ChemistryAtom
-                if searchController.isActive {
-                    object = filteredAtoms[Array(filteredAtoms.keys)[indexPath.row]]!
-                } else {
-                    object = objects[objects_keys[indexPath.row]]!
-                }
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailAtom = object
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
+        if segue.identifier == "showDetail", let indexPath = tableView.indexPathForSelectedRow {
+            let object: ChemistryAtom
+            if searchController.isActive {
+                object = filteredAtoms[Array(filteredAtoms.keys)[indexPath.row]]!
+            } else {
+                object = objects[objects_keys[indexPath.row]]!
             }
+            let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+            controller.detailAtom = object
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
     
@@ -157,10 +151,14 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
         filteredAtoms.removeAll(keepingCapacity: false)
         
         let array = objects.filter({atom -> Bool in
-            return atom.value.title.base!.lowercased().contains(searchController.searchBar.text!.lowercased())
+            let a1 = atom.value.title.base!.lowercased()
+            let a2 = searchController.searchBar.text!.lowercased()
+            return a1.contains(a2)
         }) // Symbols
         let array2 = objects.filter({atom -> Bool in
-            return atom.value.title.base!.lowercased().contains(searchController.searchBar.text!.lowercased())
+            let a1 = atom.value.symbol.lowercased()
+            let a2 = searchController.searchBar.text!.lowercased()
+            return a1.contains(a2)
         }) // Names
         
         filteredAtoms += array
