@@ -16,6 +16,8 @@
 		0443A1862281C0430036DBBC /* CollectionAtomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */; };
 		0443A1892281C8D90036DBBC /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A1872281C8D90036DBBC /* CollectionViewItem.swift */; };
 		0443A18A2281C8D90036DBBC /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443A1882281C8D90036DBBC /* CollectionViewItem.xib */; };
+		044D351D22985575005C25AD /* AtomDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D351B22985575005C25AD /* AtomDetailsView.swift */; };
+		044D351E22985575005C25AD /* AtomDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044D351C22985575005C25AD /* AtomDetailsView.xib */; };
 		0481CD4022802B58009F5830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481CD3F22802B58009F5830 /* AppDelegate.swift */; };
 		0481CD4222802B58009F5830 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481CD4122802B58009F5830 /* ViewController.swift */; };
 		0481CD4422802B5A009F5830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0481CD4322802B5A009F5830 /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		0443A1852281C0430036DBBC /* CollectionAtomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAtomsViewController.swift; sourceTree = "<group>"; };
 		0443A1872281C8D90036DBBC /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
 		0443A1882281C8D90036DBBC /* CollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
+		044D351B22985575005C25AD /* AtomDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomDetailsView.swift; sourceTree = "<group>"; };
+		044D351C22985575005C25AD /* AtomDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AtomDetailsView.xib; sourceTree = "<group>"; };
 		0481CD3C22802B58009F5830 /* Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0481CD3F22802B58009F5830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0481CD4122802B58009F5830 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 				0429C2282288A1A100762D08 /* CollectionMoleculeItem.xib */,
 				0498AA1E22916CDA00CCDBA7 /* MoleculesSplitViewController.swift */,
 				0498AA2022916D2D00CCDBA7 /* DetailViewController.swift */,
+				044D351B22985575005C25AD /* AtomDetailsView.swift */,
+				044D351C22985575005C25AD /* AtomDetailsView.xib */,
 			);
 			path = "Chemistry macOS";
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				0481CD4422802B5A009F5830 /* Assets.xcassets in Resources */,
 				041B5ED72282B73600A8B23C /* InfoPlist.strings in Resources */,
 				04BF9FB4228454680027267C /* MoleculesLoadWindow.xib in Resources */,
+				044D351E22985575005C25AD /* AtomDetailsView.xib in Resources */,
 				0481CD4722802B5A009F5830 /* Main.storyboard in Resources */,
 				0425A4A42289E4F6008E715D /* base.json in Resources */,
 				041FEA6B2288559E00914697 /* DatasetExportWindow.xib in Resources */,
@@ -404,6 +411,7 @@
 				04BF9FB72284558A0027267C /* CollectionMoleculesViewController.swift in Sources */,
 				04A4865622807F6D00490805 /* WindowController.swift in Sources */,
 				04BF9FB3228454680027267C /* MoleculesLoadWindow.swift in Sources */,
+				044D351D22985575005C25AD /* AtomDetailsView.swift in Sources */,
 				0498AA2122916D2D00CCDBA7 /* DetailViewController.swift in Sources */,
 				04ABC35D228729A100A6B154 /* MyPackSource.swift in Sources */,
 				041FEA6A2288559E00914697 /* DatasetExportWindow.swift in Sources */,
