@@ -43,6 +43,7 @@ class DetailViewController: UIViewController, WKUIDelegate {
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
         sceneView.scene!.rootNode.addChildNode(cameraNode)
+        @IBOutlet weak var scnView: SCNView!
         
         sceneView.scene!.rootNode.addChildNode(node)
         

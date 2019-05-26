@@ -16,6 +16,7 @@
 		04A4864D228036BD00490805 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48644228036BC00490805 /* String.swift */; };
 		04A714752284A76F008F1637 /* PackSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A714742284A76F008F1637 /* PackSource.swift */; };
 		04A714792284A7E5008F1637 /* PackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A714782284A7E5008F1637 /* PackDelegate.swift */; };
+		04F03794229AC7E50034202F /* WikipediaQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F03793229AC7E50034202F /* WikipediaQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		04A48644228036BC00490805 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		04A714742284A76F008F1637 /* PackSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackSource.swift; sourceTree = "<group>"; };
 		04A714782284A7E5008F1637 /* PackDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackDelegate.swift; sourceTree = "<group>"; };
+		04F03793229AC7E50034202F /* WikipediaQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		04A486302280368000490805 /* ChemistryShared */ = {
 			isa = PBXGroup;
 			children = (
+				04F03792229AC7BB0034202F /* Wikipedia */,
 				04A714732284A760008F1637 /* Pack */,
 				04298DA222831850009D358D /* Structures.swift */,
 				045799CC2280B47D00A76059 /* Atoms.swift */,
@@ -93,6 +96,14 @@
 				04A714782284A7E5008F1637 /* PackDelegate.swift */,
 			);
 			path = Pack;
+			sourceTree = "<group>";
+		};
+		04F03792229AC7BB0034202F /* Wikipedia */ = {
+			isa = PBXGroup;
+			children = (
+				04F03793229AC7E50034202F /* WikipediaQuery.swift */,
+			);
+			path = Wikipedia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				04A714792284A7E5008F1637 /* PackDelegate.swift in Sources */,
 				04298DA322831850009D358D /* Structures.swift in Sources */,
 				045799CE2280B47D00A76059 /* Atoms.swift in Sources */,
+				04F03794229AC7E50034202F /* WikipediaQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,12 +12,16 @@ import SceneKit
 import WebKit
 
 class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
+    @IBOutlet var sceneView: SCNView!
+    @IBOutlet var atomTitle: NSTextField!
+    @IBOutlet var atomDescription: NSTextView!
+    
     func show(molecule: ChemistryMolecule) {
-        let sceneView = SCNView(frame: view.frame)
-        sceneView.backgroundColor = .clear
+        sceneView.isHidden = false
+        atomTitle.isHidden = true
+        atomDescription.isHidden = true
         
         let scene = SCNScene()
-        scene.background.contents = NSColor.clear
         sceneView.scene = scene
         sceneView.allowsCameraControl = true
         sceneView.autoenablesDefaultLighting = true
@@ -30,25 +34,20 @@ class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
         let node = drawChemistryMolecule(molecule)
         sceneView.scene!.rootNode.addChildNode(node)
         node.rotation = SCNVector4(x: 0.0, y: 0.0, z: 0.0, w: 0.0)
-        
-        view.subviews = [view.subviews[0]]
-        view.addSubview(sceneView)
-        sceneView.autoresizingMask = .init(arrayLiteral: .height, .width)
     }
     
     func show(atom: ChemistryAtom) {
-        let webConfiguration = WKWebViewConfiguration()
-        let webView = WKWebView(frame: view.frame, configuration: webConfiguration)
+        sceneView.isHidden = true
+        atomTitle.isHidden = false
+        atomDescription.isHidden = false
         
-        webView.uiDelegate = self
+        atomTitle.stringValue = atom.title.base!
         
-        let myURL = URL(string:"https://en.m.wikipedia.org/wiki/\(atom.title.base!)")
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
+        let query = WikipediaQuery().get(atom.title.base!).query
+        let pageId = Array(query.pages.keys)[0]
+        let extract = query.pages[pageId]?.extract
         
-        view.subviews = [view.subviews[0]]
-        view.addSubview(webView)
-        webView.autoresizingMask = .init(arrayLiteral: .height, .width)
+        atomDescription.string = extract ?? ""
     }
     
 
