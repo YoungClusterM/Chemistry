@@ -49,11 +49,11 @@ public struct ChemistryPackDetails: Encodable, Decodable {
 public struct ChemistryAtom: Encodable, Decodable {
     public var symbol: String
     public var number: Int
-    public var title: String
+    public var title: ChemistryAtomTitle
     public var color: ChemistryColor
     public var radius: Int
     public var mass: Float
-    public init(symbol: String, number: Int, title: String, color: ChemistryColor, radius: Int, mass: Float) {
+    public init(symbol: String, number: Int, title: ChemistryAtomTitle, color: ChemistryColor, radius: Int, mass: Float) {
         self.symbol = symbol
         self.number = number
         self.title = title
@@ -61,6 +61,13 @@ public struct ChemistryAtom: Encodable, Decodable {
         self.radius = radius
         self.mass = mass
     }
+}
+
+public struct ChemistryAtomTitle: Encodable, Decodable {
+    public var base: String? // Base
+    public var en: String?   // English
+    public var ru: String?   // Russian
+    public var be: String?   // Belarusian
 }
 
 // Molecules's struct
@@ -71,6 +78,26 @@ public struct ChemistryMolecule: Encodable, Decodable {
         self.title = title
         self.atoms = atoms
     }
+}
+
+public func drawChemistryMolecule(_ molecule: ChemistryMolecule) -> SCNNode {
+    let mainNode = SCNNode()
+    
+    molecule.atoms.forEach { (atom: ChemistryMoleculeAtom) in
+        let atom1 = Atoms[atom.symbol]?.draw().ToNode()
+        #if os(iOS) || os(watchOS) || os(tvOS)
+        atom1?.position.x = Float(atom.position[0])
+        atom1?.position.y = Float(atom.position[1])
+        atom1?.position.z = Float(atom.position[2])
+        #elseif os(OSX)
+        atom1?.position.x = CGFloat(atom.position[0])
+        atom1?.position.y = CGFloat(atom.position[1])
+        atom1?.position.z = CGFloat(atom.position[2])
+        #endif
+        mainNode.addChildNode(atom1!)
+    }
+    
+    return mainNode
 }
 
 public struct ChemistryMoleculeAtom: Encodable, Decodable {

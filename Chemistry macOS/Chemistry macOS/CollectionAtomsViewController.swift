@@ -9,13 +9,23 @@
 import Cocoa
 import ChemistryShared
 
-class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
+class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate, DetailSource {
+    var detailDelegate: DetailDelegate?
     
+    func packObserve(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func packObserve(didListPack pack: Dictionary<String, ChemistryPack>) {
+        
+    }
+    
+    
+    var packSource: PackSource?
 
     @IBOutlet weak var collectionView: CollectionAtomsView!
-    let objects = Array(Atoms.keys).sorted { (s1, s2) -> Bool in
-        return Atoms[s1]!.num < Atoms[s2]!.num
-    }
+    var objects_keys: [String] = []
+    var objects: [String : ChemistryAtom] = [:]
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return objects.count
@@ -27,7 +37,7 @@ class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSourc
             return CollectionViewItem()
         }
         
-        collectionViewItem.atom = objects[indexPath.item]
+        collectionViewItem.atom = objects[objects_keys[indexPath.item]]
         
         return collectionViewItem
     }
@@ -35,8 +45,8 @@ class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSourc
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt
         indexPaths: Set<IndexPath>) {
         for index in indexPaths {
-            let key = objects[index.item] as String
-            didSelectedItem(symbol: key, atom: Atoms[key]!)
+            let key = objects_keys[index.item] as String
+            didSelectedItem(symbol: key, atom: objects[key]!)
         }
     }
     
@@ -44,30 +54,42 @@ class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        packSource = MyPackSource(delegate: self)
+        
+        var packs = packSource?.listPack()
+        let base = getBasePack()
+        packs?["Base"] = base
+        
+        packs?.forEach({ (arg0) in
+            let (_, value) = arg0
+            value.atoms.forEach({ (molecule: ChemistryAtom) in
+                objects_keys.append(molecule.title.base!)
+                objects[molecule.title.base!] = molecule
+            })
+        })
+        
+        objects_keys = objects_keys.sorted { (s0, s1) -> Bool in
+            return objects[s0]!.number < objects[s1]!.number
+        }
+        
         collectionView.register(CollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"))
         collectionView.reloadData()
     }
     
-    override func viewDidLayout() {
-        super.viewDidLayout()
+    override func viewDidAppear() {
+        collectionView.reloadData()
+        setupViewRect()
+    }
+    
+    func setupViewRect() {
         collectionView.frame = CGRect(x: 0, y: 0, width: collectionView.frame.width, height: (collectionView.collectionViewLayout?.collectionViewContentSize.height)!)
     }
     
     var selectedItem: CollectionViewItem?
     
-    func didSelectedItem(symbol: String, atom: Atom) {
-        let text =
-            "Symbol: \(symbol)\n" +
-                "Title: \(atom.wikipedia)\n" +
-                "Number: \(atom.num)\n" +
-                "Mass: \(atom.atomMass)\n" +
-        "Radius: \(atom.pm) pm\n"
-        let alert = NSAlert.init()
-        alert.messageText = "Atom"
-        alert.informativeText = text
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "OK")
-        alert.runModal()
+    func didSelectedItem(symbol: String, atom: ChemistryAtom) {
+        detailDelegate?.show(atom: atom)
     }
 }
 

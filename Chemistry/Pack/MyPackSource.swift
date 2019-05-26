@@ -1,13 +1,14 @@
 //
 //  MyPackSource.swift
-//  Chemistry
+//  Chemistry-iOS
 //
-//  Created by Pavel Kasila on 5/11/19.
-//  Copyright © 2019 Pavel Kasila. All rights reserved.
+//  Created by Pavel Kasila on 5/13/19.
+//  Copyright © 2019 Pavel Kosilo. All rights reserved.
 //
 
 import Foundation
-import Cocoa
+import UIKit
+import CoreGraphics
 import ChemistryShared
 
 class MyPackSource : PackSource {
@@ -35,7 +36,7 @@ class MyPackSource : PackSource {
             value.atoms.forEach({ (atom: ChemistryAtom) in
                 Atoms[atom.symbol] = Atom(
                     pm: Float(atom.radius),
-                    color: NSColor(cgColor: CGColor.init(red: atom.color.red, green: atom.color.green, blue: atom.color.blue, alpha: 1))!,
+                    color: UIColor(red: atom.color.red, green: atom.color.green, blue: atom.color.blue, alpha: 1),
                     num: Int8(atom.number),
                     wikipedia: atom.title.base!,
                     atomMass: atom.mass
@@ -93,3 +94,4 @@ class MyPackSource : PackSource {
     
     
 }
+

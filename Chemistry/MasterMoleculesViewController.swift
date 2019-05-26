@@ -10,10 +10,21 @@ import UIKit
 import BLTNBoard
 import ChemistryShared
 
-class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdating {
+class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdating, PackDelegate {
     
-    var detailViewController: DetailViewController? = nil
-    var objects = [String]()
+    func packObserve(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func packObserve(didListPack pack: [String : ChemistryPack]) {
+        
+    }
+    
+    
+    var detailViewController: DetailViewController?
+    
+    var objects: [String : ChemistryMolecule] = [:]
+    var packSource: PackSource?
     
     var searchController = UISearchController()
     var filteredMolecules: [String] = []
@@ -40,26 +51,25 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        packSource = MyPackSource(delegate: self)
+        
         insertMolecules(self)
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController = (controllers[controllers.count-1] as? UINavigationController)?.topViewController as? DetailViewController
         }
         
-        searchController = ({
-            let controller = UISearchController(searchResultsController: nil)
-            controller.searchResultsUpdater = self
-            controller.dimsBackgroundDuringPresentation = false
-            controller.searchBar.sizeToFit()
-            
-            tableView.tableHeaderView = controller.searchBar
-            
-            return controller
-        })()
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        
+        tableView.tableHeaderView = searchController.searchBar
         
         tableView.reloadData()
         
-        if (!(userDefaults?.bool(forKey: "molecules_descripted") ?? false)) {
+        if !(userDefaults?.bool(forKey: "molecules_descripted"))! {
             descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
         }
     }
@@ -71,9 +81,15 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     
     @objc
     func insertMolecules(_ sender: Any) {
-        for molecule in Molecules {
-            objects.insert(molecule.key, at: 0)
-        }
+        var packs = packSource?.listPack()
+        packs?["Base"] = getBasePack()
+        
+        packs?.forEach({ (arg0) in
+            let (_, value) = arg0
+            value.molecules.forEach({ (molecule: ChemistryMolecule) in
+                objects[molecule.title] = molecule
+            })
+        })
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
@@ -81,19 +97,17 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let object: String
-                if searchController.isActive {
-                    object = filteredMolecules[indexPath.row]
-                } else {
-                    object = objects[indexPath.row]
-                }
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
+        if segue.identifier == "showDetail", let indexPath = tableView.indexPathForSelectedRow {
+            let object: ChemistryMolecule
+            if searchController.isActive {
+                object = objects[filteredMolecules[indexPath.row]]!
+            } else {
+                object = objects[Array(objects.keys)[indexPath.row]]!
             }
+            let controller = (segue.destination as? UINavigationController)?.topViewController as? DetailViewController
+            controller?.detailMolecule = object
+            controller?.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller?.navigationItem.leftItemsSupplementBackButton = true
         }
     }
     
@@ -117,7 +131,7 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
         if searchController.isActive {
             object = filteredMolecules[indexPath.row]
         } else {
-            object = objects[indexPath.row]
+            object = Array(objects.keys)[indexPath.row]
         }
         cell.textLabel!.text = object.description
         return cell
@@ -128,20 +142,13 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
         return false
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-    
     func updateSearchResults(for searchController: UISearchController) {
         filteredMolecules.removeAll(keepingCapacity: false)
         
-        let array = (objects as Array).filter({atom -> Bool in
-            return atom.numbersInsteadChemistry().lowercased().contains(searchController.searchBar.text!.numbersInsteadChemistry().lowercased())
+        let array = (Array(objects.keys) as Array).filter({atom -> Bool in
+            let a1 = atom.numbersInsteadChemistry().lowercased()
+            let a2 = searchController.searchBar.text!.numbersInsteadChemistry().lowercased()
+            return a1.contains(a2)
         })
         filteredMolecules = array
         

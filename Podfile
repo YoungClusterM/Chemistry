@@ -1,7 +1,7 @@
 workspace 'Chemistry.xcworkspace'
 
-target 'Chemistry' do
-  project 'Chemistry'
+target 'Chemistry-iOS' do
+  project 'Chemistry-iOS'
   platform :ios, '12.0'
   pod 'BulletinBoard'
   pod 'SSZipArchive'

@@ -1,8 +1,8 @@
 //
-//  CollectionViewItem.swift
+//  CollectionMoleculeItem.swift
 //  Chemistry
 //
-//  Created by Pavel Kasila on 5/7/19.
+//  Created by Pavel Kasila on 5/12/19.
 //  Copyright © 2019 Pavel Kasila. All rights reserved.
 //
 
@@ -10,22 +10,24 @@ import Cocoa
 import SceneKit
 import ChemistryShared
 
-class CollectionViewItem: NSCollectionViewItem {
-    
-    var atom: ChemistryAtom? {
+class CollectionMoleculeItem: NSCollectionViewItem {
+
+    var molecule: ChemistryMolecule? {
         didSet {
-            atomTitle.stringValue = atom!.title.base!
-            atomLabel.stringValue = atom!.symbol
-            atomNumber.stringValue = String(atom!.number)
-            atomMass.stringValue = atom!.mass != -1 ? String(atom!.mass) : "Unknown"
+            nameLabel.stringValue = molecule!.title
+            var molMass: Float = 0
+            
+            molecule?.atoms.forEach({ (atom: ChemistryMoleculeAtom) in
+                let atom1 = Atoms[atom.symbol]!
+                molMass += atom1.atomMass
+            })
+            
+            massLabel.stringValue = "\(molMass)"
         }
     }
     
-    @IBOutlet weak var atomLabel: NSTextField!
-    @IBOutlet weak var atomTitle: NSTextField!
-    @IBOutlet weak var atomNumber: NSTextField!
-    @IBOutlet weak var atomMass: NSTextField!
-    
+    @IBOutlet weak var nameLabel: NSTextField!
+    @IBOutlet weak var massLabel: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -40,11 +40,12 @@ class DatasetExportWin: NSWindow {
                 title: titleField.stringValue,
                 version: versionField.stringValue,
                 type: "chemistry",
-                copyright: "© 2019 " + authorField.stringValue + ". All rights reserved."
+                copyright: "© \(Calendar.current.component(.year, from: Date())) \(authorField.stringValue). All rights reserved."
             )
             
             let atoms = pack(atoms: Atoms)
-            let molecules = pack(molecules: Molecules)
+            //let molecules = pack(molecules: Molecules)
+            let molecules = Array<ChemistryMolecule>()
             
             let pack = ChemistryPack(
                 packDetails: settings,
@@ -61,5 +62,10 @@ class DatasetExportWin: NSWindow {
             }
             self.close()
         }
+    }
+    
+    override func close() {
+        super.close()
+        NSApplication.shared.stopModal()
     }
 }

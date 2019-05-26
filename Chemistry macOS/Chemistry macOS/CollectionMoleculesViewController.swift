@@ -10,34 +10,36 @@ import Foundation
 import AppKit
 import ChemistryShared
 
-class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate {
+class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, PackDelegate, DetailSource {
+    func packObserve(didGetPack pack: ChemistryPack) {
+        
+    }
+    
+    func packObserve(didListPack pack: Dictionary<String, ChemistryPack>) {
+        
+    }
+    
     
     var packSource: PackSource?
     
-    func pack(didGetPack pack: ChemistryPack) {
-        
-    }
-    
-    func pack(didListPack pack: Dictionary<String, ChemistryPack>) {
-        
-    }
+    var detailDelegate: DetailDelegate?
     
     
     @IBOutlet weak var collectionView: NSCollectionView!
     
-    var objects = Array<String>()
+    var objects: [String : ChemistryMolecule] = [:]
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return objects.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"), for: indexPath)
-        guard let collectionViewItem = item as? CollectionViewItem else {
-            return CollectionViewItem()
+        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionMoleculeItem"), for: indexPath)
+        guard let collectionViewItem = item as? CollectionMoleculeItem else {
+            return CollectionMoleculeItem()
         }
         
-        collectionViewItem.atom = objects[indexPath.item]
+        collectionViewItem.molecule = objects[Array(objects.keys)[indexPath.item]]
         
         return collectionViewItem
     }
@@ -45,8 +47,8 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt
         indexPaths: Set<IndexPath>) {
         for index in indexPaths {
-            let key = objects[index.item] as String
-            didSelectedItem(symbol: key, atom: Atoms[key]!)
+            let key = Array(objects.keys)[index.item] as String
+            didSelectedItem(symbol: key, molecule: objects[key]!)
         }
     }
     
@@ -57,40 +59,40 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
         
         packSource = MyPackSource(delegate: self)
         
-        let packs = packSource?.listPack()
+        var packs = packSource?.listPack()
+        let base = getBasePack()
+        packs?["Base"] = base
         
-        var obj = Array<String>()
         packs?.forEach({ (arg0) in
-            let (key, _) = arg0
-            obj.append(key)
+            let (_, value) = arg0
+            value.molecules.forEach({ (molecule: ChemistryMolecule) in
+                objects[molecule.title] = molecule
+            })
         })
         
-        objects.append(contentsOf: obj)
-        
-        collectionView.register(CollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"))
+        collectionView.register(CollectionMoleculeItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionMoleculeItem"))
         collectionView.reloadData()
+        setupViewRect()
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
+        setupViewRect()
+    }
+    
+    override func viewDidAppear() {
+        collectionView.reloadData()
+        setupViewRect()
+    }
+    
+    func setupViewRect() {
         collectionView.frame = CGRect(x: 0, y: 0, width: collectionView.frame.width, height: (collectionView.collectionViewLayout?.collectionViewContentSize.height)!)
     }
     
     var selectedItem: CollectionViewItem?
     
-    func didSelectedItem(symbol: String, atom: Atom) {
-        let text =
-            "Symbol: \(symbol)\n" +
-                "Title: \(atom.wikipedia)\n" +
-                "Number: \(atom.num)\n" +
-                "Mass: \(atom.atomMass)\n" +
-        "Radius: \(atom.pm) pm\n"
-        let alert = NSAlert.init()
-        alert.messageText = "Atom"
-        alert.informativeText = text
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "OK")
-        alert.runModal()
+    func didSelectedItem(symbol: String, molecule: ChemistryMolecule) {
+        detailDelegate?.show(molecule: molecule)
     }
     
     let moleculesLoader = MoleculesLoadWindow()

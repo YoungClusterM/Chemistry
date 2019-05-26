@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.SceneKitIBPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -165,7 +166,7 @@
         <!--Molecules-->
         <scene sceneID="RWq-QD-Ny7">
             <objects>
-                <splitViewController title="Molecules" id="JxP-jJ-o2c" sceneMemberID="viewController">
+                <splitViewController title="Molecules" id="JxP-jJ-o2c" customClass="SplitViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="hqd-9k-WAU"/>
                         <splitViewItem id="nHl-Di-g1E"/>
@@ -190,7 +191,7 @@
         <!--Atoms-->
         <scene sceneID="wcc-uV-pWs">
             <objects>
-                <splitViewController title="Atoms" id="NLo-fq-n6J" sceneMemberID="viewController">
+                <splitViewController title="Atoms" id="NLo-fq-n6J" customClass="SplitViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="dw2-z4-Ykt"/>
                         <splitViewItem id="srj-oW-HNA"/>
@@ -288,13 +289,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="260"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <collectionView id="2g8-HD-tgr">
+                                                <collectionView selectable="YES" id="2g8-HD-tgr">
                                                     <rect key="frame" x="0.0" y="0.0" width="450" height="260"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="JTQ-2k-INg">
-                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="itemSize" width="100" height="100"/>
+                                                        <edgeInsets key="sectionInset" left="10" right="10" top="10" bottom="10"/>
                                                     </collectionViewFlowLayout>
                                                     <color key="primaryBackgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="fok-Zh-NTW" id="Wgi-GO-iER"/>
+                                                        <outlet property="delegate" destination="fok-Zh-NTW" id="jMy-3S-OFt"/>
+                                                    </connections>
                                                 </collectionView>
                                             </subviews>
                                         </clipView>
@@ -349,11 +355,69 @@
         <!--Detail View Controller-->
         <scene sceneID="H4g-Me-otk">
             <objects>
-                <viewController title="Detail View Controller" id="Bz7-hR-Ktk" sceneMemberID="viewController">
+                <viewController title="Detail View Controller" id="Bz7-hR-Ktk" customClass="DetailViewController" customModule="Chemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Pm1-ZY-4If">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Xrz-KK-l3y">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <subviews>
+                                    <sceneView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yzp-tB-Sgw">
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </sceneView>
+                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o79-UW-0DN">
+                                        <rect key="frame" x="18" y="246" width="414" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Title" id="4ND-Ez-dkx">
+                                            <font key="font" metaFont="system" size="28"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8N-Cl-pqd">
+                                        <rect key="frame" x="20" y="20" width="410" height="218"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="IxG-cB-zVd">
+                                            <rect key="frame" x="0.0" y="0.0" width="410" height="218"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView hidden="YES" ambiguous="YES" editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="3ZO-Gs-ih3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="410" height="218"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <size key="minSize" width="410" height="218"/>
+                                                    <size key="maxSize" width="410" height="10000000"/>
+                                                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                </textView>
+                                            </subviews>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="tWw-Ts-Hn4">
+                                            <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="lJS-H8-qen">
+                                            <rect key="frame" x="394" y="0.0" width="16" height="218"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                </subviews>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xrz-KK-l3y" secondAttribute="trailing" id="GsU-f6-dsg"/>
+                            <constraint firstItem="Xrz-KK-l3y" firstAttribute="leading" secondItem="Pm1-ZY-4If" secondAttribute="leading" id="coK-41-SOz"/>
+                            <constraint firstItem="Xrz-KK-l3y" firstAttribute="top" secondItem="Pm1-ZY-4If" secondAttribute="top" id="f2s-zB-zX7"/>
+                            <constraint firstAttribute="bottom" secondItem="Xrz-KK-l3y" secondAttribute="bottom" id="okC-ZG-qnB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="atomDescription" destination="3ZO-Gs-ih3" id="bfk-A3-dKl"/>
+                        <outlet property="atomTitle" destination="o79-UW-0DN" id="dJB-VW-hrr"/>
+                        <outlet property="sceneView" destination="Yzp-tB-Sgw" id="HL4-U6-mfb"/>
+                    </connections>
                 </viewController>
                 <customObject id="MeK-1A-29s" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
