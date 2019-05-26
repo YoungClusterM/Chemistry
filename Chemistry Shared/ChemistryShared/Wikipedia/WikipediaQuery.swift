@@ -8,12 +8,14 @@
 
 import Foundation
 
+public typealias WikipediaQueryCallback = (WikipediaQueryModel) -> Result<Void, Error>
+
 public class WikipediaQuery {
     public init() {
         
     }
     
-    public func get(_ title: String) -> WikipediaQueryModel {
+    public func getExtract(_ title: String) -> WikipediaQueryModel {
         do {
             let data = try Data(contentsOf: URL(string: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=\(title)")!)
             
@@ -24,6 +26,10 @@ public class WikipediaQuery {
         } catch let error as NSError {
             fatalError("\(error)")
         }
+    }
+    
+    public func getExtract(_ title: String, callback: WikipediaQueryCallback) -> Result<Void, Error> {
+        return callback(self.getExtract(title))
     }
 }
 

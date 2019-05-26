@@ -15,6 +15,7 @@ class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
     @IBOutlet var sceneView: SCNView!
     @IBOutlet var atomTitle: NSTextField!
     @IBOutlet var atomDescription: NSTextView!
+    @IBOutlet var progressIndicator: NSProgressIndicator!
     
     func show(molecule: ChemistryMolecule) {
         sceneView.isHidden = false
@@ -41,13 +42,20 @@ class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
         atomTitle.isHidden = false
         atomDescription.isHidden = false
         
+        progressIndicator.isHidden = false
+        
         atomTitle.stringValue = atom.title.base!
         
-        let query = WikipediaQuery().get(atom.title.base!).query
-        let pageId = Array(query.pages.keys)[0]
-        let extract = query.pages[pageId]?.extract
-        
-        atomDescription.string = extract ?? ""
+        let _ = WikipediaQuery().getExtract(atom.title.base!) { data in
+            return Result {
+                let pageId = Array(data.query.pages.keys)[0]
+                let extract = data.query.pages[pageId]?.extract
+                
+                self.atomDescription.string = extract ?? ""
+                
+                self.progressIndicator.isHidden = true
+            }
+        }
     }
     
 

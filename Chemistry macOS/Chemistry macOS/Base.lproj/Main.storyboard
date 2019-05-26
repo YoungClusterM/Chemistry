@@ -403,6 +403,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
+                                    <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-33-OXW">
+                                        <rect key="frame" x="217" y="142" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </progressIndicator>
                                 </subviews>
                             </visualEffectView>
                         </subviews>
@@ -416,6 +420,7 @@
                     <connections>
                         <outlet property="atomDescription" destination="3ZO-Gs-ih3" id="bfk-A3-dKl"/>
                         <outlet property="atomTitle" destination="o79-UW-0DN" id="dJB-VW-hrr"/>
+                        <outlet property="progressIndicator" destination="cvw-33-OXW" id="5br-Bg-Qfr"/>
                         <outlet property="sceneView" destination="Yzp-tB-Sgw" id="HL4-U6-mfb"/>
                     </connections>
                 </viewController>
