@@ -10,13 +10,7 @@
 		0425A4952289A38B008E715D /* PackagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A4942289A38B008E715D /* PackagerUtils.swift */; };
 		0425A49A2289E3FF008E715D /* base.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0425A4982289E292008E715D /* base.json */; };
 		04298DA322831850009D358D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298DA222831850009D358D /* Structures.swift */; };
-		045799CD2280B47D00A76059 /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CB2280B47D00A76059 /* Molecules.swift */; };
 		045799CE2280B47D00A76059 /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CC2280B47D00A76059 /* Atoms.swift */; };
-		045799D52280B48500A76059 /* H2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799D02280B48500A76059 /* H2.swift */; };
-		045799D62280B48500A76059 /* F2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799D12280B48500A76059 /* F2.swift */; };
-		045799D72280B48500A76059 /* H2O.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799D22280B48500A76059 /* H2O.swift */; };
-		045799D82280B48500A76059 /* O2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799D32280B48500A76059 /* O2.swift */; };
-		045799D92280B48500A76059 /* Fe2O3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799D42280B48500A76059 /* Fe2O3.swift */; };
 		04A486322280368000490805 /* ChemistryShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A486312280368000490805 /* ChemistryShared.swift */; };
 		04A4864C228036BD00490805 /* ToNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48643228036BC00490805 /* ToNode.swift */; };
 		04A4864D228036BD00490805 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48644228036BC00490805 /* String.swift */; };
@@ -41,13 +35,7 @@
 		0425A4942289A38B008E715D /* PackagerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagerUtils.swift; sourceTree = "<group>"; };
 		0425A4982289E292008E715D /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		04298DA222831850009D358D /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
-		045799CB2280B47D00A76059 /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		045799CC2280B47D00A76059 /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
-		045799D02280B48500A76059 /* H2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H2.swift; sourceTree = "<group>"; };
-		045799D12280B48500A76059 /* F2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = F2.swift; sourceTree = "<group>"; };
-		045799D22280B48500A76059 /* H2O.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H2O.swift; sourceTree = "<group>"; };
-		045799D32280B48500A76059 /* O2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2.swift; sourceTree = "<group>"; };
-		045799D42280B48500A76059 /* Fe2O3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fe2O3.swift; sourceTree = "<group>"; };
 		04A4862F2280368000490805 /* libChemistryShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChemistryShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A486312280368000490805 /* ChemistryShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryShared.swift; sourceTree = "<group>"; };
 		04A48643228036BC00490805 /* ToNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToNode.swift; sourceTree = "<group>"; };
@@ -75,27 +63,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		045799CA2280B47D00A76059 /* Chemistry */ = {
-			isa = PBXGroup;
-			children = (
-				045799CB2280B47D00A76059 /* Molecules.swift */,
-				045799CC2280B47D00A76059 /* Atoms.swift */,
-			);
-			path = Chemistry;
-			sourceTree = "<group>";
-		};
-		045799CF2280B48500A76059 /* Molecules */ = {
-			isa = PBXGroup;
-			children = (
-				045799D02280B48500A76059 /* H2.swift */,
-				045799D12280B48500A76059 /* F2.swift */,
-				045799D22280B48500A76059 /* H2O.swift */,
-				045799D32280B48500A76059 /* O2.swift */,
-				045799D42280B48500A76059 /* Fe2O3.swift */,
-			);
-			path = Molecules;
-			sourceTree = "<group>";
-		};
 		04A485E42280340700490805 = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +76,8 @@
 			children = (
 				04A714732284A760008F1637 /* Pack */,
 				04298DA222831850009D358D /* Structures.swift */,
+				045799CC2280B47D00A76059 /* Atoms.swift */,
 				04298D7C2282F430009D358D /* Resources */,
-				045799CF2280B48500A76059 /* Molecules */,
-				045799CA2280B47D00A76059 /* Chemistry */,
 				04A48644228036BC00490805 /* String.swift */,
 				04A48643228036BC00490805 /* ToNode.swift */,
 				04A486312280368000490805 /* ChemistryShared.swift */,
@@ -188,18 +154,12 @@
 			files = (
 				04A486322280368000490805 /* ChemistryShared.swift in Sources */,
 				0425A4952289A38B008E715D /* PackagerUtils.swift in Sources */,
-				045799D62280B48500A76059 /* F2.swift in Sources */,
-				045799D82280B48500A76059 /* O2.swift in Sources */,
 				04A714752284A76F008F1637 /* PackSource.swift in Sources */,
 				04A4864D228036BD00490805 /* String.swift in Sources */,
 				04A4864C228036BD00490805 /* ToNode.swift in Sources */,
-				045799D92280B48500A76059 /* Fe2O3.swift in Sources */,
-				045799CD2280B47D00A76059 /* Molecules.swift in Sources */,
 				04A714792284A7E5008F1637 /* PackDelegate.swift in Sources */,
 				04298DA322831850009D358D /* Structures.swift in Sources */,
-				045799D72280B48500A76059 /* H2O.swift in Sources */,
 				045799CE2280B47D00A76059 /* Atoms.swift in Sources */,
-				045799D52280B48500A76059 /* H2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
