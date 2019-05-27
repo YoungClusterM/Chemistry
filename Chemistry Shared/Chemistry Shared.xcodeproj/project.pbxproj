@@ -10,6 +10,7 @@
 		0425A4952289A38B008E715D /* PackagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A4942289A38B008E715D /* PackagerUtils.swift */; };
 		0425A49A2289E3FF008E715D /* base.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0425A4982289E292008E715D /* base.json */; };
 		04298DA322831850009D358D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04298DA222831850009D358D /* Structures.swift */; };
+		04351ABF229C4A65006F5AEE /* Information+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04351ABE229C4A65006F5AEE /* Information+Model.swift */; };
 		045799CE2280B47D00A76059 /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045799CC2280B47D00A76059 /* Atoms.swift */; };
 		04A486322280368000490805 /* ChemistryShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A486312280368000490805 /* ChemistryShared.swift */; };
 		04A4864C228036BD00490805 /* ToNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48643228036BC00490805 /* ToNode.swift */; };
@@ -36,6 +37,7 @@
 		0425A4942289A38B008E715D /* PackagerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagerUtils.swift; sourceTree = "<group>"; };
 		0425A4982289E292008E715D /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		04298DA222831850009D358D /* Structures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
+		04351ABE229C4A65006F5AEE /* Information+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Information+Model.swift"; sourceTree = "<group>"; };
 		045799CC2280B47D00A76059 /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
 		04A4862F2280368000490805 /* libChemistryShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChemistryShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A486312280368000490805 /* ChemistryShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemistryShared.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		04351ABD229C4A3A006F5AEE /* EduService */ = {
+			isa = PBXGroup;
+			children = (
+				04351ABE229C4A65006F5AEE /* Information+Model.swift */,
+			);
+			path = EduService;
+			sourceTree = "<group>";
+		};
 		04A485E42280340700490805 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		04A486302280368000490805 /* ChemistryShared */ = {
 			isa = PBXGroup;
 			children = (
+				04351ABD229C4A3A006F5AEE /* EduService */,
 				04F03792229AC7BB0034202F /* Wikipedia */,
 				04A714732284A760008F1637 /* Pack */,
 				04298DA222831850009D358D /* Structures.swift */,
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04351ABF229C4A65006F5AEE /* Information+Model.swift in Sources */,
 				04A486322280368000490805 /* ChemistryShared.swift in Sources */,
 				0425A4952289A38B008E715D /* PackagerUtils.swift in Sources */,
 				04A714752284A76F008F1637 /* PackSource.swift in Sources */,

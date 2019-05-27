@@ -83,8 +83,13 @@ public func getBasePack() -> ChemistryPack {
         let data = try Data(contentsOf: sourceURL, options: .alwaysMapped)
         let pack = try JSONDecoder().decode(ChemistryPack.self, from: data)
         return pack
-    } catch let error as NSError {
-        print("parse error: \(error.localizedDescription)")
+    } catch _ as NSError {
+        do {
+            let data = try Data(contentsOf: URL(string: EduServiceInformation().getInformation().manifest)!, options: .alwaysMapped)
+            let pack = try JSONDecoder().decode(ChemistryPack.self, from: data)
+            return pack
+        } catch let error as NSError {
+            fatalError("\(error)")
+        }
     }
-    fatalError("Invalid filename/path.")
 }
