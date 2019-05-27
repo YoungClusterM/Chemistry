@@ -383,7 +383,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="410" height="218"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView hidden="YES" ambiguous="YES" editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="3ZO-Gs-ih3">
+                                                <textView hidden="YES" ambiguous="YES" editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" verticallyResizable="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="3ZO-Gs-ih3">
                                                     <rect key="frame" x="0.0" y="0.0" width="410" height="218"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -403,9 +403,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
-                                    <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-33-OXW">
-                                        <rect key="frame" x="217" y="142" width="16" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-33-OXW">
+                                        <rect key="frame" x="209" y="134" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                     </progressIndicator>
                                 </subviews>
                             </visualEffectView>

@@ -18,11 +18,10 @@ class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
     @IBOutlet var progressIndicator: NSProgressIndicator!
     
     func show(molecule: ChemistryMolecule) {
-        sceneView.isHidden = false
-        atomTitle.isHidden = true
-        atomDescription.isHidden = true
+        sceneView.backgroundColor = .clear
         
         let scene = SCNScene()
+        scene.background.contents = NSColor.clear
         sceneView.scene = scene
         sceneView.allowsCameraControl = true
         sceneView.autoenablesDefaultLighting = true
@@ -35,13 +34,13 @@ class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
         let node = drawChemistryMolecule(molecule)
         sceneView.scene!.rootNode.addChildNode(node)
         node.rotation = SCNVector4(x: 0.0, y: 0.0, z: 0.0, w: 0.0)
+        
+        sceneView.isHidden = false
+        atomTitle.isHidden = true
+        atomDescription.isHidden = true
     }
     
     func show(atom: ChemistryAtom) {
-        sceneView.isHidden = true
-        atomTitle.isHidden = false
-        atomDescription.isHidden = false
-        
         progressIndicator.isHidden = false
         
         atomTitle.stringValue = atom.title.base!
@@ -54,6 +53,10 @@ class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
                 self.atomDescription.string = extract ?? ""
                 
                 self.progressIndicator.isHidden = true
+                
+                sceneView.isHidden = true
+                atomTitle.isHidden = false
+                atomDescription.isHidden = false
             }
         }
     }
@@ -69,4 +72,12 @@ class DetailViewController: NSViewController, DetailDelegate, WKUIDelegate {
 protocol DetailDelegate {
     func show(molecule: ChemistryMolecule)
     func show(atom: ChemistryAtom)
+}
+
+extension String{
+    func convertHtml() -> NSAttributedString{
+        guard let data = data(using: .utf8) else { return NSAttributedString() }
+        return NSAttributedString(html: data, options: [NSAttributedString.DocumentReadingOptionKey.documentType:
+                NSAttributedString.DocumentType.html], documentAttributes: nil) ?? NSAttributedString()
+    }
 }

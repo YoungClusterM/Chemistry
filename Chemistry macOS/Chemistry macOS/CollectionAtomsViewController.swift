@@ -58,7 +58,7 @@ class CollectionAtomsViewController: NSViewController, NSCollectionViewDataSourc
         packSource = MyPackSource(delegate: self)
         
         var packs = packSource?.listPack()
-        let base = getBasePack()
+        let base = getBasePack(network: false)
         packs?["Base"] = base
         
         packs?.forEach({ (arg0) in

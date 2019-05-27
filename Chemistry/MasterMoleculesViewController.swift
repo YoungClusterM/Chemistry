@@ -82,7 +82,7 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
     @objc
     func insertMolecules(_ sender: Any) {
         var packs = packSource?.listPack()
-        packs?["Base"] = getBasePack()
+        packs?["Base"] = getBasePack(network: false)
         
         packs?.forEach({ (arg0) in
             let (_, value) = arg0
