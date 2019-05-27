@@ -75,16 +75,31 @@ public func pack(molecules: [String : SCNNode]) -> [ChemistryMolecule] {
     return items
 }
 
-public func getBasePack() -> ChemistryPack {
+public func getBasePack(network: Bool) -> ChemistryPack {
     var sourceURL = URL(fileURLWithPath: Bundle.main.resourcePath!)
     sourceURL.appendPathComponent("base.json")
-    print(sourceURL.absoluteString)
-    do {
-        let data = try Data(contentsOf: sourceURL, options: .alwaysMapped)
-        let pack = try JSONDecoder().decode(ChemistryPack.self, from: data)
-        return pack
-    } catch let error as NSError {
-        print("parse error: \(error.localizedDescription)")
+    if network {
+        do {
+            let data = try Data(contentsOf: URL(string: EduServiceInformation().getInformation().manifest)!, options: .alwaysMapped)
+            let pack = try JSONDecoder().decode(ChemistryPack.self, from: data)
+            
+            do {
+                try data.write(to: sourceURL, options: .atomic)
+            } catch {
+                print("Cannot save base manifest for future use")
+            }
+            
+            return pack
+        } catch _ as NSError {
+            return ChemistryPack(packDetails: ChemistryPackDetails(title: "Nothing", version: "NONE", type: "chemistry", copyright: "NONE"), atoms: [], molecules: [])
+        }
+    } else {
+        do {
+            let data = try Data(contentsOf: sourceURL, options: .alwaysMapped)
+            let pack = try JSONDecoder().decode(ChemistryPack.self, from: data)
+            return pack
+        } catch _ as NSError {
+            return getBasePack(network: true)
+        }
     }
-    fatalError("Invalid filename/path.")
 }

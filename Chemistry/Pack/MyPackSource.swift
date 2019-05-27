@@ -28,7 +28,7 @@ class MyPackSource : PackSource {
     
     private func loadAtoms() {
         var packs = self.listPack()
-        let base = getBasePack()
+        let base = getBasePack(network: false)
         packs["Base"] = base
         
         packs.forEach({ (arg0) in
