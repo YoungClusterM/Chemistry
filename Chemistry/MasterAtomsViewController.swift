@@ -65,7 +65,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
         
         tableView.reloadData()
         
-        if !(userDefaults?.bool(forKey: "molecules_descripted"))! {
+        if !(userDefaults?.bool(forKey: "atoms_descripted"))! {
             descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
         }
     }
