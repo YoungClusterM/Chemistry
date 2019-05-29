@@ -57,7 +57,7 @@ class CollectionMoleculesViewController: NSViewController, NSCollectionViewDataS
         super.viewDidLoad()
         // Do view setup here.
         
-        packSource = MyPackSource(delegate: self)
+        packSource = PackSource(delegate: self)
         
         var packs = packSource?.listPack()
         let base = getBasePack(network: false)

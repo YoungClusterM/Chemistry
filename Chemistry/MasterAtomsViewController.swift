@@ -77,7 +77,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
     
     @objc
     func insertAtoms(_ sender: Any) {
-        packSource = MyPackSource(delegate: self)
+        packSource = PackSource(delegate: self)
         
         var packs = packSource?.listPack()
         let base = getBasePack(network: false)
