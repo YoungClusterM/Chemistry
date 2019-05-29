@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0425A4932289A1F2008E715D /* MyPackSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A4922289A1F2008E715D /* MyPackSource.swift */; };
 		04419A9C2291D6CC00010208 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04419A9B2291D6CC00010208 /* DetailViewController.swift */; };
 		045F307F227EFDF100816C02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 045F3081227EFDF100816C02 /* Localizable.strings */; };
 		04A486372280368B00490805 /* libChemistryShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A486362280368B00490805 /* libChemistryShared.a */; };
@@ -43,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0425A4922289A1F2008E715D /* MyPackSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPackSource.swift; sourceTree = "<group>"; };
 		04419A9B2291D6CC00010208 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0458BD9C227DEA1C00FF26AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		045F3080227EFDF100816C02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -102,14 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0425A4912289A1E1008E715D /* Pack */ = {
-			isa = PBXGroup;
-			children = (
-				0425A4922289A1F2008E715D /* MyPackSource.swift */,
-			);
-			path = Pack;
-			sourceTree = "<group>";
-		};
 		043B10B5224FCAD3009E33D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +144,6 @@
 		9274DBD8217C8686007AF82A /* Chemistry */ = {
 			isa = PBXGroup;
 			children = (
-				0425A4912289A1E1008E715D /* Pack */,
 				04A4865222805B4100490805 /* Chemistry.entitlements */,
 				9274DBD9217C8687007AF82A /* AppDelegate.swift */,
 				9274DBDF217C8688007AF82A /* Main.storyboard */,
@@ -458,7 +447,6 @@
 				04419A9C2291D6CC00010208 /* DetailViewController.swift in Sources */,
 				9238AE7F223E900F0022BA1E /* MasterMoleculesViewController.swift in Sources */,
 				92D6F183223FD8F000C0F3A3 /* MasterNavigationController.swift in Sources */,
-				0425A4932289A1F2008E715D /* MyPackSource.swift in Sources */,
 				9238AE7D223E7A860022BA1E /* CustomTabBarController.swift in Sources */,
 				9238AE81223E96010022BA1E /* MasterAtomsViewController.swift in Sources */,
 				9274DBDA217C8687007AF82A /* AppDelegate.swift in Sources */,

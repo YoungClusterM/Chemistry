@@ -52,7 +52,7 @@ class MasterMoleculesViewController: UITableViewController, UISearchResultsUpdat
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
-        packSource = MyPackSource(delegate: self)
+        packSource = PackSource(delegate: self)
         
         insertMolecules(self)
         if let split = splitViewController {

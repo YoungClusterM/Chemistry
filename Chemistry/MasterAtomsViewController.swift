@@ -65,7 +65,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
         
         tableView.reloadData()
         
-        if !(userDefaults?.bool(forKey: "molecules_descripted"))! {
+        if !(userDefaults?.bool(forKey: "atoms_descripted"))! {
             descriptor.showBulletin(above: UIApplication.shared.keyWindow!.rootViewController!)
         }
     }
@@ -77,7 +77,7 @@ class MasterAtomsViewController: UITableViewController, UISearchResultsUpdating,
     
     @objc
     func insertAtoms(_ sender: Any) {
-        packSource = MyPackSource(delegate: self)
+        packSource = PackSource(delegate: self)
         
         var packs = packSource?.listPack()
         let base = getBasePack(network: false)
